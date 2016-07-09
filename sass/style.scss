@@ -1,1 +1,19 @@
+/* === Importing Helpers === */
+
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+
 /* === Main Style === */
+
+* {
+    box-sizing: border-box;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+/* === Importing Layout === */
+
+@import "layout/header.scss";

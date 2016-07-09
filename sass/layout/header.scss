@@ -1,0 +1,19 @@
+/* === Header === */
+
+header {
+    section {
+        background: $headerbg;
+        height: 40px;
+        @include flexbox(space-around);
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                color: $headerlinkcolor;
+                &:hover {
+                    color: $headerlinkhover;
+                }
+            }
+        }
+    }
+}
