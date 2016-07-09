@@ -105,27 +105,94 @@ header section {
         header section div form input:-ms-input-placeholder {
           font-size: initial; } }
 header main {
-  padding-top: 33px;
+  padding: 33px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
   header main nav {
-    margin-right: 20px; }
-  header main nav ul li {
-    display: inline-block;
-    border: 1px solid transparent; }
-    header main nav ul li:hover {
-      border: 1px solid #6c0002; }
-    header main nav ul li.active {
-      border: 1px solid #6c0002; }
-      header main nav ul li.active a {
-        color: #6c0002; }
-    header main nav ul li a {
-      display: block;
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header main nav > a {
+      position: relative;
+      border: 1px solid #666;
+      margin-right: 15px;
       padding: 10px 20px;
       color: #666;
-      font-size: 16px; }
-      header main nav ul li a:hover {
+      font-size: 20px; }
+      header main nav > a:hover {
+        border: 1px solid #6c0002;
         color: #6c0002; }
+        header main nav > a:hover div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > a span.ui.red.label, header main nav > a span.ui.red.labels .label {
+        background: #6c0002 !important; }
+      header main nav > a div {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 360px;
+        min-height: 125px;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 54px;
+        right: 0px; }
+        header main nav > a div::before {
+          content: '';
+          position: absolute;
+          top: -14px;
+          right: 6%;
+          width: 28px;
+          height: 28px;
+          background: white;
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        header main nav > a div .empty {
+          font-size: 15px;
+          text-align: center;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+    header main nav ul li {
+      display: inline-block;
+      border: 1px solid transparent; }
+      header main nav ul li:hover {
+        border: 1px solid #6c0002; }
+        header main nav ul li:hover a {
+          color: #6c0002; }
+      header main nav ul li.active {
+        border: 1px solid #6c0002; }
+        header main nav ul li.active a {
+          color: #6c0002; }
+      header main nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #666;
+        font-size: 16px; }
+  @media (max-width: 880px) {
+    header main {
+      display: block; }
+      header main figure {
+        display: block;
+        text-align: center; }
+      header main nav {
+        text-align: center;
+        display: block; }
+        header main nav > a {
+          display: inline-block;
+          margin: 10px 0; }
+        header main nav ul {
+          margin: 10px 0; } }
 
 /*# sourceMappingURL=style.css.map */
