@@ -27,6 +27,16 @@ header section {
       color: #A5A5A5; }
       header section ul li a:hover {
         color: #C0C0C0; }
+  header section div form:hover input {
+    width: 190px; }
+    header section div form:hover input::-webkit-input-placeholder {
+      font-size: initial; }
+    header section div form:hover input:-moz-placeholder {
+      font-size: initial; }
+    header section div form:hover input::-moz-placeholder {
+      font-size: initial; }
+    header section div form:hover input:-ms-input-placeholder {
+      font-size: initial; }
   header section div form button {
     color: #A5A5A5;
     background: transparent;
@@ -34,14 +44,21 @@ header section {
     padding: 5px 2px;
     outline: 0;
     transform: translateX(-25px); }
-    header section div form button:hover input[type="search"] {
-      width: 190px; }
   header section div form input {
     border-right: 0;
     border-radius: 15px;
+    border: 2px solid #A5A5A5;
     outline: 0;
     padding: 5px 10px;
     width: 30px;
-    transition: width 0.3s ease-in-out; }
+    transition: width 0.5s ease-in-out; }
+    header section div form input::-webkit-input-placeholder {
+      font-size: 0; }
+    header section div form input:-moz-placeholder {
+      font-size: 0; }
+    header section div form input::-moz-placeholder {
+      font-size: 0; }
+    header section div form input:-ms-input-placeholder {
+      font-size: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,6 +19,22 @@ header {
                 }
             }
         }
+        div form:hover input {
+            width: 190px;
+            &::-webkit-input-placeholder {
+               font-size: initial;
+            }
+            &:-moz-placeholder {
+               font-size: initial;
+            }
+            &::-moz-placeholder {
+               font-size: initial;
+            }
+
+            &:-ms-input-placeholder {
+               font-size: initial;
+            }
+        }
         div form button {
             color: $headerlinkcolor;
             background: $transparent;
@@ -26,17 +42,29 @@ header {
             padding: 5px 2px;
             outline: $zero;
             transform: translateX(-25px);
-            &:hover input[type="search"] {
-                width: 190px;
-            }
         }
         div form input {
             border-right: $zero;
             border-radius: 15px;
+            border: 2px solid $headerlinkcolor;
             outline: $zero;
             padding: 5px $ten;
             width: 30px;
-            transition: width 0.3s ease-in-out;
+            transition: width 0.5s ease-in-out;
+            &::-webkit-input-placeholder {
+               font-size: $zero;
+            }
+            &:-moz-placeholder {
+               font-size: $zero;
+            }
+            &::-moz-placeholder {
+               font-size: $zero;
+            }
+
+            &:-ms-input-placeholder {
+               font-size: $zero;
+            }
         }
+
     }
 }
