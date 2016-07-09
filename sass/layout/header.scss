@@ -1,6 +1,7 @@
 /* === Header === */
 
 header {
+    // Top Bar
     section {
         background: $headerbg;
         height: 50px;
@@ -19,20 +20,50 @@ header {
                 }
             }
         }
-        div form:hover input {
-            width: 190px;
-            &::-webkit-input-placeholder {
-               font-size: initial;
+        div {
+            margin-right: 5px;
+        }
+        div > button {
+            display: none;
+            @media (max-width: 450px) {
+                display: block;
+                background: $transparent;
+                border: $zero;
+                color: $headerlinkcolor;
+                outline: $zero;
             }
-            &:-moz-placeholder {
-               font-size: initial;
-            }
-            &::-moz-placeholder {
-               font-size: initial;
-            }
+        }
+        div form {
+            &:hover input {
+                width: 200px;
+                &::-webkit-input-placeholder {
+                   font-size: initial;
+                }
+                &:-moz-placeholder {
+                   font-size: initial;
+                }
+                &::-moz-placeholder {
+                   font-size: initial;
+                }
 
-            &:-ms-input-placeholder {
-               font-size: initial;
+                &:-ms-input-placeholder {
+                   font-size: initial;
+                }
+                @media (max-width: 450px) {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 450px) {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                &:hover input {
+                    width: 100%;
+                }
+                &.toggle {
+                    display: none;
+                }
             }
         }
         div form button {
@@ -41,7 +72,13 @@ header {
             border: $zero;
             padding: 5px 2px;
             outline: $zero;
-            transform: translateX(-25px);
+            transform: translateX(-27px);
+            @media (max-width: 450px) {
+                padding: 5px 10px;
+                position: absolute;
+                top: 2px;
+                right: -25px;
+            }
         }
         div form input {
             border-right: $zero;
@@ -49,6 +86,7 @@ header {
             border: 2px solid $headerlinkcolor;
             outline: $zero;
             padding: 5px $ten;
+            height: 33px;
             width: 30px;
             transition: width 0.5s ease-in-out;
             &::-webkit-input-placeholder {
@@ -60,11 +98,57 @@ header {
             &::-moz-placeholder {
                font-size: $zero;
             }
-
             &:-ms-input-placeholder {
                font-size: $zero;
             }
+            @media (max-width: 450px) {
+                width: 100%;
+                background: $white;
+                &::-webkit-input-placeholder {
+                   font-size: initial;
+                }
+                &:-moz-placeholder {
+                   font-size: initial;
+                }
+                &::-moz-placeholder {
+                   font-size: initial;
+                }
+                &:-ms-input-placeholder {
+                   font-size: initial;
+                }
+            }
         }
 
+    }
+    // Main Header
+    main {
+        padding-top: 33px;
+        @include flexbox(space-between);
+        nav {
+            margin-right: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            border: 1px solid $transparent;
+            &:hover {
+                border: 1px solid $mainColor;
+            }
+            &.active {
+                a {
+                    color: $mainColor;
+                }
+                border: 1px solid $mainColor;
+            }
+            a {
+                display: block;
+                padding: $ten 20px;
+                color: #666;
+                font-size: 16px;
+                // font-weight: bold;
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
     }
 }

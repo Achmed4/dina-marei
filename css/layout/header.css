@@ -1,20 +1,21 @@
 /*
 Error: Undefined variable: "$headerbg".
-        on line 5 of sass/layout/header.scss
+        on line 6 of sass/layout/header.scss
 
 1: /* === Header === *\/
 2: 
 3: header {
-4:     section {
-5:         background: $headerbg;
-6:         height: 50px;
-7:         @include flexbox(space-between);
-8:         ul li {
-9:             display: inline-block;
-10:             padding: $zero $ten;
+4:     // Top Bar
+5:     section {
+6:         background: $headerbg;
+7:         height: 50px;
+8:         @include flexbox(space-between);
+9:         ul li {
+10:             display: inline-block;
+11:             padding: $zero $ten;
 
 Backtrace:
-sass/layout/header.scss:5
+sass/layout/header.scss:6
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -75,4 +76,4 @@ sass/layout/header.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$headerbg\".\A         on line 5 of sass/layout/header.scss\A \A 1: /* === Header === */\A 2: \A 3: header {\A 4:     section {\A 5:         background: $headerbg;\A 6:         height: 50px;\A 7:         @include flexbox(space-between);\A 8:         ul li {\A 9:             display: inline-block;\A 10:             padding: $zero $ten;"; }
+  content: "Error: Undefined variable: \"$headerbg\".\A         on line 6 of sass/layout/header.scss\A \A 1: /* === Header === */\A 2: \A 3: header {\A 4:     // Top Bar\A 5:     section {\A 6:         background: $headerbg;\A 7:         height: 50px;\A 8:         @include flexbox(space-between);\A 9:         ul li {\A 10:             display: inline-block;\A 11:             padding: $zero $ten;"; }

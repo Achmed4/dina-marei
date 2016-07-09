@@ -7,7 +7,8 @@
 
 ul, li {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
 
 /* === Importing Layout === */
 /* === Header === */
@@ -27,8 +28,19 @@ header section {
       color: #A5A5A5; }
       header section ul li a:hover {
         color: #C0C0C0; }
+  header section div {
+    margin-right: 5px; }
+  header section div > button {
+    display: none; }
+    @media (max-width: 450px) {
+      header section div > button {
+        display: block;
+        background: transparent;
+        border: 0;
+        color: #A5A5A5;
+        outline: 0; } }
   header section div form:hover input {
-    width: 190px; }
+    width: 200px; }
     header section div form:hover input::-webkit-input-placeholder {
       font-size: initial; }
     header section div form:hover input:-moz-placeholder {
@@ -37,19 +49,39 @@ header section {
       font-size: initial; }
     header section div form:hover input:-ms-input-placeholder {
       font-size: initial; }
+    @media (max-width: 450px) {
+      header section div form:hover input {
+        width: 100%; } }
+  @media (max-width: 450px) {
+    header section div form {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%; }
+      header section div form:hover input {
+        width: 100%; }
+      header section div form.toggle {
+        display: none; } }
   header section div form button {
     color: #A5A5A5;
     background: transparent;
     border: 0;
     padding: 5px 2px;
     outline: 0;
-    transform: translateX(-25px); }
+    transform: translateX(-27px); }
+    @media (max-width: 450px) {
+      header section div form button {
+        padding: 5px 10px;
+        position: absolute;
+        top: 2px;
+        right: -25px; } }
   header section div form input {
     border-right: 0;
     border-radius: 15px;
     border: 2px solid #A5A5A5;
     outline: 0;
     padding: 5px 10px;
+    height: 33px;
     width: 30px;
     transition: width 0.5s ease-in-out; }
     header section div form input::-webkit-input-placeholder {
@@ -60,5 +92,40 @@ header section {
       font-size: 0; }
     header section div form input:-ms-input-placeholder {
       font-size: 0; }
+    @media (max-width: 450px) {
+      header section div form input {
+        width: 100%;
+        background: white; }
+        header section div form input::-webkit-input-placeholder {
+          font-size: initial; }
+        header section div form input:-moz-placeholder {
+          font-size: initial; }
+        header section div form input::-moz-placeholder {
+          font-size: initial; }
+        header section div form input:-ms-input-placeholder {
+          font-size: initial; } }
+header main {
+  padding-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header main nav {
+    margin-right: 20px; }
+  header main nav ul li {
+    display: inline-block;
+    border: 1px solid transparent; }
+    header main nav ul li:hover {
+      border: 1px solid #6c0002; }
+    header main nav ul li.active {
+      border: 1px solid #6c0002; }
+      header main nav ul li.active a {
+        color: #6c0002; }
+    header main nav ul li a {
+      display: block;
+      padding: 10px 20px;
+      color: #666;
+      font-size: 16px; }
+      header main nav ul li a:hover {
+        color: #6c0002; }
 
 /*# sourceMappingURL=style.css.map */
