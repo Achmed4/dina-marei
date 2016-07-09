@@ -1,3 +1,28 @@
+/* === Importing Helpers === */
+/* === Variables === */
+/* === Mixins === */
 /* === Main Style === */
+* {
+  box-sizing: border-box; }
+
+ul, li {
+  margin: 0;
+  padding: 0; }
+
+/* === Importing Layout === */
+/* === Header === */
+header section {
+  background: #414141;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  header section li {
+    display: inline-block; }
+    header section li a {
+      display: block;
+      color: #A5A5A5; }
+      header section li a:hover {
+        color: #C0C0C0; }
 
 /*# sourceMappingURL=style.css.map */
