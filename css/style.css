@@ -13,16 +13,35 @@ ul, li {
 /* === Header === */
 header section {
   background: #414141;
-  height: 40px;
+  height: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
-  header section li {
-    display: inline-block; }
-    header section li a {
+  header section ul li {
+    display: inline-block;
+    padding: 0 10px; }
+    header section ul li:not(:last-child) {
+      border-right: 1px solid #A5A5A5; }
+    header section ul li a {
       display: block;
       color: #A5A5A5; }
-      header section li a:hover {
+      header section ul li a:hover {
         color: #C0C0C0; }
+  header section div form button {
+    color: #A5A5A5;
+    background: transparent;
+    border: 0;
+    padding: 5px 2px;
+    outline: 0;
+    transform: translateX(-25px); }
+    header section div form button:hover input[type="search"] {
+      width: 190px; }
+  header section div form input {
+    border-right: 0;
+    border-radius: 15px;
+    outline: 0;
+    padding: 5px 10px;
+    width: 30px;
+    transition: width 0.3s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */

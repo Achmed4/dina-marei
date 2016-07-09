@@ -7,11 +7,11 @@ Error: Undefined variable: "$headerbg".
 3: header {
 4:     section {
 5:         background: $headerbg;
-6:         height: 40px;
-7:         @include flexbox(space-around);
-8:         li {
+6:         height: 50px;
+7:         @include flexbox(space-between);
+8:         ul li {
 9:             display: inline-block;
-10:             a {
+10:             padding: $zero $ten;
 
 Backtrace:
 sass/layout/header.scss:5
@@ -75,4 +75,4 @@ sass/layout/header.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$headerbg\".\A         on line 5 of sass/layout/header.scss\A \A 1: /* === Header === */\A 2: \A 3: header {\A 4:     section {\A 5:         background: $headerbg;\A 6:         height: 40px;\A 7:         @include flexbox(space-around);\A 8:         li {\A 9:             display: inline-block;\A 10:             a {"; }
+  content: "Error: Undefined variable: \"$headerbg\".\A         on line 5 of sass/layout/header.scss\A \A 1: /* === Header === */\A 2: \A 3: header {\A 4:     section {\A 5:         background: $headerbg;\A 6:         height: 50px;\A 7:         @include flexbox(space-between);\A 8:         ul li {\A 9:             display: inline-block;\A 10:             padding: $zero $ten;"; }

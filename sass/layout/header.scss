@@ -3,10 +3,14 @@
 header {
     section {
         background: $headerbg;
-        height: 40px;
-        @include flexbox(space-around);
-        li {
+        height: 50px;
+        @include flexbox(space-between);
+        ul li {
             display: inline-block;
+            padding: $zero $ten;
+            &:not(:last-child) {
+                border-right: 1px solid $headerlinkcolor;
+            }
             a {
                 display: block;
                 color: $headerlinkcolor;
@@ -14,6 +18,25 @@ header {
                     color: $headerlinkhover;
                 }
             }
+        }
+        div form button {
+            color: $headerlinkcolor;
+            background: $transparent;
+            border: $zero;
+            padding: 5px 2px;
+            outline: $zero;
+            transform: translateX(-25px);
+            &:hover input[type="search"] {
+                width: 190px;
+            }
+        }
+        div form input {
+            border-right: $zero;
+            border-radius: 15px;
+            outline: $zero;
+            padding: 5px $ten;
+            width: 30px;
+            transition: width 0.3s ease-in-out;
         }
     }
 }
