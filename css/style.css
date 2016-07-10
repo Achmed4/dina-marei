@@ -104,6 +104,8 @@ header section {
           font-size: initial; }
         header section div form input:-ms-input-placeholder {
           font-size: initial; } }
+    header section div form input:focus {
+      width: 200px; }
 header main {
   padding: 33px 0 5px;
   display: flex;
@@ -141,7 +143,8 @@ header main {
         box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
         position: absolute;
         top: 54px;
-        left: 0px; }
+        left: 0px;
+        z-index: 1; }
         header main nav > a div::before {
           content: '';
           position: absolute;
@@ -178,7 +181,7 @@ header main {
           color: #6c0002; }
       header main nav ul li a {
         display: block;
-        padding: 10px 20px;
+        padding: 10px 15px;
         color: #666;
         font-size: 16px; }
       header main nav ul li div {
@@ -194,13 +197,14 @@ header main {
         padding: 15px;
         background: white;
         white-space: nowrap;
+        text-align: left;
         opacity: 0;
         visibility: hidden; }
         header main nav ul li div > ul li {
           display: block; }
         @media (max-width: 880px) {
           header main nav ul li div {
-            top: 58px; } }
+            top: 40px; } }
       header main nav ul li:hover div {
         opacity: 1;
         visibility: visible; }
