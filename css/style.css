@@ -121,7 +121,7 @@ header main {
       position: relative;
       border: 1px solid #666;
       margin-right: 15px;
-      padding: 10px 20px;
+      padding: 10px 15px;
       color: #666;
       font-size: 20px; }
       header main nav > a:hover {
@@ -167,6 +167,25 @@ header main {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+      @media (max-width: 767px) {
+        header main nav > a {
+          margin-right: 20px !important; } }
+    header main nav > button {
+      display: none;
+      border: 1px solid #666;
+      padding: 10px;
+      color: #666;
+      font-size: 20px;
+      background: white; }
+      header main nav > button:hover {
+        border: 1px solid #6c0002;
+        color: #6c0002; }
+      @media (max-width: 767px) {
+        header main nav > button {
+          display: inline-block; } }
+    @media (max-width: 767px) {
+      header main nav > ul {
+        display: none; } }
     header main nav ul li {
       position: relative;
       display: inline-block;
@@ -200,6 +219,8 @@ header main {
         text-align: left;
         opacity: 0;
         visibility: hidden; }
+        header main nav ul li div > ul h3 {
+          color: #666; }
         header main nav ul li div > ul li {
           display: block; }
         @media (max-width: 880px) {

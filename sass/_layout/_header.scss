@@ -136,7 +136,7 @@ header {
                 position: relative;
                 border: 1px solid #666;
                 margin-right: 15px;
-                padding: $ten 20px;
+                padding: $ten 15px;
                 color: #666;
                 font-size: 20px;
                 &:hover {
@@ -188,8 +188,30 @@ header {
                         transform: translate(-50%, -50%);
                     }
                 }
+                @media (max-width: 767px) {
+                    margin-right: 20px !important;
+                }
             }
-
+            > button {
+                display: none;
+                border: 1px solid #666;
+                padding: $ten;
+                color: #666;
+                font-size: 20px;
+                background: white;
+                &:hover {
+                    border: 1px solid $mainColor;
+                    color: $mainColor;
+                }
+                @media (max-width: 767px) {
+                    display: inline-block;
+                }
+            }
+            > ul {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
             ul li {
                 position: relative;
                 display: inline-block;
@@ -227,6 +249,9 @@ header {
                     text-align: left;
                     opacity: 0;
                     visibility: hidden;
+                    > ul h3 {
+                        color: #666;
+                    }
                     > ul li {
                         display: block;
                     }
