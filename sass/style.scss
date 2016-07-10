@@ -1,7 +1,7 @@
 /* === Importing Helpers === */
 
-@import "helpers/variables.scss";
-@import "helpers/mixins.scss";
+@import "_helpers/_variables.scss";
+@import "_helpers/_mixins.scss";
 
 /* === Main Style === */
 
@@ -17,4 +17,4 @@ ul,li {
 
 /* === Importing Layout === */
 
-@import "layout/header.scss";
+@import "_layout/_header.scss";
