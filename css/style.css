@@ -95,6 +95,11 @@ header section {
       font-size: 0; }
     header section div form input:-ms-input-placeholder {
       font-size: 0; }
+    header section div form input:focus {
+      width: 200px; }
+    @media (max-width: 767px) {
+      header section div form input:focus {
+        width: 100%; } }
     @media (max-width: 450px) {
       header section div form input {
         width: 100%;
@@ -107,8 +112,6 @@ header section {
           font-size: initial; }
         header section div form input:-ms-input-placeholder {
           font-size: initial; } }
-    header section div form input:focus {
-      width: 200px; }
 header main {
   padding: 33px 0 5px;
   display: flex;

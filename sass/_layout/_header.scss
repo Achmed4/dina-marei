@@ -101,6 +101,14 @@ header {
             &:-ms-input-placeholder {
                font-size: $zero;
             }
+            &:focus {
+                width: 200px;
+            }
+            @media (max-width: 767px) {
+                &:focus {
+                    width: 100%;
+                }
+            }
             @media (max-width: 450px) {
                 width: 100%;
                 background: $white;
@@ -117,9 +125,7 @@ header {
                    font-size: initial;
                 }
             }
-            &:focus {
-                width: 200px;
-            }
+
         }
 
     }
