@@ -5,7 +5,7 @@ header {
     section {
         background: $headerbg;
         height: 50px;
-        @include flexbox(space-between);
+        @include flexbox($justify-content: space-between);
         ul li {
             display: inline-block;
             padding: $zero $ten;
@@ -122,12 +122,13 @@ header {
     }
     // Main Header
     main {
-        padding: 33px $zero;
-        @include flexbox(space-between);
+        padding: 33px $zero 5px;
+        @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
         nav {
             margin-right: 15px;
-            @include flexbox(space-between);
+            @include flexbox($justify-content: space-between);
+            // Cart
             > a {
                 position: relative;
                 border: 1px solid #666;
@@ -157,12 +158,12 @@ header {
                     box-shadow:0 0px 5px 1px rgba(0, 0, 0, 0.1);
                     position: absolute;
                     top: 54px;
-                    right: 0px;
+                    left: 0px;
                     &::before {
                         content: '';
                         position: absolute;
                         top: -14px;
-                        right: 6%;
+                        left: 5%;
                         width: 28px;
                         height: 28px;
                         background: $white;
@@ -186,6 +187,7 @@ header {
             }
 
             ul li {
+                position: relative;
                 display: inline-block;
                 border: 1px solid $transparent;
                 &:hover {
@@ -205,6 +207,31 @@ header {
                     padding: $ten 20px;
                     color: #666;
                     font-size: 16px;
+                }
+                // Sub-Menu
+                div {
+                    @include flexbox($align-items: flex-start);
+                    position: absolute;
+                    top: 40px;
+                    max-width: 400px;
+                    height: auto;
+                    border: 1px solid #e3e2e2;
+                    box-shadow: 0 2px 2px #cccccc;
+                    padding: 15px;
+                    background: $white;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    > ul li {
+                        display: block;
+                    }
+                    @media (max-width: 880px) {
+                        top: 58px;
+                    }
+                }
+                &:hover div {
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
