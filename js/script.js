@@ -9,11 +9,15 @@
         $(this).addClass('active').siblings().removeClass('active');
     });
 
+    // Adjusting Nav Menu on Mobile
     $('header main nav > button').on('click', function() {
         $('header main nav > ul').fadeIn('300');
     });
     $('header main nav > ul span').on('click', function() {
         $('header main nav > ul').fadeOut('300');
     });
+
+    // Trigger Main Carousel
+    $('figure > div').slick();
 
 }());
