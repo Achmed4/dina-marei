@@ -18,6 +18,9 @@
     });
 
     // Trigger Main Carousel
-    $('figure > div').slick();
+    $('figure > div').slick({
+        prevArrow: "<i class='angle right icon'></i>",
+        nextArrow: "<i class='angle left icon'></i>",
+    });
 
 }());
