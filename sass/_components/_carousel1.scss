@@ -2,8 +2,16 @@
 
 header ~ figure {
     margin: 0!important;
+    // new
+    padding-top: 56.25%;
+    position: relative;
     #main-carousel {
         width: 100%;
+        // new
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
         &:hover i.angle.right.icon.slick-arrow {
             right: 1%;
         }
@@ -22,7 +30,7 @@ header ~ figure {
             line-height: 55px;
             position: absolute;
             top: 50%;
-            margin-top: -15%;
+            // margin-top: -15%;
             cursor: pointer;
             color: #666;
             opacity: 0.3;
@@ -30,13 +38,13 @@ header ~ figure {
             transition: all 0.3s ease-in-out;
         }
         i.angle.right.icon.slick-arrow {
-            right: -3%;
+            right: -20%;
             &:hover {
                 opacity: 1;
             }
         }
         i.angle.left.icon.slick-arrow {
-            left: -3%;
+            left: -20%;
             &:hover {
                 opacity: 1;
             }

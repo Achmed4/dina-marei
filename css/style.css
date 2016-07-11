@@ -86,7 +86,7 @@ header section {
     padding: 5px 10px;
     height: 33px;
     width: 30px;
-    transition: width 0.5s ease-in-out; }
+    transition: width 0.3s ease-in-out; }
     header section div form input::-webkit-input-placeholder {
       font-size: 0; }
     header section div form input:-moz-placeholder {
@@ -297,9 +297,15 @@ header main {
 
 /* === Carousel 1 === */
 header ~ figure {
-  margin: 0 !important; }
+  margin: 0 !important;
+  padding-top: 56.25%;
+  position: relative; }
   header ~ figure #main-carousel {
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
     header ~ figure #main-carousel:hover i.angle.right.icon.slick-arrow {
       right: 1%; }
     header ~ figure #main-carousel:hover i.angle.left.icon.slick-arrow {
@@ -315,18 +321,17 @@ header ~ figure {
       line-height: 55px;
       position: absolute;
       top: 50%;
-      margin-top: -15%;
       cursor: pointer;
       color: #666;
       opacity: 0.3;
       z-index: 9;
       transition: all 0.3s ease-in-out; }
     header ~ figure #main-carousel i.angle.right.icon.slick-arrow {
-      right: -3%; }
+      right: -20%; }
       header ~ figure #main-carousel i.angle.right.icon.slick-arrow:hover {
         opacity: 1; }
     header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
-      left: -3%; }
+      left: -20%; }
       header ~ figure #main-carousel i.angle.left.icon.slick-arrow:hover {
         opacity: 1; }
 
