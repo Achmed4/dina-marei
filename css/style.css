@@ -298,30 +298,36 @@ header main {
 /* === Carousel 1 === */
 header ~ figure {
   margin: 0 !important; }
-
-#main-carousel {
-  width: 100%; }
-  #main-carousel:hover i.angle.right.icon.slick-arrow, #main-carousel:hover i.angle.left.icon.slick-arrow {
-    opacity: 1; }
-  #main-carousel div > img {
+  header ~ figure #main-carousel {
     width: 100%; }
-  #main-carousel i.angle.right.icon.slick-arrow,
-  #main-carousel i.angle.left.icon.slick-arrow {
-    font-size: 60px;
-    font-weight: bold;
-    width: 35px;
-    height: 55px;
-    line-height: 55px;
-    position: absolute;
-    top: 50%;
-    margin-top: -15%;
-    cursor: pointer;
-    color: #666;
-    opacity: 0.3;
-    z-index: 9; }
-  #main-carousel i.angle.right.icon.slick-arrow {
-    right: 1%; }
-  #main-carousel i.angle.left.icon.slick-arrow {
-    left: 1%; }
+    header ~ figure #main-carousel:hover i.angle.right.icon.slick-arrow {
+      right: 1%; }
+    header ~ figure #main-carousel:hover i.angle.left.icon.slick-arrow {
+      left: 1%; }
+    header ~ figure #main-carousel div > img {
+      width: 100%; }
+    header ~ figure #main-carousel i.angle.right.icon.slick-arrow,
+    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+      font-size: 60px;
+      font-weight: bold;
+      width: 35px;
+      height: 55px;
+      line-height: 55px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15%;
+      cursor: pointer;
+      color: #666;
+      opacity: 0.3;
+      z-index: 9;
+      transition: all 0.3s ease-in-out; }
+    header ~ figure #main-carousel i.angle.right.icon.slick-arrow {
+      right: -3%; }
+      header ~ figure #main-carousel i.angle.right.icon.slick-arrow:hover {
+        opacity: 1; }
+    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+      left: -3%; }
+      header ~ figure #main-carousel i.angle.left.icon.slick-arrow:hover {
+        opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

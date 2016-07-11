@@ -1,37 +1,45 @@
 /* === Carousel 1 === */
 
 header ~ figure {
-    margin: 0!important
-}
-
-#main-carousel {
-    width: 100%;
-    &:hover i.angle.right.icon.slick-arrow,
-    &:hover i.angle.left.icon.slick-arrow {
-        opacity: 1;
-    }
-    div > img {
+    margin: 0!important;
+    #main-carousel {
         width: 100%;
-    }
-    i.angle.right.icon.slick-arrow,
-    i.angle.left.icon.slick-arrow {
-        font-size: 60px;
-        font-weight: bold;
-        width: 35px;
-        height: 55px;
-        line-height: 55px;
-        position: absolute;
-        top: 50%;
-        margin-top: -15%;
-        cursor: pointer;
-        color: #666;
-        opacity: 0.3;
-        z-index: 9;
-    }
-    i.angle.right.icon.slick-arrow {
-        right: 1%;
-    }
-    i.angle.left.icon.slick-arrow {
-        left: 1%;
+        &:hover i.angle.right.icon.slick-arrow {
+            right: 1%;
+        }
+        &:hover i.angle.left.icon.slick-arrow {
+            left: 1%;
+        }
+        div > img {
+            width: 100%;
+        }
+        i.angle.right.icon.slick-arrow,
+        i.angle.left.icon.slick-arrow {
+            font-size: 60px;
+            font-weight: bold;
+            width: 35px;
+            height: 55px;
+            line-height: 55px;
+            position: absolute;
+            top: 50%;
+            margin-top: -15%;
+            cursor: pointer;
+            color: #666;
+            opacity: 0.3;
+            z-index: 9;
+            transition: all 0.3s ease-in-out;
+        }
+        i.angle.right.icon.slick-arrow {
+            right: -3%;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        i.angle.left.icon.slick-arrow {
+            left: -3%;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
