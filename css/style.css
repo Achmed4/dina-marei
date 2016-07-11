@@ -262,7 +262,8 @@ header main {
         white-space: nowrap;
         text-align: left;
         opacity: 0;
-        visibility: hidden; }
+        visibility: hidden;
+        z-index: 2; }
         header main nav ul li div > ul h3 {
           color: #666; }
         header main nav ul li div > ul li {

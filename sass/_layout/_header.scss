@@ -298,6 +298,7 @@ header {
                     text-align: left;
                     opacity: 0;
                     visibility: hidden;
+                    z-index: 2;
                     > ul h3 {
                         color: #666;
                     }
