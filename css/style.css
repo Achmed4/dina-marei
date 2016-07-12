@@ -346,40 +346,101 @@ figure ~ section {
   padding: 50px 0;
   text-align: center;
   color: #666; }
-  figure ~ section > div h2 {
-    text-transform: uppercase;
-    font-weight: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 21px;
-    margin-bottom: 25px; }
-    figure ~ section > div h2 img:first-child {
-      margin-right: 15px; }
-    figure ~ section > div h2 img:last-child {
-      margin-left: 15px; }
-  figure ~ section > div ul li {
-    display: inline-block;
-    padding: 0 15px; }
-    figure ~ section > div ul li:not(:last-child) {
-      border-right: 1px solid #A5A5A5; }
-    figure ~ section > div ul li a {
-      display: block;
-      color: #A5A5A5; }
-      figure ~ section > div ul li a:hover {
-        color: #6c0002; }
-    @media (max-width: 767px) {
-      figure ~ section > div ul li {
-        border: 1px solid #A5A5A5;
-        width: 45%;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        padding: 0; }
-        figure ~ section > div ul li a {
-          padding: 10px 15px; } }
-    @media (max-width: 520px) {
-      figure ~ section > div ul li {
+  figure ~ section > div {
+    margin-bottom: 30px; }
+    figure ~ section > div h2 {
+      text-transform: uppercase;
+      font-weight: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 21px;
+      margin-bottom: 25px; }
+      figure ~ section > div h2 img:first-child {
+        margin-right: 15px; }
+      figure ~ section > div h2 img:last-child {
+        margin-left: 15px; }
+    figure ~ section > div ul li {
+      display: inline-block;
+      padding: 0 15px; }
+      figure ~ section > div ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+      figure ~ section > div ul li a {
         display: block;
-        margin: 10px auto; } }
+        color: #A5A5A5; }
+        figure ~ section > div ul li a:hover {
+          color: #6c0002; }
+      @media (max-width: 767px) {
+        figure ~ section > div ul li {
+          border: 1px solid #A5A5A5;
+          width: 45%;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          padding: 0; }
+          figure ~ section > div ul li a {
+            padding: 10px 15px; } }
+      @media (max-width: 520px) {
+        figure ~ section > div ul li {
+          display: block;
+          margin: 10px auto; } }
+  figure ~ section .carousel2 .slick-slide {
+    height: 350px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
+    margin: 0 5px; }
+    figure ~ section .carousel2 .slick-slide div:first-child {
+      height: 210px; }
+    figure ~ section .carousel2 .slick-slide div:last-child {
+      height: 140px; }
+    figure ~ section .carousel2 .slick-slide img {
+      width: 100%; }
+  figure ~ section .carousel2 i.angle.right.icon.slick-arrow,
+  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    bottom: -60px;
+    cursor: pointer;
+    color: #666;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    opacity: 0.9;
+    z-index: 9;
+    transition: all 0.3s ease-in-out; }
+  figure ~ section .carousel2 i.angle.right.icon.slick-arrow {
+    margin-left: 45px; }
+    figure ~ section .carousel2 i.angle.right.icon.slick-arrow:hover {
+      opacity: 1; }
+  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+    margin-right: 45px; }
+    figure ~ section .carousel2 i.angle.left.icon.slick-arrow:hover {
+      opacity: 1; }
+  figure ~ section .carousel2 .slick-list, figure ~ section .carousel2 .slick-track {
+    height: 100%; }
+
+/* === Framework === */
+.image-parent {
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative; }
+
+.image-cover {
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */

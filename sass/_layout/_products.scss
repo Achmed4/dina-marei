@@ -5,6 +5,7 @@ figure ~ section {
     text-align: center;
     color: $textColor;
     > div {
+        margin-bottom: 30px;
         h2 {
             text-transform: uppercase;
             font-weight: normal;
@@ -47,6 +48,59 @@ figure ~ section {
                 display: block;
                 margin: 10px auto;
             }
+        }
+    }
+    .carousel2 {
+        .slick-slide {
+            height: 350px;
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
+            margin: 0 5px;
+            div:first-child {
+                height: 210px;
+            }
+            div:last-child {
+                height: 140px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        i.angle.right.icon.slick-arrow,
+        i.angle.left.icon.slick-arrow {
+            font-size: 30px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            position: absolute;
+            bottom: -60px;
+            cursor: pointer;
+            color: $textColor;
+            border: 1px solid #c8c8c8;
+            border-radius: 3px;
+            opacity: 0.9;
+            z-index: 9;
+            transition: all 0.3s ease-in-out;
+        }
+        i.angle.right.icon.slick-arrow {
+            margin-left: 45px;
+            // right: 45%;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        i.angle.left.icon.slick-arrow {
+            margin-right: 45px;
+            // left: 45%;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .slick-list, .slick-track {
+            height: 100%;
         }
     }
 }
