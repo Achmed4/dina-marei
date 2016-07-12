@@ -3,6 +3,7 @@
 header ~ figure {
     margin: 0!important;
     // new
+    overflow: hidden;
     padding-top: 56.25%;
     position: relative;
     #main-carousel {
@@ -48,6 +49,9 @@ header ~ figure {
             &:hover {
                 opacity: 1;
             }
+        }
+        .slick-list, .slick-track, .slick-slide {
+            height: 100%;
         }
     }
 }

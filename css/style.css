@@ -298,6 +298,7 @@ header main {
 /* === Carousel 1 === */
 header ~ figure {
   margin: 0 !important;
+  overflow: hidden;
   padding-top: 56.25%;
   position: relative; }
   header ~ figure #main-carousel {
@@ -334,5 +335,7 @@ header ~ figure {
       left: -20%; }
       header ~ figure #main-carousel i.angle.left.icon.slick-arrow:hover {
         opacity: 1; }
+    header ~ figure #main-carousel .slick-list, header ~ figure #main-carousel .slick-track, header ~ figure #main-carousel .slick-slide {
+      height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
