@@ -18,6 +18,8 @@
     });
     $('header main nav > ul span').on('click', function() {
         $('header main nav > ul').fadeOut('300');
+        // Show Body Scroll
+        $('body').css('overflow-y', 'visible');
     });
 
     // Trigger Main Carousel
@@ -60,6 +62,37 @@
     //Adding Active Class to Products Links on click
     $('figure ~ section > div ul li').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    // Trigger carousel3
+    $('.carousel3').slick({
+        infinite: true,
+        arrows: false,
+        dots: true,
+        slidesToShow: 2,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+          },
+        ]
     });
 
 }());

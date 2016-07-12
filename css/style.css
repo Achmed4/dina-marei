@@ -490,6 +490,61 @@ section ~ article {
         section ~ article section div:last-child a:hover {
           background-color: #6c0002; }
 
+/* === Testimonials === */
+blockquote {
+  padding: 60px 0;
+  color: #666; }
+  blockquote h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    margin-bottom: 25px; }
+    blockquote h2 img:first-child {
+      margin-right: 15px; }
+    blockquote h2 img:last-child {
+      margin-left: 15px; }
+  blockquote .carousel3 .slick-slide {
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 15px; }
+    blockquote .carousel3 .slick-slide div:first-child {
+      width: 90px;
+      margin-right: 10px; }
+      blockquote .carousel3 .slick-slide div:first-child img {
+        width: 100%;
+        border-radius: 50%; }
+    blockquote .carousel3 .slick-slide div:last-child {
+      display: inline-block;
+      width: 90%; }
+      blockquote .carousel3 .slick-slide div:last-child cite {
+        font-weight: bold; }
+  blockquote .carousel3 .slick-dots {
+    width: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0;
+    position: relative;
+    bottom: -30px; }
+    blockquote .carousel3 .slick-dots li {
+      display: inline-block; }
+      blockquote .carousel3 .slick-dots li button {
+        border: 0;
+        outline: 0;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #A5A5A5;
+        background: #C0C0C0; }
+    blockquote .carousel3 .slick-dots .slick-active button {
+      background: #FFF; }
+
 /* === Framework === */
 hr {
   width: 50%; }
