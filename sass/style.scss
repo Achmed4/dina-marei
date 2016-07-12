@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 4000px;
+}
+
 ul,li {
     margin: 0;
     padding: 0;
@@ -23,3 +27,4 @@ i.icon, i.icons {
 
 @import "_layout/_header.scss";
 @import "_components/_carousel1.scss";
+@import "_layout/_products.scss";

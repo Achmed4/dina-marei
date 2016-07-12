@@ -140,10 +140,10 @@ header {
             // Cart
             > a {
                 position: relative;
-                border: 1px solid #666;
+                border: 1px solid $textColor;
                 margin-right: 15px;
                 padding: $ten 15px;
-                color: #666;
+                color: $textColor;
                 font-size: 20px;
                 &:hover {
                     border: 1px solid $mainColor;
@@ -200,9 +200,9 @@ header {
             }
             > button {
                 display: none;
-                border: 1px solid #666;
+                border: 1px solid $textColor;
                 padding: $ten;
-                color: #666;
+                color: $textColor;
                 font-size: 20px;
                 background: white;
                 &:hover {
@@ -280,7 +280,7 @@ header {
                 a {
                     display: block;
                     padding: $ten 15px;
-                    color: #666;
+                    color: $textColor;
                     font-size: 16px;
                 }
                 // Sub-Menu
@@ -300,7 +300,7 @@ header {
                     visibility: hidden;
                     z-index: 2;
                     > ul h3 {
-                        color: #666;
+                        color: $textColor;
                     }
                     > ul li {
                         display: block;
