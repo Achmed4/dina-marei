@@ -449,11 +449,13 @@ figure ~ section {
     z-index: 9;
     transition: all 0.3s ease-in-out; }
   figure ~ section .carousel2 i.angle.right.icon.slick-arrow {
-    margin-left: 45px; }
+    margin-right: -40px;
+    right: 50%; }
     figure ~ section .carousel2 i.angle.right.icon.slick-arrow:hover {
       opacity: 1; }
   figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
-    margin-right: 45px; }
+    margin-left: -40px;
+    left: 50%; }
     figure ~ section .carousel2 i.angle.left.icon.slick-arrow:hover {
       opacity: 1; }
   figure ~ section .carousel2 .slick-list, figure ~ section .carousel2 .slick-track {
