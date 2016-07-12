@@ -2,13 +2,11 @@
 
 header ~ figure {
     margin: 0!important;
-    // new
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
     #main-carousel {
         width: 100%;
-        // new
         position: absolute;
         top: 0;
         left: 0;
@@ -31,7 +29,7 @@ header ~ figure {
             line-height: 55px;
             position: absolute;
             top: 50%;
-            // margin-top: -15%;
+            margin-top: -27.5px;
             cursor: pointer;
             color: $textColor;
             opacity: 0.3;

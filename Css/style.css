@@ -1,0 +1,486 @@
+/* === Importing Helpers === */
+/* === Variables === */
+/* === Mixins === */
+/* === Main Style === */
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 4000px; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+i.icon, i.icons {
+  margin: 0; }
+
+/* === Importing Layout === */
+/* === Header === */
+header section {
+  background: #414141;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header section ul li {
+    display: inline-block;
+    padding: 0 10px; }
+    header section ul li:not(:last-child) {
+      border-right: 1px solid #A5A5A5; }
+    header section ul li a {
+      display: block;
+      color: #A5A5A5; }
+      header section ul li a:hover {
+        color: #C0C0C0; }
+  header section div {
+    margin-right: 5px; }
+  header section div > button {
+    display: none; }
+    @media (max-width: 450px) {
+      header section div > button {
+        display: block;
+        background: transparent;
+        border: 0;
+        color: #A5A5A5;
+        outline: 0; } }
+  header section div form:hover input {
+    width: 200px; }
+    header section div form:hover input::-webkit-input-placeholder {
+      font-size: initial; }
+    header section div form:hover input:-moz-placeholder {
+      font-size: initial; }
+    header section div form:hover input::-moz-placeholder {
+      font-size: initial; }
+    header section div form:hover input:-ms-input-placeholder {
+      font-size: initial; }
+    @media (max-width: 450px) {
+      header section div form:hover input {
+        width: 100%; } }
+  @media (max-width: 450px) {
+    header section div form {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%; }
+      header section div form:hover input {
+        width: 100%; }
+      header section div form.toggle {
+        display: none; } }
+  header section div form button {
+    color: #A5A5A5;
+    background: transparent;
+    border: 0;
+    padding: 5px 2px;
+    outline: 0;
+    transform: translateX(-27px); }
+    @media (max-width: 450px) {
+      header section div form button {
+        padding: 5px 10px;
+        position: absolute;
+        top: 2px;
+        right: -25px; } }
+  header section div form input {
+    border-right: 0;
+    border-radius: 15px;
+    border: 2px solid #A5A5A5;
+    outline: 0;
+    padding: 5px 10px;
+    height: 33px;
+    width: 30px;
+    transition: width 0.3s ease-in-out; }
+    header section div form input::-webkit-input-placeholder {
+      font-size: 0; }
+    header section div form input:-moz-placeholder {
+      font-size: 0; }
+    header section div form input::-moz-placeholder {
+      font-size: 0; }
+    header section div form input:-ms-input-placeholder {
+      font-size: 0; }
+    header section div form input:focus {
+      width: 200px; }
+    @media (max-width: 767px) {
+      header section div form input:focus {
+        width: 100%; } }
+    @media (max-width: 450px) {
+      header section div form input {
+        width: 100%;
+        background: white; }
+        header section div form input::-webkit-input-placeholder {
+          font-size: initial; }
+        header section div form input:-moz-placeholder {
+          font-size: initial; }
+        header section div form input::-moz-placeholder {
+          font-size: initial; }
+        header section div form input:-ms-input-placeholder {
+          font-size: initial; } }
+header main {
+  padding: 33px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
+  header main nav {
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header main nav > a {
+      position: relative;
+      border: 1px solid #666;
+      margin-right: 15px;
+      padding: 10px 15px;
+      color: #666;
+      font-size: 20px; }
+      header main nav > a:hover {
+        border: 1px solid #6c0002;
+        color: #6c0002; }
+        header main nav > a:hover div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > a span.ui.red.label, header main nav > a span.ui.red.labels .label {
+        background: #6c0002 !important; }
+      header main nav > a div {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 360px;
+        min-height: 125px;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 54px;
+        left: 0px;
+        z-index: 1; }
+        header main nav > a div::before {
+          content: '';
+          position: absolute;
+          top: -14px;
+          left: 5%;
+          width: 28px;
+          height: 28px;
+          background: white;
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        header main nav > a div .empty {
+          font-size: 15px;
+          text-align: center;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+      @media (max-width: 767px) {
+        header main nav > a {
+          margin-right: 20px !important; } }
+    header main nav > button {
+      display: none;
+      border: 1px solid #666;
+      padding: 10px;
+      color: #666;
+      font-size: 20px;
+      background: white; }
+      header main nav > button:hover {
+        border: 1px solid #6c0002;
+        color: #6c0002; }
+      @media (max-width: 767px) {
+        header main nav > button {
+          display: inline-block; } }
+    header main nav > ul span {
+      display: none;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      border-radius: 50%;
+      background: #6c0002;
+      color: white;
+      margin-bottom: 15px;
+      position: relative;
+      top: 1%;
+      left: 90%;
+      cursor: pointer; }
+    @media (max-width: 767px) {
+      header main nav > ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        background: #FFF;
+        width: 100%;
+        height: 100%;
+        margin-top: 0 !important;
+        overflow-y: scroll;
+        z-index: 999; }
+        header main nav > ul > span {
+          display: block; }
+        header main nav > ul > li {
+          display: block !important; }
+          header main nav > ul > li > div {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            text-align: center !important;
+            padding: 5px 0 !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            opacity: 1 !important;
+            visibility: visible !important; }
+            header main nav > ul > li > div > ul {
+              margin: 0 !important;
+              display: inline-block !important; } }
+    header main nav ul li {
+      position: relative;
+      display: inline-block;
+      border: 1px solid transparent; }
+      header main nav ul li:hover {
+        border: 1px solid #6c0002; }
+        header main nav ul li:hover a {
+          color: #6c0002; }
+      header main nav ul li.active {
+        border: 1px solid #6c0002; }
+        header main nav ul li.active a {
+          color: #6c0002; }
+      header main nav ul li a {
+        display: block;
+        padding: 10px 15px;
+        color: #666;
+        font-size: 16px; }
+      header main nav ul li div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        top: 40px;
+        max-width: 400px;
+        height: auto;
+        border: 1px solid #e3e2e2;
+        box-shadow: 0 2px 2px #cccccc;
+        padding: 15px;
+        background: white;
+        white-space: nowrap;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2; }
+        header main nav ul li div > ul h3 {
+          color: #666; }
+        header main nav ul li div > ul li {
+          display: block; }
+        @media (max-width: 880px) {
+          header main nav ul li div {
+            top: 40px; } }
+        @media (max-width: 767px) {
+          header main nav ul li div {
+            max-width: 100%; } }
+      header main nav ul li:hover div {
+        opacity: 1;
+        visibility: visible; }
+    @media (max-width: 767px) {
+      header main nav {
+        margin-right: 0 !important; } }
+  @media (max-width: 880px) {
+    header main {
+      display: block; }
+      header main figure {
+        display: block;
+        text-align: center; }
+      header main nav {
+        text-align: center;
+        display: block; }
+        header main nav > a {
+          display: inline-block;
+          margin: 10px 0; }
+        header main nav ul {
+          margin: 10px 0; } }
+
+/* === Carousel 1 === */
+header ~ figure {
+  margin: 0 !important;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative; }
+  header ~ figure #main-carousel {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+    header ~ figure #main-carousel:hover i.angle.right.icon.slick-arrow {
+      right: 1%; }
+    header ~ figure #main-carousel:hover i.angle.left.icon.slick-arrow {
+      left: 1%; }
+    header ~ figure #main-carousel div > img {
+      width: 100%; }
+    header ~ figure #main-carousel i.angle.right.icon.slick-arrow,
+    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+      font-size: 60px;
+      font-weight: bold;
+      width: 35px;
+      height: 55px;
+      line-height: 55px;
+      position: absolute;
+      top: 50%;
+      margin-top: -27.5px;
+      cursor: pointer;
+      color: #666;
+      opacity: 0.3;
+      z-index: 9;
+      transition: all 0.3s ease-in-out; }
+    header ~ figure #main-carousel i.angle.right.icon.slick-arrow {
+      right: -20%; }
+      header ~ figure #main-carousel i.angle.right.icon.slick-arrow:hover {
+        opacity: 1; }
+    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+      left: -20%; }
+      header ~ figure #main-carousel i.angle.left.icon.slick-arrow:hover {
+        opacity: 1; }
+    header ~ figure #main-carousel .slick-list, header ~ figure #main-carousel .slick-track, header ~ figure #main-carousel .slick-slide {
+      height: 100%; }
+
+/* === Products === */
+figure ~ section {
+  padding: 60px 0;
+  text-align: center;
+  color: #666; }
+  figure ~ section:after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 1px;
+    background: grey;
+    opacity: 0.5;
+    right: 50%;
+    margin-right: -250px;
+    margin-top: 115px; }
+  figure ~ section > div {
+    margin-bottom: 30px; }
+    figure ~ section > div h2 {
+      text-transform: uppercase;
+      font-weight: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 21px;
+      margin-bottom: 25px; }
+      figure ~ section > div h2 img:first-child {
+        margin-right: 15px; }
+      figure ~ section > div h2 img:last-child {
+        margin-left: 15px; }
+    figure ~ section > div ul li {
+      display: inline-block;
+      padding: 0 15px; }
+      figure ~ section > div ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+      figure ~ section > div ul li a {
+        display: block;
+        color: #A5A5A5; }
+        figure ~ section > div ul li a:hover {
+          color: #6c0002; }
+      figure ~ section > div ul li.active a {
+        color: #6c0002; }
+      @media (max-width: 767px) {
+        figure ~ section > div ul li {
+          border: 1px solid #A5A5A5;
+          width: 45%;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          padding: 0; }
+          figure ~ section > div ul li a {
+            padding: 10px 15px; } }
+      @media (max-width: 520px) {
+        figure ~ section > div ul li {
+          display: block;
+          margin: 10px auto; } }
+  figure ~ section .carousel2 .slick-slide {
+    height: 350px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
+    margin: 0 5px; }
+    figure ~ section .carousel2 .slick-slide div:first-child {
+      height: 210px; }
+      figure ~ section .carousel2 .slick-slide div:first-child img {
+        width: 100%;
+        transition: transform 0.5s ease-in-out; }
+    figure ~ section .carousel2 .slick-slide div:last-child {
+      height: 140px; }
+      figure ~ section .carousel2 .slick-slide div:last-child a {
+        display: block;
+        padding: 20px 0 !important;
+        color: #666;
+        opacity: 0.9; }
+      figure ~ section .carousel2 .slick-slide div:last-child span {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 20px; }
+      figure ~ section .carousel2 .slick-slide div:last-child button {
+        border-radius: 3px;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        color: white;
+        background-color: #666;
+        transition: background-color 0.5s ease-in-out; }
+    figure ~ section .carousel2 .slick-slide:hover a {
+      color: #6c0002 !important; }
+    figure ~ section .carousel2 .slick-slide:hover img {
+      transform: translate(-50%, -50%) scale(1.2); }
+    figure ~ section .carousel2 .slick-slide:hover button {
+      background-color: #6c0002 !important; }
+  figure ~ section .carousel2 i.angle.right.icon.slick-arrow,
+  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    bottom: -60px;
+    cursor: pointer;
+    color: #666;
+    border: 1px solid #c8c8c8;
+    border-radius: 3px;
+    opacity: 0.9;
+    z-index: 9;
+    transition: all 0.3s ease-in-out; }
+  figure ~ section .carousel2 i.angle.right.icon.slick-arrow {
+    margin-right: -40px;
+    right: 50%; }
+    figure ~ section .carousel2 i.angle.right.icon.slick-arrow:hover {
+      opacity: 1; }
+  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+    margin-left: -40px;
+    left: 50%; }
+    figure ~ section .carousel2 i.angle.left.icon.slick-arrow:hover {
+      opacity: 1; }
+  figure ~ section .carousel2 .slick-list, figure ~ section .carousel2 .slick-track {
+    height: 100%; }
+
+/* === Framework === */
+.image-parent {
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative; }
+
+.image-cover {
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=style.css.map */

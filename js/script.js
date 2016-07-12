@@ -12,6 +12,7 @@
     // Adjusting Nav Menu on Mobile
     $('header main nav > button').on('click', function() {
         $('header main nav > ul').fadeIn('300');
+        $('body').css('overflow', 'hidden');
     });
     $('header main nav > ul span').on('click', function() {
         $('header main nav > ul').fadeOut('300');
