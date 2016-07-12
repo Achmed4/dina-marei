@@ -67,6 +67,7 @@
     // Trigger carousel3
     $('.carousel3').slick({
         infinite: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         slidesToShow: 2,
