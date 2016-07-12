@@ -1,20 +1,9 @@
-/* === Products === */
+/* === Latest Products === */
 
 figure ~ section {
     padding: 60px 0;
     text-align: center;
     color: $textColor;
-    &:after {
-        content: '';
-        position: absolute;
-        width: 500px;
-        height: 1px;
-        background: grey;
-        opacity: 0.5;
-        right: 50%;
-        margin-right: -250px;
-        margin-top: 115px;
-    }
     > div {
         margin-bottom: 30px;
         h2 {
@@ -41,6 +30,7 @@ figure ~ section {
             a {
                 display: block;
                 color: $headerlinkcolor;
+                cursor: pointer;
                 &:hover {
                     color: $mainColor;
                 }
@@ -130,6 +120,10 @@ figure ~ section {
             opacity: 0.9;
             z-index: 9;
             transition: all 0.3s ease-in-out;
+            &:hover {
+                background: $textColor;
+                color: $white;
+            }
         }
         i.angle.right.icon.slick-arrow {
             margin-right: -40px;

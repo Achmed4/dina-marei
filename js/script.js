@@ -5,6 +5,7 @@
         $('header section div form').toggleClass('toggle');
     });
 
+    // Adding Active Class to Nav Links
     $('header nav ul li').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
     });
@@ -12,6 +13,7 @@
     // Adjusting Nav Menu on Mobile
     $('header main nav > button').on('click', function() {
         $('header main nav > ul').fadeIn('300');
+        // Hide Body Scroll
         $('body').css('overflow', 'hidden');
     });
     $('header main nav > ul span').on('click', function() {
@@ -53,6 +55,11 @@
               }
           },
         ]
+    });
+
+    //Adding Active Class to Products Links on click
+    $('figure ~ section > div ul li').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
     });
 
 }());

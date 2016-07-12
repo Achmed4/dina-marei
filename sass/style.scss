@@ -27,10 +27,15 @@ i.icon, i.icons {
 
 @import "_layout/_header.scss";
 @import "_components/_carousel1.scss";
-@import "_layout/_products.scss";
+@import "_layout/_featured-products.scss";
+@import "_layout/_articles.scss";
 
 
 /* === Framework === */
+
+hr {
+    width: 50%;
+}
 
 .image-parent {
     overflow: hidden;

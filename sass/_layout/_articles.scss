@@ -1,0 +1,41 @@
+/* === Articles === */
+
+section ~ article {
+    padding: 60px 0;
+    section {
+        height: 370px;
+        margin-bottom: 20px !important;
+        h3 {
+            color: $textColor;
+        }
+        div:nth-child(2) {
+            height: 210px;
+            img {
+                width: 100%;
+            }
+        }
+        div:last-child {
+            height: 140px;
+            p {
+                color: $textColor;
+                height: 60px;
+                overflow: hidden;
+                padding-top: 5%;
+                margin-bottom: 0;
+            }
+            a {
+                display: inline-block;
+                margin-top: 10px;
+                border-radius: 3px;
+                border: 1px solid transparent;
+                padding: 5px 35px;
+                color: white;
+                background-color: #666;
+                transition: background-color 0.5s ease-in-out;
+                &:hover {
+                    background-color: $mainColor;
+                }
+            }
+        }
+    }
+}
