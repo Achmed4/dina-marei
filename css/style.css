@@ -544,8 +544,9 @@ blockquote {
 
 /* === Footer === */
 blockquote ~ footer {
-  padding: 60px 0;
   background: #E0E0E0; }
+  blockquote ~ footer .row {
+    padding: 60px 0 !important; }
   blockquote ~ footer .row > div {
     text-align: left;
     margin-bottom: 25px !important; }
@@ -576,14 +577,39 @@ blockquote ~ footer {
         border: 0;
         outline: 0;
         padding: 5px 10px; }
-      blockquote ~ footer .row > div form a {
+      blockquote ~ footer .row > div form button {
         display: inline-block;
-        width: 25px;
-        height: 100%;
-        transform: translateX(-25px); }
-    @media (max-width: 767px) {
+        width: 45px;
+        transform: translateX(-24px);
+        border: 0;
+        outline: 0;
+        background: antiquewhite;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px; }
+    @media (max-width: 991px) {
       blockquote ~ footer .row > div {
         text-align: center; } }
+  blockquote ~ footer > div:last-child {
+    width: 100%;
+    height: auto;
+    background-color: #414141;
+    text-align: center;
+    padding: 15px 0; }
+    blockquote ~ footer > div:last-child ul {
+      margin: 10px 0; }
+      blockquote ~ footer > div:last-child ul li {
+        display: inline-block;
+        padding: 0 15px; }
+        blockquote ~ footer > div:last-child ul li a {
+          display: block;
+          color: #C0C0C0; }
+      blockquote ~ footer > div:last-child ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+    blockquote ~ footer > div:last-child p {
+      color: #C0C0C0; }
+      blockquote ~ footer > div:last-child p a {
+        font-weight: bold;
+        color: #C0C0C0; }
 
 /* === Framework === */
 hr {
