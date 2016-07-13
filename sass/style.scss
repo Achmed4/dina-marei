@@ -9,10 +9,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 4000px;
-}
-
 ul,li {
     margin: 0;
     padding: 0;
@@ -30,6 +26,7 @@ i.icon, i.icons {
 @import "_layout/_featured-products.scss";
 @import "_layout/_articles.scss";
 @import "_layout/_testimonials.scss";
+@import "_layout/_footer.scss";
 
 
 /* === Framework === */
