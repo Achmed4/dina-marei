@@ -556,6 +556,17 @@ blockquote ~ footer {
       width: 100%; }
       blockquote ~ footer .row > div table td:first-child {
         padding: 0 15px 15px 0; }
+      blockquote ~ footer .row > div table ~ ul li {
+        display: inline-block;
+        margin-bottom: 0px; }
+        blockquote ~ footer .row > div table ~ ul li a {
+          display: block;
+          padding: 10px;
+          margin-right: 5px;
+          border-radius: 50%;
+          border: 1px solid #A5A5A5; }
+        blockquote ~ footer .row > div table ~ ul li:hover a {
+          background: antiquewhite; }
     blockquote ~ footer .row > div a {
       color: #666; }
       blockquote ~ footer .row > div a:hover {

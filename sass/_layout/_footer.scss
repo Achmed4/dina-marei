@@ -16,6 +16,22 @@ blockquote ~ footer {
             td:first-child {
                 padding: 0 15px 15px 0;
             }
+            & ~ ul li {
+                display: inline-block;
+                margin-bottom: 0px;
+                a {
+                    display: block;
+                    padding: 10px;
+                    margin-right: 5px;
+                    border-radius: 50%;
+                    border: 1px solid $headerlinkcolor;
+                }
+                &:hover {
+                    a {
+                        background: antiquewhite;
+                    }
+                }
+            }
         }
         a {
             color: $textColor;
