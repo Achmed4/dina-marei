@@ -10,9 +10,6 @@ ul, li {
   padding: 0;
   list-style: none; }
 
-i.icon, i.icons {
-  margin: 0; }
-
 /* === Importing Layout === */
 /* === Header === */
 header section {
@@ -308,14 +305,14 @@ header ~ figure {
     top: 0;
     left: 0;
     height: 100%; }
-    header ~ figure #main-carousel:hover i.angle.right.icon.slick-arrow {
+    header ~ figure #main-carousel:hover i.fa.fa-angle-right.slick-arrow {
       right: 1%; }
-    header ~ figure #main-carousel:hover i.angle.left.icon.slick-arrow {
+    header ~ figure #main-carousel:hover i.fa.fa-angle-left.slick-arrow {
       left: 1%; }
     header ~ figure #main-carousel div > img {
       width: 100%; }
-    header ~ figure #main-carousel i.angle.right.icon.slick-arrow,
-    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+    header ~ figure #main-carousel i.fa.fa-angle-right.slick-arrow,
+    header ~ figure #main-carousel i.fa.fa-angle-left.slick-arrow {
       font-size: 60px;
       font-weight: bold;
       width: 35px;
@@ -329,18 +326,18 @@ header ~ figure {
       opacity: 0.3;
       z-index: 9;
       transition: all 0.3s ease-in-out; }
-    header ~ figure #main-carousel i.angle.right.icon.slick-arrow {
+    header ~ figure #main-carousel i.fa.fa-angle-right.slick-arrow {
       right: -20%; }
-      header ~ figure #main-carousel i.angle.right.icon.slick-arrow:hover {
+      header ~ figure #main-carousel i.fa.fa-angle-right.slick-arrow:hover {
         opacity: 1; }
-    header ~ figure #main-carousel i.angle.left.icon.slick-arrow {
+    header ~ figure #main-carousel i.fa.fa-angle-left.slick-arrow {
       left: -20%; }
-      header ~ figure #main-carousel i.angle.left.icon.slick-arrow:hover {
+      header ~ figure #main-carousel i.fa.fa-angle-left.slick-arrow:hover {
         opacity: 1; }
     header ~ figure #main-carousel .slick-list, header ~ figure #main-carousel .slick-track, header ~ figure #main-carousel .slick-slide {
       height: 100%; }
 
-/* === Latest Products === */
+/* === Featured & Latest Products === */
 figure ~ section {
   padding: 60px 0;
   text-align: center;
@@ -423,8 +420,8 @@ figure ~ section {
       transform: translate(-50%, -50%) scale(1.2); }
     figure ~ section .carousel2 .slick-slide:hover button {
       background-color: #6c0002 !important; }
-  figure ~ section .carousel2 i.angle.right.icon.slick-arrow,
-  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+  figure ~ section .carousel2 i.fa.fa-angle-right.slick-arrow,
+  figure ~ section .carousel2 i.fa.fa-angle-left.slick-arrow {
     font-size: 30px;
     width: 35px;
     height: 35px;
@@ -438,19 +435,19 @@ figure ~ section {
     opacity: 0.9;
     z-index: 9;
     transition: all 0.3s ease-in-out; }
-    figure ~ section .carousel2 i.angle.right.icon.slick-arrow:hover,
-    figure ~ section .carousel2 i.angle.left.icon.slick-arrow:hover {
+    figure ~ section .carousel2 i.fa.fa-angle-right.slick-arrow:hover,
+    figure ~ section .carousel2 i.fa.fa-angle-left.slick-arrow:hover {
       background: #666;
       color: white; }
-  figure ~ section .carousel2 i.angle.right.icon.slick-arrow {
+  figure ~ section .carousel2 i.fa.fa-angle-right.slick-arrow {
     margin-right: -40px;
     right: 50%; }
-    figure ~ section .carousel2 i.angle.right.icon.slick-arrow:hover {
+    figure ~ section .carousel2 i.fa.fa-angle-right.slick-arrow:hover {
       opacity: 1; }
-  figure ~ section .carousel2 i.angle.left.icon.slick-arrow {
+  figure ~ section .carousel2 i.fa.fa-angle-left.slick-arrow {
     margin-left: -40px;
     left: 50%; }
-    figure ~ section .carousel2 i.angle.left.icon.slick-arrow:hover {
+    figure ~ section .carousel2 i.fa.fa-angle-left.slick-arrow:hover {
       opacity: 1; }
   figure ~ section .carousel2 .slick-list, figure ~ section .carousel2 .slick-track {
     height: 100%; }

@@ -24,15 +24,15 @@
 
     // Trigger Main Carousel
     $('figure > div').slick({
-        prevArrow: "<i class='angle right icon'></i>",
-        nextArrow: "<i class='angle left icon'></i>",
+        prevArrow: "<i class='fa fa-angle-right'></i>",
+        nextArrow: "<i class='fa fa-angle-left'></i>",
     });
 
     // Trigger Carousel2
     $('.carousel2').slick({
         infinite: true,
-        prevArrow: "<i class='angle right icon'></i>",
-        nextArrow: "<i class='angle left icon'></i>",
+        prevArrow: "<i class='fa fa-angle-right'></i>",
+        nextArrow: "<i class='fa fa-angle-left'></i>",
         slidesToShow: 5,
         slidesToScroll: 5,
         responsive: [

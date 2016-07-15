@@ -1,4 +1,4 @@
-/* === Latest Products === */
+/* === Featured & Latest Products === */
 
 figure ~ section {
     padding: 60px 0;
@@ -105,8 +105,8 @@ figure ~ section {
                 }
             }
         }
-        i.angle.right.icon.slick-arrow,
-        i.angle.left.icon.slick-arrow {
+        i.fa.fa-angle-right.slick-arrow,
+        i.fa.fa-angle-left.slick-arrow {
             font-size: 30px;
             width: 35px;
             height: 35px;
@@ -125,14 +125,14 @@ figure ~ section {
                 color: $white;
             }
         }
-        i.angle.right.icon.slick-arrow {
+        i.fa.fa-angle-right.slick-arrow {
             margin-right: -40px;
             right: 50%;
             &:hover {
                 opacity: 1;
             }
         }
-        i.angle.left.icon.slick-arrow {
+        i.fa.fa-angle-left.slick-arrow {
             margin-left: -40px;
             left: 50%;
             &:hover {

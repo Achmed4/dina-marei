@@ -11,17 +11,17 @@ header ~ figure {
         top: 0;
         left: 0;
         height: 100%;
-        &:hover i.angle.right.icon.slick-arrow {
+        &:hover i.fa.fa-angle-right.slick-arrow {
             right: 1%;
         }
-        &:hover i.angle.left.icon.slick-arrow {
+        &:hover i.fa.fa-angle-left.slick-arrow {
             left: 1%;
         }
         div > img {
             width: 100%;
         }
-        i.angle.right.icon.slick-arrow,
-        i.angle.left.icon.slick-arrow {
+        i.fa.fa-angle-right.slick-arrow,
+        i.fa.fa-angle-left.slick-arrow {
             font-size: 60px;
             font-weight: bold;
             width: 35px;
@@ -36,13 +36,13 @@ header ~ figure {
             z-index: 9;
             transition: all 0.3s ease-in-out;
         }
-        i.angle.right.icon.slick-arrow {
+        i.fa.fa-angle-right.slick-arrow {
             right: -20%;
             &:hover {
                 opacity: 1;
             }
         }
-        i.angle.left.icon.slick-arrow {
+        i.fa.fa-angle-left.slick-arrow {
             left: -20%;
             &:hover {
                 opacity: 1;
