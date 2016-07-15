@@ -13,102 +13,101 @@ ul, li {
 /* === Importing Layout === */
 /* === Header === */
 header section {
-  background: #414141;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  header section ul li {
-    display: inline-block;
-    padding: 0 10px; }
-    header section ul li:not(:last-child) {
-      border-right: 1px solid #A5A5A5; }
-    header section ul li a {
-      display: block;
-      color: #A5A5A5; }
-      header section ul li a:hover {
-        color: #C0C0C0; }
-  header section div {
-    margin-right: 5px; }
-  header section div > button {
-    display: none; }
-    @media (max-width: 450px) {
-      header section div > button {
+  background: #414141; }
+  header section .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header section .container ul li {
+      display: inline-block;
+      padding: 0 10px; }
+      header section .container ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+      header section .container ul li a {
         display: block;
-        background: transparent;
-        border: 0;
-        color: #A5A5A5;
-        outline: 0; } }
-  header section div form:hover input {
-    width: 200px; }
-    header section div form:hover input::-webkit-input-placeholder {
-      font-size: initial; }
-    header section div form:hover input:-moz-placeholder {
-      font-size: initial; }
-    header section div form:hover input::-moz-placeholder {
-      font-size: initial; }
-    header section div form:hover input:-ms-input-placeholder {
-      font-size: initial; }
-    @media (max-width: 450px) {
-      header section div form:hover input {
-        width: 100%; } }
-  @media (max-width: 450px) {
-    header section div form {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%; }
-      header section div form:hover input {
-        width: 100%; }
-      header section div form.toggle {
-        display: none; } }
-  header section div form button {
-    color: #A5A5A5;
-    background: transparent;
-    border: 0;
-    padding: 5px 2px;
-    outline: 0;
-    transform: translateX(-27px); }
-    @media (max-width: 450px) {
-      header section div form button {
-        padding: 5px 10px;
-        position: absolute;
-        top: 2px;
-        right: -25px; } }
-  header section div form input {
-    border-right: 0;
-    border-radius: 15px;
-    border: 2px solid #A5A5A5;
-    outline: 0;
-    padding: 5px 10px;
-    height: 33px;
-    width: 30px;
-    transition: width 0.3s ease-in-out; }
-    header section div form input::-webkit-input-placeholder {
-      font-size: 0; }
-    header section div form input:-moz-placeholder {
-      font-size: 0; }
-    header section div form input::-moz-placeholder {
-      font-size: 0; }
-    header section div form input:-ms-input-placeholder {
-      font-size: 0; }
-    header section div form input:focus {
+        color: #A5A5A5; }
+        header section .container ul li a:hover {
+          color: #C0C0C0; }
+    header section .container div > button {
+      display: none; }
+      @media (max-width: 450px) {
+        header section .container div > button {
+          display: block;
+          background: transparent;
+          border: 0;
+          color: #A5A5A5;
+          outline: 0; } }
+    header section .container div form:hover input {
       width: 200px; }
-    @media (max-width: 767px) {
-      header section div form input:focus {
-        width: 200px; } }
+      header section .container div form:hover input::-webkit-input-placeholder {
+        font-size: initial; }
+      header section .container div form:hover input:-moz-placeholder {
+        font-size: initial; }
+      header section .container div form:hover input::-moz-placeholder {
+        font-size: initial; }
+      header section .container div form:hover input:-ms-input-placeholder {
+        font-size: initial; }
+      @media (max-width: 450px) {
+        header section .container div form:hover input {
+          width: 100%; } }
     @media (max-width: 450px) {
-      header section div form input {
-        width: 100%;
-        background: white; }
-        header section div form input::-webkit-input-placeholder {
-          font-size: initial; }
-        header section div form input:-moz-placeholder {
-          font-size: initial; }
-        header section div form input::-moz-placeholder {
-          font-size: initial; }
-        header section div form input:-ms-input-placeholder {
-          font-size: initial; } }
+      header section .container div form {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%; }
+        header section .container div form:hover input {
+          width: 100%; }
+        header section .container div form.toggle {
+          display: none; } }
+    header section .container div form button {
+      color: #A5A5A5;
+      background: transparent;
+      border: 0;
+      padding: 5px 2px;
+      outline: 0;
+      transform: translateX(-27px); }
+      @media (max-width: 450px) {
+        header section .container div form button {
+          padding: 5px 10px;
+          position: absolute;
+          top: 2px;
+          right: -25px; } }
+    header section .container div form input {
+      border-right: 0;
+      border-radius: 15px;
+      border: 2px solid #A5A5A5;
+      outline: 0;
+      padding: 5px 10px;
+      height: 33px;
+      width: 30px;
+      transition: width 0.3s ease-in-out; }
+      header section .container div form input::-webkit-input-placeholder {
+        font-size: 0; }
+      header section .container div form input:-moz-placeholder {
+        font-size: 0; }
+      header section .container div form input::-moz-placeholder {
+        font-size: 0; }
+      header section .container div form input:-ms-input-placeholder {
+        font-size: 0; }
+      header section .container div form input:focus {
+        width: 200px; }
+      @media (max-width: 767px) {
+        header section .container div form input:focus {
+          width: 200px; } }
+      @media (max-width: 450px) {
+        header section .container div form input {
+          width: 100%;
+          background: white; }
+          header section .container div form input::-webkit-input-placeholder {
+            font-size: initial; }
+          header section .container div form input:-moz-placeholder {
+            font-size: initial; }
+          header section .container div form input::-moz-placeholder {
+            font-size: initial; }
+          header section .container div form input:-ms-input-placeholder {
+            font-size: initial; } }
 header main {
   padding: 33px 0 5px;
   display: flex;
@@ -297,7 +296,7 @@ header main {
 header ~ figure {
   margin: 0 !important;
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 30%;
   position: relative; }
   header ~ figure #main-carousel {
     width: 100%;
@@ -542,80 +541,84 @@ blockquote {
 /* === Footer === */
 blockquote ~ footer {
   background: #E0E0E0; }
-  blockquote ~ footer .row {
-    padding: 60px 0 !important; }
-  blockquote ~ footer .row > div {
-    text-align: left;
-    margin-bottom: 25px !important; }
-    blockquote ~ footer .row > div h4 {
-      color: #666; }
-    blockquote ~ footer .row > div table {
-      width: 100%; }
-      blockquote ~ footer .row > div table td:first-child {
-        padding: 0 15px 15px 0; }
-      blockquote ~ footer .row > div table ~ ul li {
-        display: inline-block;
-        margin-bottom: 0px; }
-        blockquote ~ footer .row > div table ~ ul li a {
-          display: block;
-          padding: 10px;
+  blockquote ~ footer main {
+    padding: 60px 0;
+    overflow: hidden; }
+    blockquote ~ footer main .container > div {
+      text-align: left;
+      margin-bottom: 25px !important;
+      padding: 10px; }
+      blockquote ~ footer main .container > div h4 {
+        color: #666; }
+      blockquote ~ footer main .container > div table {
+        width: 100%; }
+        blockquote ~ footer main .container > div table td:first-child {
+          padding: 0 15px 15px 0; }
+        blockquote ~ footer main .container > div table ~ ul li {
+          display: inline-block;
+          margin-bottom: 0px;
           margin-right: 5px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
           border-radius: 50%;
           border: 1px solid #A5A5A5; }
-        blockquote ~ footer .row > div table ~ ul li:hover a {
-          background: antiquewhite; }
-    blockquote ~ footer .row > div a {
-      color: #666; }
-      blockquote ~ footer .row > div a:hover {
-        color: #6c0002; }
-    blockquote ~ footer .row > div li {
-      margin-bottom: 10px; }
-      blockquote ~ footer .row > div li a {
-        display: block; }
-    blockquote ~ footer .row > div p {
-      color: #666; }
-    blockquote ~ footer .row > div form {
-      width: 100%;
-      height: 30px;
-      line-height: 30px; }
-      blockquote ~ footer .row > div form input {
-        width: 60%;
-        height: 100%;
-        border-radius: 20px;
-        border: 0;
-        outline: 0;
-        padding: 5px 10px; }
-      blockquote ~ footer .row > div form button {
-        display: inline-block;
-        width: 45px;
-        transform: translateX(-24px);
-        border: 0;
-        outline: 0;
-        background: antiquewhite;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px; }
-    @media (max-width: 991px) {
-      blockquote ~ footer .row > div {
-        text-align: center; } }
-  blockquote ~ footer > div:last-child {
+          blockquote ~ footer main .container > div table ~ ul li a {
+            display: block; }
+          blockquote ~ footer main .container > div table ~ ul li:hover {
+            background: antiquewhite; }
+      blockquote ~ footer main .container > div a {
+        color: #666; }
+        blockquote ~ footer main .container > div a:hover {
+          color: #6c0002; }
+      blockquote ~ footer main .container > div li {
+        margin-bottom: 10px; }
+        blockquote ~ footer main .container > div li a {
+          display: block; }
+      blockquote ~ footer main .container > div p {
+        color: #666; }
+      blockquote ~ footer main .container > div form {
+        width: 100%;
+        height: 30px;
+        line-height: 30px; }
+        blockquote ~ footer main .container > div form input {
+          width: 60%;
+          height: 100%;
+          border-radius: 20px;
+          border: 0;
+          outline: 0;
+          padding: 5px 10px; }
+        blockquote ~ footer main .container > div form button {
+          display: inline-block;
+          width: 45px;
+          transform: translateX(-24px);
+          border: 0;
+          outline: 0;
+          background: antiquewhite;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px; }
+      @media (max-width: 991px) {
+        blockquote ~ footer main .container > div {
+          text-align: center; } }
+  blockquote ~ footer > div.sub-footer {
     width: 100%;
     height: auto;
     background-color: #414141;
     text-align: center;
     padding: 15px 0; }
-    blockquote ~ footer > div:last-child ul {
+    blockquote ~ footer > div.sub-footer ul {
       margin: 10px 0; }
-      blockquote ~ footer > div:last-child ul li {
+      blockquote ~ footer > div.sub-footer ul li {
         display: inline-block;
         padding: 0 15px; }
-        blockquote ~ footer > div:last-child ul li a {
+        blockquote ~ footer > div.sub-footer ul li a {
           display: block;
           color: #C0C0C0; }
-      blockquote ~ footer > div:last-child ul li:not(:last-child) {
+      blockquote ~ footer > div.sub-footer ul li:not(:last-child) {
         border-right: 1px solid #A5A5A5; }
-    blockquote ~ footer > div:last-child p {
+    blockquote ~ footer > div.sub-footer p {
       color: #C0C0C0; }
-      blockquote ~ footer > div:last-child p a {
+      blockquote ~ footer > div.sub-footer p a {
         font-weight: bold;
         color: #C0C0C0; }
 
