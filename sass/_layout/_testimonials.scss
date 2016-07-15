@@ -60,6 +60,7 @@ blockquote {
                     height: 15px;
                     border: 1px solid $headerlinkcolor;
                     background: $headerlinkhover;
+                    display: block;
                 }
             }
             .slick-active {

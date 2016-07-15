@@ -467,7 +467,7 @@ section ~ article {
       height: 140px; }
       section ~ article section div:last-child p {
         color: #666;
-        height: 60px;
+        height: 54px;
         overflow: hidden;
         padding-top: 5%;
         margin-bottom: 0; }
@@ -534,7 +534,8 @@ blockquote {
         width: 15px;
         height: 15px;
         border: 1px solid #A5A5A5;
-        background: #C0C0C0; }
+        background: #C0C0C0;
+        display: block; }
     blockquote .carousel3 .slick-dots .slick-active button {
       background: #FFF; }
 
@@ -562,7 +563,8 @@ blockquote ~ footer {
           height: 40px;
           line-height: 40px;
           border-radius: 50%;
-          border: 1px solid #A5A5A5; }
+          border: 1px solid #A5A5A5;
+          text-align: center; }
           blockquote ~ footer main .container > div table ~ ul li a {
             display: block; }
           blockquote ~ footer main .container > div table ~ ul li:hover {
