@@ -4,131 +4,131 @@ header {
     // Top Bar
     section {
         background: $headerbg;
-        height: 50px;
-        @include flexbox($justify-content: space-between);
-        ul li {
-            display: inline-block;
-            padding: $zero $ten;
-            &:not(:last-child) {
-                border-right: 1px solid $headerlinkcolor;
-            }
-            a {
-                display: block;
-                color: $headerlinkcolor;
-                &:hover {
-                    color: $headerlinkhover;
+        .container {
+            height: 50px;
+            @include flexbox($justify-content: space-between);
+            ul li {
+                display: inline-block;
+                padding: $zero $ten;
+                &:not(:last-child) {
+                    border-right: 1px solid $headerlinkcolor;
+                }
+                a {
+                    display: block;
+                    color: $headerlinkcolor;
+                    &:hover {
+                        color: $headerlinkhover;
+                    }
                 }
             }
-        }
-        div {
-            margin-right: 5px;
-        }
-        div > button {
-            display: none;
-            @media (max-width: 450px) {
-                display: block;
-                background: $transparent;
-                border: $zero;
-                color: $headerlinkcolor;
-                outline: $zero;
+            div > button {
+                display: none;
+                @media (max-width: 450px) {
+                    display: block;
+                    background: $transparent;
+                    border: $zero;
+                    color: $headerlinkcolor;
+                    outline: $zero;
+                }
             }
-        }
-        div form {
-            &:hover input {
-                width: 200px;
-                &::-webkit-input-placeholder {
-                   font-size: initial;
-                }
-                &:-moz-placeholder {
-                   font-size: initial;
-                }
-                &::-moz-placeholder {
-                   font-size: initial;
-                }
+            div form {
+                &:hover input {
+                    width: 200px;
+                    &::-webkit-input-placeholder {
+                       font-size: initial;
+                    }
+                    &:-moz-placeholder {
+                       font-size: initial;
+                    }
+                    &::-moz-placeholder {
+                       font-size: initial;
+                    }
 
-                &:-ms-input-placeholder {
-                   font-size: initial;
+                    &:-ms-input-placeholder {
+                       font-size: initial;
+                    }
+                    @media (max-width: 450px) {
+                        width: 100%;
+                    }
                 }
                 @media (max-width: 450px) {
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
                     width: 100%;
+                    &:hover input {
+                        width: 100%;
+                    }
+                    &.toggle {
+                        display: none;
+                    }
                 }
             }
-            @media (max-width: 450px) {
-                position: absolute;
-                top: 50px;
-                left: 0;
-                width: 100%;
-                &:hover input {
-                    width: 100%;
+            div form button {
+                color: $headerlinkcolor;
+                background: $transparent;
+                border: $zero;
+                padding: 5px 2px;
+                outline: $zero;
+                transform: translateX(-27px);
+                @media (max-width: 450px) {
+                    padding: 5px 10px;
+                    position: absolute;
+                    top: 2px;
+                    right: -25px;
                 }
-                &.toggle {
-                    display: none;
+            }
+            div form input {
+                border-right: $zero;
+                border-radius: 15px;
+                border: 2px solid $headerlinkcolor;
+                outline: $zero;
+                padding: 5px $ten;
+                height: 33px;
+                width: 30px;
+                transition: width 0.3s ease-in-out;
+                &::-webkit-input-placeholder {
+                   font-size: $zero;
                 }
-            }
-        }
-        div form button {
-            color: $headerlinkcolor;
-            background: $transparent;
-            border: $zero;
-            padding: 5px 2px;
-            outline: $zero;
-            transform: translateX(-27px);
-            @media (max-width: 450px) {
-                padding: 5px 10px;
-                position: absolute;
-                top: 2px;
-                right: -25px;
-            }
-        }
-        div form input {
-            border-right: $zero;
-            border-radius: 15px;
-            border: 2px solid $headerlinkcolor;
-            outline: $zero;
-            padding: 5px $ten;
-            height: 33px;
-            width: 30px;
-            transition: width 0.3s ease-in-out;
-            &::-webkit-input-placeholder {
-               font-size: $zero;
-            }
-            &:-moz-placeholder {
-               font-size: $zero;
-            }
-            &::-moz-placeholder {
-               font-size: $zero;
-            }
-            &:-ms-input-placeholder {
-               font-size: $zero;
-            }
-            &:focus {
-                width: 200px;
-            }
-            @media (max-width: 767px) {
+                &:-moz-placeholder {
+                   font-size: $zero;
+                }
+                &::-moz-placeholder {
+                   font-size: $zero;
+                }
+                &:-ms-input-placeholder {
+                   font-size: $zero;
+                }
                 &:focus {
                     width: 200px;
                 }
-            }
-            @media (max-width: 450px) {
-                width: 100%;
-                background: $white;
-                &::-webkit-input-placeholder {
-                   font-size: initial;
+                @media (max-width: 767px) {
+                    &:focus {
+                        width: 200px;
+                    }
                 }
-                &:-moz-placeholder {
-                   font-size: initial;
+                @media (max-width: 450px) {
+                    width: 100%;
+                    background: $white;
+                    &::-webkit-input-placeholder {
+                       font-size: initial;
+                    }
+                    &:-moz-placeholder {
+                       font-size: initial;
+                    }
+                    &::-moz-placeholder {
+                       font-size: initial;
+                    }
+                    &:-ms-input-placeholder {
+                       font-size: initial;
+                    }
                 }
-                &::-moz-placeholder {
-                   font-size: initial;
-                }
-                &:-ms-input-placeholder {
-                   font-size: initial;
-                }
+
             }
 
         }
-
     }
+
     // Main Header
     main {
         padding: 33px $zero 5px;
