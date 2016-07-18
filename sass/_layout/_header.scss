@@ -104,11 +104,6 @@ header {
                     &:focus {
                         width: 200px;
                     }
-                    // @media (max-width: 767px) {
-                    //     &:focus {
-                    //         width: 200px;
-                    //     }
-                    // }
                     @media (max-width: 460px) {
                         width: 100%;
                         background: $white;
