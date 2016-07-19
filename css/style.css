@@ -19,98 +19,131 @@ header section {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    header section .container ul li {
+    header section .container > ul li {
       display: inline-block;
       padding: 0 10px; }
-      header section .container ul li:not(:last-child) {
+      header section .container > ul li:not(:last-child) {
         border-right: 1px solid #A5A5A5; }
-      header section .container ul li a {
+      header section .container > ul li a {
         display: block;
         color: #A5A5A5; }
-        header section .container ul li a:hover {
+        header section .container > ul li a:hover {
           color: #C0C0C0; }
-    header section .container div > button {
-      display: none; }
-      @media (max-width: 460px) {
-        header section .container div > button {
-          display: block;
-          background: transparent;
-          border: 0;
-          color: #A5A5A5;
-          outline: 0; } }
-    header section .container div form {
-      position: relative;
+    header section .container div {
       margin-right: 10px; }
-      header section .container div form:hover input {
-        width: 200px; }
-        header section .container div form:hover input::-webkit-input-placeholder {
-          font-size: initial; }
-        header section .container div form:hover input:-moz-placeholder {
-          font-size: initial; }
-        header section .container div form:hover input::-moz-placeholder {
-          font-size: initial; }
-        header section .container div form:hover input:-ms-input-placeholder {
-          font-size: initial; }
-        @media (max-width: 460px) {
-          header section .container div form:hover input {
-            width: 100%; } }
-      @media (max-width: 460px) {
-        header section .container div form {
-          position: absolute;
-          top: 50px;
-          left: 0;
-          width: 100%; }
-          header section .container div form:hover input {
-            width: 100%; }
-          header section .container div form.toggle {
-            display: none; } }
-      header section .container div form button {
-        color: #A5A5A5;
+      header section .container div > button {
         background: transparent;
         border: 0;
-        padding: 5px 8px;
-        outline: 0;
-        transform: translateX(-30px);
-        position: absolute; }
-        @media (max-width: 460px) {
-          header section .container div form button {
-            padding: 5px 8px;
-            position: absolute;
-            top: 1px;
-            right: -30px; } }
-      header section .container div form input {
-        border-right: 0;
-        border-radius: 15px;
-        border: 2px solid #A5A5A5;
-        outline: 0;
-        padding: 5px 10px;
-        height: 30px;
-        width: 30px;
-        transition: width 0.3s ease-in-out; }
-        header section .container div form input::-webkit-input-placeholder {
-          font-size: 0; }
-        header section .container div form input:-moz-placeholder {
-          font-size: 0; }
-        header section .container div form input::-moz-placeholder {
-          font-size: 0; }
-        header section .container div form input:-ms-input-placeholder {
-          font-size: 0; }
-        header section .container div form input:focus {
+        color: #A5A5A5;
+        outline: 0; }
+        header section .container div > button:first-child {
+          display: none; }
+          @media (max-width: 471px) {
+            header section .container div > button:first-child {
+              display: inline-block; } }
+        header section .container div > button:nth-child(2) {
+          display: inline-block; }
+      header section .container div ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 90px;
+        background: #414141;
+        min-width: 150px;
+        height: 40px;
+        line-height: 40px;
+        justify-content: space-around;
+        align-items: center; }
+        @media (max-width: 1200px) {
+          header section .container div ul {
+            right: 10px; } }
+        header section .container div ul li {
+          display: inline-block;
+          height: 100%; }
+          header section .container div ul li:not(:last-child) {
+            border-right: 1px solid #222; }
+          header section .container div ul li a {
+            display: block;
+            padding: 0 15px;
+            color: #A5A5A5; }
+            header section .container div ul li a:hover {
+              color: #DA0060; }
+        header section .container div ul.toggle {
+          display: block; }
+      header section .container div form {
+        position: relative;
+        margin-right: 5px;
+        display: inline-block; }
+        header section .container div form:hover input {
           width: 200px; }
-        @media (max-width: 460px) {
-          header section .container div form input {
-            width: 100%;
-            background: white; }
-            header section .container div form input:focus {
+          header section .container div form:hover input::-webkit-input-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input:-moz-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input::-moz-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input:-ms-input-placeholder {
+            font-size: initial; }
+          @media (max-width: 471px) {
+            header section .container div form:hover input {
+              width: 100%; } }
+        @media (max-width: 471px) {
+          header section .container div form {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%; }
+            header section .container div form:hover input {
               width: 100%; }
-            header section .container div form input::-webkit-input-placeholder {
-              font-size: initial; }
-            header section .container div form input:-moz-placeholder {
-              font-size: initial; }
-            header section .container div form input::-moz-placeholder {
-              font-size: initial; }
-            header section .container div form input:-ms-input-placeholder {
-              font-size: initial; } }
+            header section .container div form.toggle {
+              display: none; } }
+        header section .container div form button {
+          color: #A5A5A5;
+          background: transparent;
+          border: 0;
+          padding: 5px 8px;
+          outline: 0;
+          transform: translateX(-30px);
+          position: absolute; }
+          @media (max-width: 460px) {
+            header section .container div form button {
+              padding: 5px 8px;
+              position: absolute;
+              top: 1px;
+              right: -30px; } }
+        header section .container div form input {
+          border-right: 0;
+          border-radius: 15px;
+          border: 2px solid #A5A5A5;
+          outline: 0;
+          padding: 5px 10px;
+          height: 30px;
+          width: 30px;
+          transition: width 0.3s ease-in-out; }
+          header section .container div form input::-webkit-input-placeholder {
+            font-size: 0; }
+          header section .container div form input:-moz-placeholder {
+            font-size: 0; }
+          header section .container div form input::-moz-placeholder {
+            font-size: 0; }
+          header section .container div form input:-ms-input-placeholder {
+            font-size: 0; }
+          header section .container div form input:focus {
+            width: 200px; }
+          @media (max-width: 460px) {
+            header section .container div form input {
+              width: 100%;
+              background: white; }
+              header section .container div form input:focus {
+                width: 100%; }
+              header section .container div form input::-webkit-input-placeholder {
+                font-size: initial; }
+              header section .container div form input:-moz-placeholder {
+                font-size: initial; }
+              header section .container div form input::-moz-placeholder {
+                font-size: initial; }
+              header section .container div form input:-ms-input-placeholder {
+                font-size: initial; } }
 header main {
   padding: 33px 0 5px;
   display: flex;

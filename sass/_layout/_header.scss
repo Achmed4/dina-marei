@@ -7,7 +7,7 @@ header {
         .container {
             height: 50px;
             @include flexbox($justify-content: space-between);
-            ul li {
+            > ul li {
                 display: inline-block;
                 padding: $zero $ten;
                 &:not(:last-child) {
@@ -21,95 +21,62 @@ header {
                     }
                 }
             }
-            div > button {
-                display: none;
-                @media (max-width: 460px) {
-                    display: block;
+            div {
+                margin-right: $ten;
+                > button {
                     background: $transparent;
                     border: $zero;
                     color: $headerlinkcolor;
                     outline: $zero;
-                }
-            }
-            div form {
-                position: relative;
-                margin-right: 10px;
-                &:hover input {
-                    width: 200px;
-                    &::-webkit-input-placeholder {
-                       font-size: initial;
+                    &:first-child {
+                        display: none;
+                        @media (max-width: 471px) { //460px
+                            display: inline-block;
+                        }
                     }
-                    &:-moz-placeholder {
-                       font-size: initial;
-                    }
-                    &::-moz-placeholder {
-                       font-size: initial;
-                    }
-
-                    &:-ms-input-placeholder {
-                       font-size: initial;
-                    }
-                    @media (max-width: 460px) {
-                        width: 100%;
+                    &:nth-child(2) {
+                        display: inline-block;
                     }
                 }
-                @media (max-width: 460px) {
+                ul {
+                    display: none;
                     position: absolute;
                     top: 50px;
-                    left: 0;
-                    width: 100%;
-                    &:hover input {
-                        width: 100%;
+                    right: 90px;
+                    background: $headerbg;
+                    min-width: 150px;
+                    height: 40px;
+                    line-height: 40px;
+                    justify-content: space-around;
+                    align-items: center;
+                    @media (max-width: 1200px) {
+                        right: 10px;
+                    }
+                    li {
+                        display: inline-block;
+                        height: 100%;
+                        &:not(:last-child) {
+                            border-right: 1px solid #222;
+                        }
+                        a {
+                            display: block;
+                            padding: 0 15px;
+                            color: $headerlinkcolor;
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
                     }
                     &.toggle {
-                        display: none;
+                        display: block;
                     }
                 }
-                button {
-                    color: $headerlinkcolor;
-                    background: $transparent;
-                    border: $zero;
-                    padding: 5px 8px;
-                    outline: $zero;
-                    transform: translateX(-30px);
-                    position: absolute;
-                    @media (max-width: 460px) {
-                        padding: 5px 8px;
-                        position: absolute;
-                        top: 1px;
-                        right: -30px;
-                    }
-                }
-                input {
-                    border-right: $zero;
-                    border-radius: 15px;
-                    border: 2px solid $headerlinkcolor;
-                    outline: $zero;
-                    padding: 5px $ten;
-                    height: 30px;
-                    width: 30px;
-                    transition: width 0.3s ease-in-out;
-                    &::-webkit-input-placeholder {
-                       font-size: $zero;
-                    }
-                    &:-moz-placeholder {
-                       font-size: $zero;
-                    }
-                    &::-moz-placeholder {
-                       font-size: $zero;
-                    }
-                    &:-ms-input-placeholder {
-                       font-size: $zero;
-                    }
-                    &:focus {
+                form {
+                    position: relative;
+                    margin-right: 5px;
+                    display: inline-block;
+                    &:hover input {
                         width: 200px;
-                    }
-                    @media (max-width: 460px) {
-                        width: 100%;
-                        background: $white;
-                        &:focus {
-                            width: 100%;
-                        }
                         &::-webkit-input-placeholder {
                            font-size: initial;
                         }
@@ -119,11 +86,86 @@ header {
                         &::-moz-placeholder {
                            font-size: initial;
                         }
+
                         &:-ms-input-placeholder {
                            font-size: initial;
                         }
+                        @media (max-width: 471px) { //460px
+                            width: 100%;
+                        }
                     }
+                    @media (max-width: 471px) { //460px
+                        position: absolute;
+                        top: 50px;
+                        left: 0;
+                        width: 100%;
+                        &:hover input {
+                            width: 100%;
+                        }
+                        &.toggle {
+                            display: none;
+                        }
+                    }
+                    button {
+                        color: $headerlinkcolor;
+                        background: $transparent;
+                        border: $zero;
+                        padding: 5px 8px;
+                        outline: $zero;
+                        transform: translateX(-30px);
+                        position: absolute;
+                        @media (max-width: 460px) {
+                            padding: 5px 8px;
+                            position: absolute;
+                            top: 1px;
+                            right: -30px;
+                        }
+                    }
+                    input {
+                        border-right: $zero;
+                        border-radius: 15px;
+                        border: 2px solid $headerlinkcolor;
+                        outline: $zero;
+                        padding: 5px $ten;
+                        height: 30px;
+                        width: 30px;
+                        transition: width 0.3s ease-in-out;
+                        &::-webkit-input-placeholder {
+                           font-size: $zero;
+                        }
+                        &:-moz-placeholder {
+                           font-size: $zero;
+                        }
+                        &::-moz-placeholder {
+                           font-size: $zero;
+                        }
+                        &:-ms-input-placeholder {
+                           font-size: $zero;
+                        }
+                        &:focus {
+                            width: 200px;
+                        }
+                        @media (max-width: 460px) {
+                            width: 100%;
+                            background: $white;
+                            &:focus {
+                                width: 100%;
+                            }
+                            &::-webkit-input-placeholder {
+                               font-size: initial;
+                            }
+                            &:-moz-placeholder {
+                               font-size: initial;
+                            }
+                            &::-moz-placeholder {
+                               font-size: initial;
+                            }
+                            &:-ms-input-placeholder {
+                               font-size: initial;
+                            }
+                        }
 
+                    }
                 }
             }
         }

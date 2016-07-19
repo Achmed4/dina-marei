@@ -2,7 +2,12 @@
 
     var searchButton = $('#search-btn');
     searchButton.on('click', function() {
-        $('header > section div form').toggleClass('toggle');
+        $('header > section .container div > form').toggleClass('toggle');
+    });
+
+    var socialButton = $('#social-btn');
+    socialButton.on('click', function() {
+        $('header > section .container div > ul').toggleClass('toggle');
     });
 
     // Adding Active Class to Nav Links
