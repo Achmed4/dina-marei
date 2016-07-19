@@ -6,7 +6,7 @@
 @import "../_layout/_header.scss";
 @import "../_layout/_footer.scss";
 
+/* === Main Style === */
+@include mainstyle;
+
 /* === Login & Register === */
-* {
-    box-sizing: border-box;
-}

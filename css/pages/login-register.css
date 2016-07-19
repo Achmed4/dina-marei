@@ -304,22 +304,22 @@ header main {
       width: 70px; }
 
 /* === Footer === */
-blockquote ~ footer {
+body > footer {
   background: #E0E0E0; }
-  blockquote ~ footer main {
+  body > footer main {
     padding: 60px 0;
     overflow: hidden; }
-    blockquote ~ footer main .container > div {
+    body > footer main .container > div {
       text-align: left;
       margin-bottom: 25px !important;
       padding: 10px; }
-      blockquote ~ footer main .container > div h4 {
+      body > footer main .container > div h4 {
         color: black; }
-      blockquote ~ footer main .container > div table {
+      body > footer main .container > div table {
         width: 100%; }
-        blockquote ~ footer main .container > div table td:first-child {
+        body > footer main .container > div table td:first-child {
           padding: 0 15px 15px 0; }
-        blockquote ~ footer main .container > div table ~ ul li {
+        body > footer main .container > div table ~ ul li {
           display: inline-block;
           margin-bottom: 0px;
           margin-right: 5px;
@@ -329,35 +329,35 @@ blockquote ~ footer {
           border-radius: 50%;
           border: 1px solid #A5A5A5;
           text-align: center; }
-          blockquote ~ footer main .container > div table ~ ul li a {
+          body > footer main .container > div table ~ ul li a {
             display: block; }
-          blockquote ~ footer main .container > div table ~ ul li:hover {
+          body > footer main .container > div table ~ ul li:hover {
             background: white; }
-      blockquote ~ footer main .container > div a {
+      body > footer main .container > div a {
         color: black; }
-        blockquote ~ footer main .container > div a:hover {
+        body > footer main .container > div a:hover {
           color: #DA0060; }
-      blockquote ~ footer main .container > div li {
+      body > footer main .container > div li {
         margin-bottom: 10px; }
-        blockquote ~ footer main .container > div li a {
+        body > footer main .container > div li a {
           display: block; }
-      blockquote ~ footer main .container > div p {
+      body > footer main .container > div p {
         color: black; }
-      blockquote ~ footer main .container > div form {
+      body > footer main .container > div form {
         width: 100%;
         height: 30px;
         line-height: 30px; }
-        blockquote ~ footer main .container > div form input {
+        body > footer main .container > div form input {
           width: 60%;
           height: 100%;
           border-radius: 20px;
           border: 0;
           outline: 0;
           padding: 5px 10px; }
-          blockquote ~ footer main .container > div form input:focus ~ button {
+          body > footer main .container > div form input:focus ~ button {
             color: white;
             background-color: #DA0060; }
-        blockquote ~ footer main .container > div form button {
+        body > footer main .container > div form button {
           display: inline-block;
           width: 45px;
           height: 30px;
@@ -369,52 +369,59 @@ blockquote ~ footer {
           border-top-right-radius: 20px;
           border-bottom-right-radius: 20px;
           transition: all 0.3s ease-in-out; }
-          blockquote ~ footer main .container > div form button:hover {
+          body > footer main .container > div form button:hover {
             color: white;
             background-color: #DA0060; }
       @media (max-width: 991px) {
-        blockquote ~ footer main .container > div {
+        body > footer main .container > div {
           text-align: center; } }
-  blockquote ~ footer > div.sub-footer {
+  body > footer > div.sub-footer {
     width: 100%;
     height: auto;
     background-color: black;
     text-align: center;
     padding: 15px 0; }
-    blockquote ~ footer > div.sub-footer ul {
+    body > footer > div.sub-footer ul {
       margin: 10px 0; }
-      blockquote ~ footer > div.sub-footer ul li {
+      body > footer > div.sub-footer ul li {
         display: inline-block;
         padding: 0 15px; }
-        blockquote ~ footer > div.sub-footer ul li a {
+        body > footer > div.sub-footer ul li a {
           display: block;
           color: #C0C0C0; }
-      blockquote ~ footer > div.sub-footer ul li:not(:last-child) {
+      body > footer > div.sub-footer ul li:not(:last-child) {
         border-right: 1px solid #A5A5A5; }
-    blockquote ~ footer > div.sub-footer p {
+    body > footer > div.sub-footer p {
       color: #C0C0C0; }
-      blockquote ~ footer > div.sub-footer p a {
+      body > footer > div.sub-footer p a {
         font-weight: bold;
         color: #DA0060; }
   @media (max-width: 767px) {
-    blockquote ~ footer .container .span_4_of_12 {
+    body > footer .container .span_4_of_12 {
       width: 100% !important; }
-    blockquote ~ footer .container .col {
+    body > footer .container .col {
       margin-left: 0; } }
   @media (min-width: 768px) and (max-width: 991px) {
-    blockquote ~ footer .container .span_4_of_12 {
+    body > footer .container .span_4_of_12 {
       width: 49.2%; }
-    blockquote ~ footer .container .col:nth-child(2n+1) {
+    body > footer .container .col:nth-child(2n+1) {
       margin-left: 0; } }
   @media (min-width: 992px) and (max-width: 1199px) {
-    blockquote ~ footer .container .col:nth-child(3n+1) {
+    body > footer .container .col:nth-child(3n+1) {
       margin-left: 0; } }
   @media (min-width: 1200px) {
-    blockquote ~ footer .container .col:nth-child(3n+1) {
+    body > footer .container .col:nth-child(3n+1) {
       margin-left: 0; } }
 
-/* === Login & Register === */
+/* === Main Style === */
 * {
   box-sizing: border-box; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* === Login & Register === */
 
 /*# sourceMappingURL=login-register.css.map */

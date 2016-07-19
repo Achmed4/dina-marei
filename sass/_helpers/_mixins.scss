@@ -5,3 +5,15 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+@mixin mainstyle() {
+    * {
+        box-sizing: border-box;
+    }
+
+    ul,li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
