@@ -643,6 +643,22 @@ blockquote ~ footer {
       blockquote ~ footer > div.sub-footer p a {
         font-weight: bold;
         color: #C0C0C0; }
+  @media (max-width: 767px) {
+    blockquote ~ footer .container .span_4_of_12 {
+      width: 100% !important; }
+    blockquote ~ footer .container .col {
+      margin-left: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    blockquote ~ footer .container .span_4_of_12 {
+      width: 49.2%; }
+    blockquote ~ footer .container .col:nth-child(2n+1) {
+      margin-left: 0; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    blockquote ~ footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+  @media (min-width: 1200px) {
+    blockquote ~ footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
 
 /* === Framework === */
 hr {
