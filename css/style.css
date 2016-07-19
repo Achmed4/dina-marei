@@ -74,10 +74,10 @@ header section {
         position: absolute; }
         @media (max-width: 460px) {
           header section .container div form button {
-            padding: 5px 10px;
+            padding: 5px 8px;
             position: absolute;
-            top: 2px;
-            right: -25px; } }
+            top: 1px;
+            right: -30px; } }
       header section .container div form input {
         border-right: 0;
         border-radius: 15px;
@@ -485,7 +485,24 @@ section ~ article {
         transition: background-color 0.5s ease-in-out; }
         section ~ article section div:last-child a:hover {
           background-color: #6c0002; }
+  @media (max-width: 767px) {
+    section ~ article .container .span_4_of_12 {
+      width: 100% !important; }
+    section ~ article .container .col {
+      margin-left: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    section ~ article .container .span_4_of_12 {
+      width: 49.2%; }
+    section ~ article .container .col:nth-child(2n+1) {
+      margin-left: 0; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    section ~ article .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+  @media (min-width: 1200px) {
+    section ~ article .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
 
+/* === Media Query === */
 /* === Testimonials === */
 blockquote {
   padding: 60px 0;
