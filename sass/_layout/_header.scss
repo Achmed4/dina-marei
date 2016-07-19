@@ -55,6 +55,7 @@ header {
                     li {
                         display: inline-block;
                         height: 100%;
+                        width: 25%;
                         &:not(:last-child) {
                             border-right: 1px solid #222;
                         }
@@ -68,7 +69,7 @@ header {
                         }
                     }
                     &.toggle {
-                        display: block;
+                        @include flexbox;
                     }
                 }
                 form {
