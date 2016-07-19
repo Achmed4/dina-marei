@@ -10,7 +10,7 @@ blockquote ~ footer {
             margin-bottom: 25px !important;
             padding: 10px;
             h4 {
-                color: $textColor;
+                color: $black;
             }
             table {
                 width: 100%;
@@ -31,12 +31,12 @@ blockquote ~ footer {
                         display: block;
                     }
                     &:hover {
-                        background: antiquewhite;
+                        background: $white;
                     }
                 }
             }
             a {
-                color: $textColor;
+                color: $black;
                 &:hover {
                     color: $mainColor;
                 }
@@ -48,7 +48,7 @@ blockquote ~ footer {
                 }
             }
             p {
-                color: $textColor;
+                color: $black;
             }
             form {
                 width: 100%;
@@ -61,16 +61,27 @@ blockquote ~ footer {
                     border: 0;
                     outline: 0;
                     padding: 5px 10px;
+                    &:focus ~ button {
+                        color: $white;
+                        background-color: $mainColor;
+                    }
                 }
                 button {
                     display: inline-block;
                     width: 45px;
-                    transform: translateX(-24px);
+                    height: 30px;
+                    transform: translate(-25px, 1px);
                     border: 0;
                     outline: 0;
-                    background: antiquewhite;
+                    color: $black;
+                    background-color: $white;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: $white;
+                        background-color: $mainColor;
+                    }
                 }
             }
             @media (max-width: 991px) {
@@ -82,7 +93,7 @@ blockquote ~ footer {
     > div.sub-footer {
         width: 100%;
         height: auto;
-        background-color: $headerbg;
+        background-color: $black;
         text-align: center;
         padding: 15px 0;
         ul {
@@ -103,7 +114,7 @@ blockquote ~ footer {
             color: $headerlinkhover;
             a {
                 font-weight: bold;
-                color: $headerlinkhover;
+                color: $mainColor;
             }
         }
     }
