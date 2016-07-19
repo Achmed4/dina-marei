@@ -10,3 +10,7 @@
 @include mainstyle;
 
 /* === Login & Register === */
+
+header ~ main {
+    padding: 60px 0 !important;
+}
