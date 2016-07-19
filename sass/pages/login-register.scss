@@ -1,0 +1,12 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Login & Register === */
+* {
+    box-sizing: border-box;
+}

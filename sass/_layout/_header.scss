@@ -134,6 +134,9 @@ header {
         padding: 33px $zero 5px;
         @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19),
+                    3px 0 3px 0 rgba(0,0,0,0.19),
+                    0 3px 3px 0 rgba(0,0,0,0.23);
         figure {
             a {
                 display: block;
