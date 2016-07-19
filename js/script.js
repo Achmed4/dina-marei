@@ -10,6 +10,21 @@
         $(this).addClass('active').siblings().removeClass('active');
     });
 
+    //Adding Positon Fixed to Main Menu on Scroll
+    var lastScrollTop = 50;
+    $(window).on('scroll', function() {
+        var currentscrollTop = $(this).scrollTop();
+        if(currentscrollTop > lastScrollTop) {
+            $('header main').addClass('fixed');
+            var mainHeaderHeight = $('header main').height();
+            $('header ~ figure').css('margin-top', mainHeaderHeight);
+        } else {
+            $('header main').removeClass('fixed');
+            $('header ~ figure').css('margin-top', 0);
+        }
+        //lastScrollTop = currentscrollTop;
+    });
+
     // Adjusting Nav Menu on Mobile
     $('header main nav > button').on('click', function() {
         $('header main nav > ul').fadeIn('300');

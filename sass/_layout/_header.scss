@@ -134,6 +134,17 @@ header {
         padding: 33px $zero 5px;
         @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        figure {
+            a {
+                display: block;
+                width: 90px;
+                margin: 0 auto;
+                transition: all 0.3s ease-in-out;
+                img {
+                    width: 100%;
+                }
+            }
+        }
         nav {
             margin-right: 15px;
             @include flexbox($justify-content: space-between);
@@ -337,6 +348,19 @@ header {
                 }
                 ul {
                     margin: 10px 0;
+                }
+            }
+        }
+        &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            z-index: 10;
+            figure {
+                a {
+                    width: 70px;
                 }
             }
         }
