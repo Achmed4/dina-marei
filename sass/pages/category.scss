@@ -11,13 +11,12 @@
 @include image-bg;
 
 /* === Category === */
-
 header ~ main {
     padding: 60px 0 !important;
 
     .col {
         padding: $ten;
-        > ul {
+        > ul:first-child {
             text-align: left;
             li {
                 display: inline-block;
@@ -236,6 +235,23 @@ header ~ main {
 
         #horizontal-layout.on {
             display: block;
+        }
+        /* === Pagination === */
+        > ul:last-child {
+            text-align: right;
+            li {
+                display: inline-block;
+                background: $textColor;
+                font-size: 15px;
+                &:hover {
+                    background: $mainColor;
+                }
+                a {
+                    display: block;
+                    padding: 5px 8px;
+                    color: $white;
+                }
+            }
         }
     }
 }

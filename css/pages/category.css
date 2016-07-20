@@ -484,19 +484,20 @@ header ~ main {
     padding: 10px;
     /* === Vertical Layout === */
     /* === Horizontal Layout === */
-    /* === jQuery Classes === */ }
-    header ~ main .col > ul {
+    /* === jQuery Classes === */
+    /* === Pagination === */ }
+    header ~ main .col > ul:first-child {
       text-align: left; }
-      header ~ main .col > ul li {
+      header ~ main .col > ul:first-child li {
         display: inline-block;
         padding: 5px 8px;
         background: transparent;
         color: black;
         font-size: 15px;
         cursor: pointer; }
-        header ~ main .col > ul li:hover {
+        header ~ main .col > ul:first-child li:hover {
           color: #DA0060; }
-        header ~ main .col > ul li.active {
+        header ~ main .col > ul:first-child li.active {
           color: #DA0060; }
     header ~ main .col #vertical-layout {
       display: none;
@@ -647,5 +648,17 @@ header ~ main {
       display: block; }
     header ~ main .col #horizontal-layout.on {
       display: block; }
+    header ~ main .col > ul:last-child {
+      text-align: right; }
+      header ~ main .col > ul:last-child li {
+        display: inline-block;
+        background: #666;
+        font-size: 15px; }
+        header ~ main .col > ul:last-child li:hover {
+          background: #DA0060; }
+        header ~ main .col > ul:last-child li a {
+          display: block;
+          padding: 5px 8px;
+          color: white; }
 
 /*# sourceMappingURL=category.css.map */
