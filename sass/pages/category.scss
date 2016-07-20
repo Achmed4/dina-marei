@@ -1,0 +1,45 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Product === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    
+    // Media Queries
+    // .container {
+    //     @media (max-width: 767px) {
+    //         .span_6_of_12 {
+    //             width: 100% !important;
+    //         }
+    //         .col {
+    //             margin-left: 0;
+    //             text-align: center;
+    //         }
+    //     }
+    //     @media (min-width: 768px) and (max-width: 991px) {
+    //         .span_6_of_12 {
+    //             width: 100% !important;
+    //         }
+    //         .col {
+    //             margin-left: 0;
+    //         }
+    //     }
+    //     @media (min-width: 992px) and (max-width: 1199px) {
+    //
+    //     }
+    //
+    //     @media (min-width: 1200px) {
+    //
+    //     }
+    // }
+}

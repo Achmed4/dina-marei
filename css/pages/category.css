@@ -1,0 +1,484 @@
+/* === Importing Helpers === */
+/* === Variables === */
+/* === Mixins === */
+/* === Importing Layout === */
+/* === Header === */
+header section {
+  background: #414141; }
+  header section .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header section .container > ul li {
+      display: inline-block;
+      padding: 0 10px; }
+      header section .container > ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+      header section .container > ul li a {
+        display: block;
+        color: #A5A5A5; }
+        header section .container > ul li a:hover {
+          color: #C0C0C0; }
+    header section .container div {
+      margin-right: 10px; }
+      header section .container div > button {
+        background: transparent;
+        border: 0;
+        color: #A5A5A5;
+        outline: 0; }
+        header section .container div > button:first-child {
+          display: none; }
+          @media (max-width: 471px) {
+            header section .container div > button:first-child {
+              display: inline-block; } }
+        header section .container div > button:nth-child(2) {
+          display: inline-block; }
+      header section .container div ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 125px;
+        background: #414141;
+        min-width: 150px;
+        height: 40px;
+        line-height: 40px;
+        justify-content: space-around;
+        align-items: center; }
+        @media (max-width: 1200px) {
+          header section .container div ul {
+            right: 15px; } }
+        header section .container div ul li {
+          display: inline-block;
+          height: 100%;
+          width: 25%; }
+          header section .container div ul li:not(:last-child) {
+            border-right: 1px solid #222; }
+          header section .container div ul li a {
+            display: block;
+            padding: 0 15px;
+            color: #A5A5A5; }
+            header section .container div ul li a:hover {
+              color: #DA0060; }
+        header section .container div ul.toggle {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      header section .container div form {
+        position: relative;
+        margin-right: 5px;
+        display: inline-block; }
+        header section .container div form:hover input {
+          width: 200px; }
+          header section .container div form:hover input::-webkit-input-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input:-moz-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input::-moz-placeholder {
+            font-size: initial; }
+          header section .container div form:hover input:-ms-input-placeholder {
+            font-size: initial; }
+          @media (max-width: 471px) {
+            header section .container div form:hover input {
+              width: 100%; } }
+        @media (max-width: 471px) {
+          header section .container div form {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%; }
+            header section .container div form:hover input {
+              width: 100%; }
+            header section .container div form.toggle {
+              display: none; } }
+        header section .container div form button {
+          color: #A5A5A5;
+          background: transparent;
+          border: 0;
+          padding: 5px 8px;
+          outline: 0;
+          transform: translateX(-30px);
+          position: absolute; }
+          @media (max-width: 460px) {
+            header section .container div form button {
+              padding: 5px 8px;
+              position: absolute;
+              top: 1px;
+              right: -30px; } }
+        header section .container div form input {
+          border-right: 0;
+          border-radius: 15px;
+          border: 2px solid #A5A5A5;
+          outline: 0;
+          padding: 5px 10px;
+          height: 30px;
+          width: 30px;
+          transition: width 0.3s ease-in-out; }
+          header section .container div form input::-webkit-input-placeholder {
+            font-size: 0; }
+          header section .container div form input:-moz-placeholder {
+            font-size: 0; }
+          header section .container div form input::-moz-placeholder {
+            font-size: 0; }
+          header section .container div form input:-ms-input-placeholder {
+            font-size: 0; }
+          header section .container div form input:focus {
+            width: 200px; }
+          @media (max-width: 460px) {
+            header section .container div form input {
+              width: 100%;
+              background: white; }
+              header section .container div form input:focus {
+                width: 100%; }
+              header section .container div form input::-webkit-input-placeholder {
+                font-size: initial; }
+              header section .container div form input:-moz-placeholder {
+                font-size: initial; }
+              header section .container div form input::-moz-placeholder {
+                font-size: initial; }
+              header section .container div form input:-ms-input-placeholder {
+                font-size: initial; } }
+header main {
+  padding: 33px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.19), 3px 0 3px 0 rgba(0, 0, 0, 0.19), 0 3px 3px 0 rgba(0, 0, 0, 0.23); }
+  header main figure a {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out; }
+    header main figure a img {
+      width: 100%; }
+  header main nav {
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header main nav > a {
+      position: relative;
+      border: 1px solid #666;
+      margin-right: 15px;
+      padding: 10px 15px;
+      color: #666;
+      font-size: 20px; }
+      header main nav > a:hover {
+        border: 1px solid #DA0060;
+        color: #DA0060; }
+        header main nav > a:hover div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > a span.ui.red.label, header main nav > a span.ui.red.labels .label {
+        background: #DA0060 !important; }
+      header main nav > a div {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 360px;
+        min-height: 125px;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 54px;
+        left: -8px;
+        z-index: 1; }
+        header main nav > a div::before {
+          content: '';
+          position: absolute;
+          top: -14px;
+          left: 5%;
+          width: 28px;
+          height: 28px;
+          background: white;
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        header main nav > a div .empty {
+          font-size: 15px;
+          text-align: center;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+      @media (max-width: 767px) {
+        header main nav > a {
+          margin-right: 20px !important; } }
+    header main nav > button {
+      display: none;
+      border: 1px solid #666;
+      padding: 10px;
+      color: #666;
+      font-size: 20px;
+      background: white; }
+      header main nav > button:hover {
+        border: 1px solid #DA0060;
+        color: #DA0060; }
+      @media (max-width: 767px) {
+        header main nav > button {
+          display: inline-block; } }
+    header main nav > ul span {
+      display: none;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      border-radius: 50%;
+      background: #DA0060;
+      color: white;
+      margin-bottom: 15px;
+      position: relative;
+      top: 1%;
+      left: 90%;
+      cursor: pointer; }
+    @media (max-width: 767px) {
+      header main nav > ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        background: #FFF;
+        width: 100%;
+        height: 100%;
+        margin-top: 0 !important;
+        overflow-y: scroll;
+        z-index: 999; }
+        header main nav > ul > span {
+          display: block; }
+        header main nav > ul > li {
+          display: block !important; }
+          header main nav > ul > li > div {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            height: auto !important;
+            text-align: center !important;
+            padding: 5px 0 !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            opacity: 1 !important;
+            visibility: visible !important; }
+            header main nav > ul > li > div > ul {
+              margin: 0 !important;
+              display: inline-block !important; } }
+    header main nav ul li {
+      position: relative;
+      display: inline-block;
+      border: 1px solid transparent; }
+      header main nav ul li:hover {
+        border: 1px solid #DA0060; }
+        header main nav ul li:hover a {
+          color: #DA0060; }
+      header main nav ul li.active {
+        border: 1px solid #DA0060; }
+        header main nav ul li.active a {
+          color: #DA0060; }
+      header main nav ul li a {
+        display: block;
+        padding: 10px 15px;
+        color: #666;
+        font-size: 16px; }
+      header main nav ul li div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        top: 40px;
+        max-width: 400px;
+        height: auto;
+        border: 1px solid #e3e2e2;
+        box-shadow: 0 2px 2px #cccccc;
+        padding: 15px;
+        background: white;
+        white-space: nowrap;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2; }
+        header main nav ul li div > ul h3 {
+          color: #666; }
+        header main nav ul li div > ul li {
+          display: block; }
+        @media (max-width: 880px) {
+          header main nav ul li div {
+            top: 40px; } }
+        @media (max-width: 767px) {
+          header main nav ul li div {
+            max-width: 100%; } }
+      header main nav ul li:hover div {
+        opacity: 1;
+        visibility: visible; }
+    @media (max-width: 767px) {
+      header main nav {
+        margin-right: 0 !important; } }
+  @media (max-width: 880px) {
+    header main {
+      display: block; }
+      header main figure {
+        display: block;
+        text-align: center; }
+      header main nav {
+        text-align: center;
+        display: block; }
+        header main nav > a {
+          display: inline-block;
+          margin: 10px 0; }
+        header main nav ul {
+          margin: 10px 0; } }
+  header main.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 10; }
+    header main.fixed figure a {
+      width: 70px; }
+
+/* === Footer === */
+body > footer {
+  background: #E0E0E0; }
+  body > footer main {
+    padding: 60px 0;
+    overflow: hidden; }
+    body > footer main .container > div {
+      text-align: left;
+      margin-bottom: 25px !important;
+      padding: 10px; }
+      body > footer main .container > div h4 {
+        color: black; }
+      body > footer main .container > div table {
+        width: 100%; }
+        body > footer main .container > div table td:first-child {
+          padding: 0 15px 15px 0; }
+        body > footer main .container > div table ~ ul li {
+          display: inline-block;
+          margin-bottom: 0px;
+          margin-right: 5px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 50%;
+          border: 1px solid #A5A5A5;
+          text-align: center; }
+          body > footer main .container > div table ~ ul li a {
+            display: block; }
+          body > footer main .container > div table ~ ul li:hover {
+            background: white; }
+      body > footer main .container > div a {
+        color: black; }
+        body > footer main .container > div a:hover {
+          color: #DA0060; }
+      body > footer main .container > div li {
+        margin-bottom: 10px; }
+        body > footer main .container > div li a {
+          display: block; }
+      body > footer main .container > div p {
+        color: black; }
+      body > footer main .container > div form {
+        width: 100%;
+        height: 30px;
+        line-height: 30px; }
+        body > footer main .container > div form input {
+          width: 60%;
+          height: 100%;
+          border-radius: 20px;
+          border: 0;
+          outline: 0;
+          padding: 5px 10px; }
+          body > footer main .container > div form input:focus ~ button {
+            color: white;
+            background-color: #DA0060; }
+        body > footer main .container > div form button {
+          display: inline-block;
+          width: 45px;
+          height: 30px;
+          transform: translate(-25px, 1px);
+          border: 0;
+          outline: 0;
+          color: black;
+          background-color: white;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          transition: all 0.3s ease-in-out; }
+          body > footer main .container > div form button:hover {
+            color: white;
+            background-color: #DA0060; }
+      @media (max-width: 991px) {
+        body > footer main .container > div {
+          text-align: center; } }
+  body > footer > div.sub-footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    text-align: center;
+    padding: 15px 0; }
+    body > footer > div.sub-footer ul {
+      margin: 10px 0; }
+      body > footer > div.sub-footer ul li {
+        display: inline-block;
+        padding: 0 15px; }
+        body > footer > div.sub-footer ul li a {
+          display: block;
+          color: #C0C0C0; }
+      body > footer > div.sub-footer ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+    body > footer > div.sub-footer p {
+      color: #C0C0C0; }
+      body > footer > div.sub-footer p a {
+        font-weight: bold;
+        color: #DA0060; }
+  @media (max-width: 767px) {
+    body > footer .container .span_4_of_12 {
+      width: 100% !important; }
+    body > footer .container .col {
+      margin-left: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    body > footer .container .span_4_of_12 {
+      width: 49.2%; }
+    body > footer .container .col:nth-child(2n+1) {
+      margin-left: 0; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    body > footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+  @media (min-width: 1200px) {
+    body > footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+
+/* === Main Style === */
+* {
+  box-sizing: border-box; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.image-parent {
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative; }
+
+.image-cover {
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/* === Product === */
+header ~ main {
+  padding: 60px 0 !important; }
+
+/*# sourceMappingURL=category.css.map */
