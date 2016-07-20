@@ -479,11 +479,12 @@ ul, li {
 
 /* === Category === */
 header ~ main {
-  padding: 60px 0 !important;
-  /* === Vertical Layout === */
-  /* === Horizontal Layout === */ }
+  padding: 60px 0 !important; }
   header ~ main .col {
-    padding: 10px; }
+    padding: 10px;
+    /* === Vertical Layout === */
+    /* === Horizontal Layout === */
+    /* === jQuery Classes === */ }
     header ~ main .col > ul {
       text-align: left; }
       header ~ main .col > ul li {
@@ -497,74 +498,146 @@ header ~ main {
           color: #DA0060; }
         header ~ main .col > ul li.active {
           color: #DA0060; }
-    header ~ main .col > div {
+    header ~ main .col #vertical-layout {
+      display: none;
       border: 1px solid #A5A5A5;
-      text-align: left;
       border-radius: 5px; }
-      header ~ main .col > div .col > div {
+      header ~ main .col #vertical-layout .col > div {
         height: 370px;
         padding: 10px;
         text-align: left;
         border: 1px solid #A5A5A5;
         border-radius: 5px;
         transition: all 0.3s ease-in-out; }
-        header ~ main .col > div .col > div:hover {
+        header ~ main .col #vertical-layout .col > div:hover {
           box-shadow: 0px 0px 4px 1px rgba(218, 0, 96, 0.25); }
-        header ~ main .col > div .col > div:hover img {
+        header ~ main .col #vertical-layout .col > div:hover img {
           transform: translate(-50%, -50%) scale(1.2); }
-        header ~ main .col > div .col > div:hover > div:last-of-type ul li:last-of-type a {
+        header ~ main .col #vertical-layout .col > div:hover > div:last-of-type ul li:last-of-type a {
           background-color: #DA0060; }
-        header ~ main .col > div .col > div .image {
+        header ~ main .col #vertical-layout .col > div .image {
           height: 210px; }
-          header ~ main .col > div .col > div .image img {
+          header ~ main .col #vertical-layout .col > div .image img {
             width: 100%;
             transition: transform 0.5s ease-in-out; }
-        header ~ main .col > div .col > div > div:last-of-type {
+        header ~ main .col #vertical-layout .col > div > div:last-of-type {
           height: 140px; }
-          header ~ main .col > div .col > div > div:last-of-type ul {
+          header ~ main .col #vertical-layout .col > div > div:last-of-type ul {
             height: 100%; }
-            header ~ main .col > div .col > div > div:last-of-type ul li {
+            header ~ main .col #vertical-layout .col > div > div:last-of-type ul li {
               height: 33.33%;
               display: flex;
               justify-content: flex-start;
               align-items: center; }
-              header ~ main .col > div .col > div > div:last-of-type ul li:first-of-type a {
+              header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:first-of-type a {
                 width: 100%;
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center; }
-                header ~ main .col > div .col > div > div:last-of-type ul li:first-of-type a h4 {
+                header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:first-of-type a h4 {
                   color: #666; }
-              header ~ main .col > div .col > div > div:last-of-type ul li p {
+              header ~ main .col #vertical-layout .col > div > div:last-of-type ul li p {
                 color: #666;
                 font-weight: bold;
                 font-size: 20px; }
-              header ~ main .col > div .col > div > div:last-of-type ul li:last-of-type a {
+              header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:last-of-type a {
                 border-radius: 3px;
                 border: 1px solid transparent;
                 padding: 5px 15px;
                 color: white;
                 background-color: #666;
                 transition: background-color 0.5s ease-in-out; }
-                header ~ main .col > div .col > div > div:last-of-type ul li:last-of-type a:hover {
+                header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:last-of-type a:hover {
                   background-color: #DA0060; }
       @media (max-width: 767px) {
-        header ~ main .col > div .col.span_3_of_12 {
+        header ~ main .col #vertical-layout .col.span_3_of_12 {
           width: 100% !important; }
-        header ~ main .col > div .col.col {
+        header ~ main .col #vertical-layout .col.col {
           margin-left: 0;
           text-align: center; } }
       @media (min-width: 768px) and (max-width: 991px) {
-        header ~ main .col > div .col.span_3_of_12 {
+        header ~ main .col #vertical-layout .col.span_3_of_12 {
           width: 32.26% !important; }
-        header ~ main .col > div .col.col:nth-child(3n+1) {
+        header ~ main .col #vertical-layout .col.col:nth-child(3n+1) {
           margin-left: 0; } }
       @media (min-width: 992px) and (max-width: 1199px) {
-        header ~ main .col > div .col.col:nth-child(4n+1) {
+        header ~ main .col #vertical-layout .col.col:nth-child(4n+1) {
           margin-left: 0; } }
       @media (min-width: 1200px) {
-        header ~ main .col > div .col.col:nth-child(4n+1) {
+        header ~ main .col #vertical-layout .col.col:nth-child(4n+1) {
           margin-left: 0; } }
+    header ~ main .col #horizontal-layout {
+      display: none;
+      padding: 10px 0; }
+      header ~ main .col #horizontal-layout:hover > div > div:last-of-type a:last-child {
+        background-color: #DA0060; }
+      header ~ main .col #horizontal-layout > div {
+        border: 1px solid #A5A5A5;
+        border-radius: 5px;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 15px;
+        clear: both; }
+        header ~ main .col #horizontal-layout > div .image {
+          width: 20%;
+          height: 100%;
+          float: left; }
+          header ~ main .col #horizontal-layout > div .image img {
+            width: 100%; }
+        header ~ main .col #horizontal-layout > div > div:last-of-type {
+          width: 80%;
+          height: 100%;
+          text-align: left;
+          padding-left: 10px;
+          float: right; }
+          header ~ main .col #horizontal-layout > div > div:last-of-type a:first-child {
+            display: block;
+            padding: 10px 0;
+            color: #666; }
+          header ~ main .col #horizontal-layout > div > div:last-of-type > div {
+            margin-bottom: 30px; }
+            header ~ main .col #horizontal-layout > div > div:last-of-type > div span {
+              color: #DA0060;
+              font-weight: bold;
+              font-size: 20px; }
+              header ~ main .col #horizontal-layout > div > div:last-of-type > div span.discount {
+                font-size: 14px;
+                color: #666;
+                font-style: italic;
+                text-decoration: line-through;
+                margin-right: 5px; }
+          header ~ main .col #horizontal-layout > div > div:last-of-type p {
+            font-size: 16px;
+            color: #666;
+            margin: 0; }
+          header ~ main .col #horizontal-layout > div > div:last-of-type a:last-child {
+            display: inline-block;
+            margin-top: 15px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            padding: 5px 15px;
+            color: white;
+            background-color: #666;
+            transition: background-color 0.5s ease-in-out; }
+            header ~ main .col #horizontal-layout > div > div:last-of-type a:last-child:hover {
+              background-color: #DA0060; }
+        @media (max-width: 767px) {
+          header ~ main .col #horizontal-layout > div {
+            height: 350px; }
+            header ~ main .col #horizontal-layout > div .image {
+              width: 100%;
+              height: 210px; }
+            header ~ main .col #horizontal-layout > div > div:last-of-type {
+              width: 100%;
+              height: 140px; }
+              header ~ main .col #horizontal-layout > div > div:last-of-type > div {
+                margin-bottom: 15px; }
+              header ~ main .col #horizontal-layout > div > div:last-of-type p {
+                display: none; } }
+    header ~ main .col #vertical-layout.on {
+      display: block; }
+    header ~ main .col #horizontal-layout.on {
+      display: block; }
 
 /*# sourceMappingURL=category.css.map */
