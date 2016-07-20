@@ -653,7 +653,8 @@ header ~ main {
       header ~ main .col > ul:last-child li {
         display: inline-block;
         background: #666;
-        font-size: 15px; }
+        font-size: 15px;
+        border-radius: 3px; }
         header ~ main .col > ul:last-child li:hover {
           background: #DA0060; }
         header ~ main .col > ul:last-child li a {

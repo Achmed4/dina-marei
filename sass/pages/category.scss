@@ -243,6 +243,7 @@ header ~ main {
                 display: inline-block;
                 background: $textColor;
                 font-size: 15px;
+                border-radius: 3px;
                 &:hover {
                     background: $mainColor;
                 }
