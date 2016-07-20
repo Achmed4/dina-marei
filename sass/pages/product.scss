@@ -1,0 +1,20 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+
+/* === Product === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    
+    .col {
+        padding: $ten;
+    }
+}
