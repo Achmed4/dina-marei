@@ -56,7 +56,7 @@ figure ~ section {
     }
     .carousel2 {
         .slick-slide {
-            height: 350px;
+            height: 370px;
             padding: 10px;
             text-align: left;
             border: 1px solid #e7e7e7;
@@ -67,7 +67,7 @@ figure ~ section {
                 height: 210px;
                 img {
                     width: 100%;
-                    transition: transform 0.5s ease-in-out;
+                    transition: transform 0.3s ease-in-out;
                 }
             }
             div:last-child {
@@ -78,11 +78,20 @@ figure ~ section {
                     color: $textColor;
                     opacity: 0.9;
                 }
-                span {
-                    display: block;
-                    font-weight: bold;
+                > div {
                     margin-bottom: 10px;
-                    font-size: 20px;
+                    span {
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: $mainColor;
+                        &.discount {
+                            font-size: 14px;
+                            color: $textColor;
+                            font-style: italic;
+                            text-decoration: line-through;
+                            margin-right: 5px;
+                        }
+                    }
                 }
                 button {
                     @include main-button;

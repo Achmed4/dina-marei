@@ -438,7 +438,7 @@ figure ~ section {
           display: block;
           margin: 10px auto; } }
   figure ~ section .carousel2 .slick-slide {
-    height: 350px;
+    height: 370px;
     padding: 10px;
     text-align: left;
     border: 1px solid #e7e7e7;
@@ -449,7 +449,7 @@ figure ~ section {
       height: 210px; }
       figure ~ section .carousel2 .slick-slide div:first-child img {
         width: 100%;
-        transition: transform 0.5s ease-in-out; }
+        transition: transform 0.3s ease-in-out; }
     figure ~ section .carousel2 .slick-slide div:last-child {
       height: 140px; }
       figure ~ section .carousel2 .slick-slide div:last-child a {
@@ -457,11 +457,18 @@ figure ~ section {
         padding: 20px 0 !important;
         color: #666;
         opacity: 0.9; }
-      figure ~ section .carousel2 .slick-slide div:last-child span {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 20px; }
+      figure ~ section .carousel2 .slick-slide div:last-child > div {
+        margin-bottom: 10px; }
+        figure ~ section .carousel2 .slick-slide div:last-child > div span {
+          font-weight: bold;
+          font-size: 20px;
+          color: #DA0060; }
+          figure ~ section .carousel2 .slick-slide div:last-child > div span.discount {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            text-decoration: line-through;
+            margin-right: 5px; }
       figure ~ section .carousel2 .slick-slide div:last-child button {
         border-radius: 3px;
         border: 1px solid transparent;
