@@ -15,7 +15,7 @@
 header ~ main {
     padding: 60px 0 !important;
     /* === Vertical Layout === */
-    #vertical-layout {
+    .col {
         padding: $ten;
         > ul {
             text-align: left;
@@ -29,10 +29,13 @@ header ~ main {
                 &:hover {
                     color: $mainColor;
                 }
+                &.active {
+                    color: $mainColor;
+                }
             }
         }
         > div {
-            padding: 10px 15px;
+            // padding: 10px 15px;
             border: 1px solid $headerlinkcolor;
             text-align: left;
             border-radius: 5px;
