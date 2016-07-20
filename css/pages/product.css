@@ -594,12 +594,12 @@ header ~ main {
     header ~ main .container .col {
       margin-left: 0; } }
 
-main ~ section .col {
+main ~ section .container > .col {
   padding: 10px;
   margin-left: 0; }
-  main ~ section .col > ul {
+  main ~ section .container > .col > ul {
     text-align: left; }
-    main ~ section .col > ul li {
+    main ~ section .container > .col > ul li {
       display: inline-block;
       padding: 10px 20px;
       background: #666;
@@ -608,37 +608,94 @@ main ~ section .col {
       border-top-left-radius: 5px;
       color: white;
       font-size: 17px; }
-  main ~ section .col > div {
+  main ~ section .container > .col > div {
     padding: 10px 15px;
     border: 1px solid #A5A5A5;
     text-align: left;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px; }
-    main ~ section .col > div#reviews form label {
+    main ~ section .container > .col > div#reviews form label {
       display: block;
       text-align: left;
       margin: 10px 0px; }
-      main ~ section .col > div#reviews form label i {
+      main ~ section .container > .col > div#reviews form label i {
         color: #DA0060;
         font-size: 10px !important;
         transform: translateY(-5px); }
-    main ~ section .col > div#reviews form textarea {
+    main ~ section .container > .col > div#reviews form textarea {
       resize: vertical; }
-    main ~ section .col > div#reviews form input[type="text"], main ~ section .col > div#reviews form input[type="email"], main ~ section .col > div#reviews form textarea {
+    main ~ section .container > .col > div#reviews form input[type="text"], main ~ section .container > .col > div#reviews form input[type="email"], main ~ section .container > .col > div#reviews form textarea {
       width: 100%;
       border: 1px solid #A5A5A5;
       padding: 5px 10px;
       margin-bottom: 15px;
       outline: 0; }
-    main ~ section .col > div#reviews form button[type="submit"] {
+    main ~ section .container > .col > div#reviews form button[type="submit"] {
       border-radius: 3px;
       border: 1px solid transparent;
       padding: 5px 15px;
       color: white;
       background-color: #666;
       transition: background-color 0.5s ease-in-out; }
-      main ~ section .col > div#reviews form button[type="submit"]:hover {
+      main ~ section .container > .col > div#reviews form button[type="submit"]:hover {
         background-color: #DA0060; }
+    main ~ section .container > .col > div#products .col > div {
+      height: 370px;
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #A5A5A5;
+      border-radius: 5px;
+      box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4); }
+      main ~ section .container > .col > div#products .col > div:hover img {
+        transform: translate(-50%, -50%) scale(1.2); }
+      main ~ section .container > .col > div#products .col > div:hover > div:last-of-type ul li:last-of-type a {
+        background-color: #DA0060; }
+      main ~ section .container > .col > div#products .col > div .image {
+        height: 210px; }
+        main ~ section .container > .col > div#products .col > div .image img {
+          width: 100%;
+          transition: transform 0.5s ease-in-out; }
+      main ~ section .container > .col > div#products .col > div > div:last-of-type {
+        height: 140px; }
+        main ~ section .container > .col > div#products .col > div > div:last-of-type ul {
+          height: 100%; }
+          main ~ section .container > .col > div#products .col > div > div:last-of-type ul li {
+            height: 33.33%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; }
+            main ~ section .container > .col > div#products .col > div > div:last-of-type ul li h4 {
+              color: #666; }
+            main ~ section .container > .col > div#products .col > div > div:last-of-type ul li p {
+              color: #666;
+              font-weight: bold;
+              font-size: 20px; }
+            main ~ section .container > .col > div#products .col > div > div:last-of-type ul li:last-of-type a {
+              border-radius: 3px;
+              border: 1px solid transparent;
+              padding: 5px 15px;
+              color: white;
+              background-color: #666;
+              transition: background-color 0.5s ease-in-out; }
+              main ~ section .container > .col > div#products .col > div > div:last-of-type ul li:last-of-type a:hover {
+                background-color: #DA0060; }
+    @media (max-width: 767px) {
+      main ~ section .container > .col > div#products .col.span_3_of_12 {
+        width: 100% !important; }
+      main ~ section .container > .col > div#products .col.col {
+        margin-left: 0;
+        text-align: center; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      main ~ section .container > .col > div#products .col.span_3_of_12 {
+        width: 32.26% !important; }
+      main ~ section .container > .col > div#products .col.col:nth-child(3n+1) {
+        margin-left: 0; } }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      main ~ section .container > .col > div#products .col.col:nth-child(4n+1) {
+        margin-left: 0; } }
+    @media (min-width: 1200px) {
+      main ~ section .container > .col > div#products .col.col:nth-child(4n+1) {
+        margin-left: 0; } }
 
 /*# sourceMappingURL=product.css.map */

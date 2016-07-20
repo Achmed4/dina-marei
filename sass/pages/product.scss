@@ -166,7 +166,7 @@ header ~ main {
 }
 
 main ~ section {
-    .col {
+    .container > .col {
         padding: $ten;
         margin-left: 0;
         > ul {
@@ -214,6 +214,84 @@ main ~ section {
                     button[type="submit"] {
                         @include main-button;
                     }
+                }
+            }
+            &#products {
+                .col {
+                    > div {
+                        height: 370px;
+                        padding: 10px;
+                        text-align: left;
+                        border: 1px solid $headerlinkcolor;
+                        border-radius: 5px;
+                        box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
+                        &:hover img {
+                            transform: translate(-50%, -50%) scale(1.2);
+                        }
+                        &:hover > div:last-of-type ul li:last-of-type a {
+                            background-color: $mainColor;
+                        }
+                        .image {
+                            height: 210px;
+                            img {
+                                width: 100%;
+                                transition: transform 0.5s ease-in-out;
+                            }
+                        }
+                        > div:last-of-type {
+                            height: 140px;
+                            ul {
+                                height: 100%;
+                                li {
+                                    height: 33.33%;
+                                    @include flexbox($justify-content: flex-start);
+                                    h4 {
+                                        color: $textColor;
+                                    }
+                                    p {
+                                        color: $textColor;
+                                        font-weight: bold;
+                                        font-size: 20px;
+                                    }
+                                    &:last-of-type {
+                                        a {
+                                            @include main-button;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 767px) {
+                        &.span_3_of_12 {
+                            width: 100% !important;
+                        }
+                        &.col {
+                            margin-left: 0;
+                            text-align: center;
+                        }
+                    }
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        &.span_3_of_12 {
+                            width: 32.26% !important;
+                        }
+                        &.col:nth-child(3n+1) {
+                            margin-left: 0;
+                        }
+                    }
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        &.col:nth-child(4n+1) {
+                            margin-left: 0;
+                        }
+                    }
+
+                    @media (min-width: 1200px) {
+                        &.col:nth-child(4n+1) {
+                            margin-left: 0;
+                        }
+                    }
+
                 }
             }
         }
