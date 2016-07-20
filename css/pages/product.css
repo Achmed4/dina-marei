@@ -576,7 +576,8 @@ header ~ main {
           background-color: #DA0060; }
     header ~ main .col:last-child a {
       color: #666;
-      font-size: 16px; }
+      font-size: 16px;
+      margin-right: 10px; }
       header ~ main .col:last-child a:hover {
         color: #DA0060; }
       header ~ main .col:last-child a > i {
@@ -594,23 +595,19 @@ header ~ main {
       margin-left: 0; } }
 
 main ~ section .col {
-  padding: 10px; }
+  padding: 10px;
+  margin-left: 0; }
   main ~ section .col > ul {
     text-align: left; }
     main ~ section .col > ul li {
       display: inline-block;
       padding: 10px 20px;
-      background: #A5A5A5;
+      background: #666;
       margin-right: 5px;
       border-top-right-radius: 5px;
       border-top-left-radius: 5px;
       color: white;
-      font-size: 17px;
-      cursor: pointer; }
-      main ~ section .col > ul li:hover {
-        background: #666; }
-      main ~ section .col > ul li.active {
-        background: #666; }
+      font-size: 17px; }
   main ~ section .col > div {
     padding: 10px 15px;
     border: 1px solid #A5A5A5;
@@ -618,5 +615,30 @@ main ~ section .col {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px; }
+    main ~ section .col > div#reviews form label {
+      display: block;
+      text-align: left;
+      margin: 10px 0px; }
+      main ~ section .col > div#reviews form label i {
+        color: #DA0060;
+        font-size: 10px !important;
+        transform: translateY(-5px); }
+    main ~ section .col > div#reviews form textarea {
+      resize: vertical; }
+    main ~ section .col > div#reviews form input[type="text"], main ~ section .col > div#reviews form input[type="email"], main ~ section .col > div#reviews form textarea {
+      width: 100%;
+      border: 1px solid #A5A5A5;
+      padding: 5px 10px;
+      margin-bottom: 15px;
+      outline: 0; }
+    main ~ section .col > div#reviews form button[type="submit"] {
+      border-radius: 3px;
+      border: 1px solid transparent;
+      padding: 5px 15px;
+      color: white;
+      background-color: #666;
+      transition: background-color 0.5s ease-in-out; }
+      main ~ section .col > div#reviews form button[type="submit"]:hover {
+        background-color: #DA0060; }
 
 /*# sourceMappingURL=product.css.map */
