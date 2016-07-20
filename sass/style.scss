@@ -27,23 +27,4 @@ hr {
     width: 50%;
 }
 
-.image-parent {
-    overflow: hidden;
-    vertical-align: middle;
-    position: relative;
-}
-
-.image-cover {
-    height: auto;
-    max-height: none;
-    max-width: none;
-    min-height: 100%;
-    min-width: 100%;
-    width: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
+@include image-bg;

@@ -458,10 +458,139 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+.image-parent {
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative; }
+
+.image-cover {
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
 /* === Product === */
 header ~ main {
   padding: 60px 0 !important; }
-  header ~ main .col {
+  header ~ main .col:first-child {
     padding: 10px; }
+    header ~ main .col:first-child > div:first-child {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      border: 1px solid #c8c8c8;
+      border-radius: 3px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
+      header ~ main .col:first-child > div:first-child img {
+        width: 100%; }
+    header ~ main .col:first-child #product-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      header ~ main .col:first-child #product-slider:hover i.fa.fa-angle-right.slick-arrow, header ~ main .col:first-child #product-slider:hover i.fa.fa-angle-left.slick-arrow {
+        opacity: 1;
+        visibility: visible; }
+      header ~ main .col:first-child #product-slider .slick-slide {
+        height: 70px;
+        margin: 0 27px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+        header ~ main .col:first-child #product-slider .slick-slide img {
+          width: 100%; }
+      header ~ main .col:first-child #product-slider .slick-list {
+        margin: 0 -27px; }
+      header ~ main .col:first-child #product-slider i.fa.fa-angle-right.slick-arrow,
+      header ~ main .col:first-child #product-slider i.fa.fa-angle-left.slick-arrow {
+        font-size: 23px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        cursor: pointer;
+        color: #666;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9;
+        transition: all 0.3s ease-in-out; }
+      header ~ main .col:first-child #product-slider i.fa.fa-angle-right.slick-arrow {
+        transform: translateX(5px); }
+      header ~ main .col:first-child #product-slider i.fa.fa-angle-left.slick-arrow {
+        transform: translateX(-2px); }
+  header ~ main .col:last-child {
+    padding: 10px;
+    text-align: left; }
+    header ~ main .col:last-child h3 {
+      margin: 10px 0; }
+    header ~ main .col:last-child div:first-of-type {
+      margin-bottom: 30px; }
+      header ~ main .col:last-child div:first-of-type span {
+        font-size: 16px;
+        font-weight: bold; }
+        header ~ main .col:last-child div:first-of-type span.discount {
+          font-size: 14px;
+          color: #666;
+          font-style: italic;
+          text-decoration: line-through;
+          margin-right: 5px; }
+        header ~ main .col:last-child div:first-of-type span.price {
+          color: #DA0060; }
+    header ~ main .col:last-child p {
+      font-size: 16px;
+      color: #666;
+      margin: 0; }
+    header ~ main .col:last-child div:nth-of-type(2) {
+      margin: 15px 0; }
+      header ~ main .col:last-child div:nth-of-type(2) span {
+        font-size: 16px; }
+        header ~ main .col:last-child div:nth-of-type(2) span.available {
+          color: green; }
+        header ~ main .col:last-child div:nth-of-type(2) span.unavailable {
+          color: red; }
+    header ~ main .col:last-child div:last-of-type {
+      margin-bottom: 15px; }
+      header ~ main .col:last-child div:last-of-type input {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #666;
+        text-align: center;
+        outline: 0;
+        margin-right: 15px; }
+      header ~ main .col:last-child div:last-of-type button {
+        border-radius: 3px;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        color: white;
+        background-color: #666;
+        transition: background-color 0.5s ease-in-out; }
+        header ~ main .col:last-child div:last-of-type button:hover {
+          background-color: #DA0060; }
+    header ~ main .col:last-child a {
+      color: #666;
+      font-size: 16px; }
+      header ~ main .col:last-child a:hover {
+        color: #DA0060; }
+      header ~ main .col:last-child a > i {
+        margin-right: 5px; }
+  @media (max-width: 767px) {
+    header ~ main .container .span_6_of_12 {
+      width: 100% !important; }
+    header ~ main .container .col {
+      margin-left: 0;
+      text-align: center; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    header ~ main .container .span_6_of_12 {
+      width: 100% !important; }
+    header ~ main .container .col {
+      margin-left: 0; } }
 
 /*# sourceMappingURL=product.css.map */

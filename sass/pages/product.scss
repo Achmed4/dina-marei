@@ -8,13 +8,158 @@
 
 /* === Main Style === */
 @include mainstyle;
+@include image-bg;
 
 /* === Product === */
 
 header ~ main {
     padding: 60px 0 !important;
-    
-    .col {
+    .col:first-child {
         padding: $ten;
+        > div:first-child {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            border: 1px solid #c8c8c8;
+            border-radius: 3px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            img {
+                width: 100%;
+            }
+        }
+        #product-slider {
+            @include flexbox;
+            width: 100%;
+            &:hover i.fa.fa-angle-right.slick-arrow,
+            &:hover i.fa.fa-angle-left.slick-arrow {
+                opacity: 1;
+                visibility: visible;
+            }
+            .slick-slide {
+                height: 70px;
+                margin: 0 27px;
+                border-radius: 3px;
+                box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                img {
+                    width: 100%;
+                }
+            }
+            .slick-list {
+                margin: 0 -27px;
+            }
+            i.fa.fa-angle-right.slick-arrow,
+            i.fa.fa-angle-left.slick-arrow {
+                font-size: 23px;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                cursor: pointer;
+                color: $textColor;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 9;
+                transition: all 0.3s ease-in-out;
+            }
+            i.fa.fa-angle-right.slick-arrow {
+                transform: translateX(5px);
+            }
+            i.fa.fa-angle-left.slick-arrow {
+                transform: translateX(-2px);
+            }
+        }
+    }
+    .col:last-child {
+        padding: $ten;
+        text-align: left;
+        h3 {
+            margin: 10px 0;
+        }
+        div:first-of-type {
+            margin-bottom: 30px;
+            span {
+                font-size: 16px;
+                font-weight: bold;
+                &.discount{
+                    font-size: 14px;
+                    color: $textColor;
+                    font-style: italic;
+                    text-decoration: line-through;
+                    margin-right: 5px;
+                }
+                &.price {
+                    color: $mainColor;
+                }
+            }
+        }
+        p {
+            font-size: 16px;
+            color: $textColor;
+            margin: 0;
+        }
+        div:nth-of-type(2) {
+            margin: 15px 0;
+            span {
+                font-size: 16px;
+                &.available {
+                    color: green;
+                }
+                &.unavailable {
+                    color: red;
+                }
+            }
+        }
+        div:last-of-type {
+            margin-bottom: 15px;
+            input {
+                width: 30px;
+                height: 30px;
+                border: 1px solid $textColor;
+                text-align: center;
+                outline: $zero;
+                margin-right: 15px;
+            }
+            button {
+                @include main-button;
+            }
+        }
+        a {
+            color: $textColor;
+            font-size: 16px;
+            &:hover {
+                color: $mainColor;
+            }
+            > i {
+                margin-right: 5px;
+            }
+        }
+    }
+    // Media Queries
+    .container {
+        @media (max-width: 767px) {
+            .span_6_of_12 {
+                width: 100% !important;
+            }
+            .col {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .span_6_of_12 {
+                width: 100% !important;
+            }
+            .col {
+                margin-left: 0;
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+
+        }
+
+        @media (min-width: 1200px) {
+            
+        }
     }
 }

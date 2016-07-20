@@ -85,12 +85,7 @@ figure ~ section {
                     font-size: 20px;
                 }
                 button {
-                    border-radius: 3px;
-                    border: 1px solid $transparent;
-                    padding: 5px 15px;
-                    color: $white;
-                    background-color: $textColor;
-                    transition: background-color 0.5s ease-in-out;
+                    @include main-button;
                 }
             }
             &:hover {

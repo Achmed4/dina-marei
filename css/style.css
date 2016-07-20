@@ -469,6 +469,8 @@ figure ~ section {
         color: white;
         background-color: #666;
         transition: background-color 0.5s ease-in-out; }
+        figure ~ section .carousel2 .slick-slide div:last-child button:hover {
+          background-color: #DA0060; }
     figure ~ section .carousel2 .slick-slide:hover a {
       color: #DA0060 !important; }
     figure ~ section .carousel2 .slick-slide:hover img {
@@ -536,6 +538,8 @@ section ~ article {
         color: white;
         background-color: #666;
         transition: background-color 0.5s ease-in-out; }
+        section ~ article section div:last-child a:hover {
+          background-color: #DA0060; }
         section ~ article section div:last-child a:hover {
           background-color: #DA0060; }
   @media (max-width: 767px) {
