@@ -478,5 +478,144 @@ ul, li {
 /* === Shopping Cart === */
 header ~ main {
   padding: 60px 0 !important; }
+  header ~ main .col {
+    padding: 10px;
+    margin-left: 0; }
+  header ~ main .col:first-child {
+    /*
+    Generic Styling, for Desktops/Laptops
+    */
+    /*table tbody td:first-child {
+        padding: 0;
+    }*/
+    /*My Style*/
+    /* Zebra striping */
+    /*
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */ }
+    header ~ main .col:first-child table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
+    header ~ main .col:first-child table tbody tr:hover {
+      background-color: rgba(204, 204, 204, 0.4); }
+    header ~ main .col:first-child table tbody td:first-child a {
+      color: white;
+      display: block;
+      background: #666;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      margin: auto; }
+    header ~ main .col:first-child table tbody td:first-child a:hover {
+      background: #DA0060;
+      color: white; }
+    header ~ main .col:first-child table tbody td img {
+      width: 50px; }
+    header ~ main .col:first-child table tbody td input {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #A5A5A5;
+      text-align: center;
+      outline: 0; }
+    header ~ main .col:first-child table ~ div {
+      width: 100%;
+      text-align: right;
+      border: 1px solid #ccc;
+      border-top: 0;
+      padding: 15px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
+      header ~ main .col:first-child table ~ div a {
+        border-radius: 3px;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        color: white;
+        background-color: #666;
+        transition: background-color 0.5s ease-in-out; }
+        header ~ main .col:first-child table ~ div a:hover {
+          background-color: #DA0060; }
+    header ~ main .col:first-child th {
+      background: white;
+      color: #666;
+      font-weight: bold; }
+    header ~ main .col:first-child td, header ~ main .col:first-child th {
+      padding: 6px;
+      border: 1px solid #ccc;
+      text-align: center; }
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+      header ~ main .col:first-child {
+        /* Force table to not be like tables anymore */
+        /* Hide table headers (but not display: none;, for accessibility) */
+        /*
+        Label the data
+        */ }
+        header ~ main .col:first-child table, header ~ main .col:first-child thead, header ~ main .col:first-child tbody, header ~ main .col:first-child th, header ~ main .col:first-child td, header ~ main .col:first-child tr {
+          display: block; }
+        header ~ main .col:first-child thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px; }
+        header ~ main .col:first-child tr {
+          border: 1px solid #ccc; }
+        header ~ main .col:first-child td {
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%; }
+        header ~ main .col:first-child td:before {
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          font-weight: bold;
+          color: #666;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          /*My Style*/
+          top: 50%;
+          transform: translate(0, -50%); }
+        header ~ main .col:first-child td:nth-of-type(1):before {
+          content: ""; }
+        header ~ main .col:first-child td:nth-of-type(2):before {
+          content: ""; }
+        header ~ main .col:first-child td:nth-of-type(3):before {
+          content: "Product"; }
+        header ~ main .col:first-child td:nth-of-type(4):before {
+          content: "Price"; }
+        header ~ main .col:first-child td:nth-of-type(5):before {
+          content: "Quantity"; }
+        header ~ main .col:first-child td:nth-of-type(6):before {
+          content: "Total"; } }
+  header ~ main .col:last-child {
+    text-align: right; }
+    header ~ main .col:last-child h3 {
+      color: #666; }
+    header ~ main .col:last-child table {
+      float: right; }
+      header ~ main .col:last-child table td, header ~ main .col:last-child table th {
+        padding: 15px 45px;
+        border: 1px solid #ccc;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
+    header ~ main .col:last-child table ~ div {
+      clear: both;
+      width: 100%;
+      text-align: right;
+      border-top: 0;
+      padding: 15px; }
+      header ~ main .col:last-child table ~ div a {
+        border-radius: 3px;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        color: white;
+        background-color: #666;
+        transition: background-color 0.5s ease-in-out; }
+        header ~ main .col:last-child table ~ div a:hover {
+          background-color: #DA0060; }
 
 /*# sourceMappingURL=shopping-cart.css.map */
