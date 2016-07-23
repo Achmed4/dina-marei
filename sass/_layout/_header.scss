@@ -6,6 +6,7 @@ header {
         background: $headerbg;
         .container {
             height: 50px;
+            position: relative;
             @include flexbox($justify-content: space-between);
             > ul li {
                 display: inline-block;
@@ -42,16 +43,16 @@ header {
                     display: none;
                     position: absolute;
                     top: 50px;
-                    right: 125px;
+                    right: 15px; //125px
                     background: $headerbg;
                     min-width: 150px;
                     height: 40px;
                     line-height: 40px;
                     justify-content: space-around;
                     align-items: center;
-                    @media (max-width: 1200px) {
-                        right: 15px;
-                    }
+                    // @media (max-width: 1200px) {
+                    //     right: 15px;
+                    // }
                     li {
                         display: inline-block;
                         height: 100%;
