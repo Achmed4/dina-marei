@@ -1,0 +1,93 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Shopping Cart === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    .col {
+        padding: $ten;
+        overflow-x: auto;
+
+        /*
+        Generic Styling, for Desktops/Laptops
+        */
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: auto;
+          box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        table tbody tr:first-child td,
+        table tbody tr:nth-child(2) td {
+            padding: 0;
+        }
+
+        /*My Style*/
+
+        table tbody tr:hover {
+            background-color: rgba(204, 204, 204, 0.4);
+        }
+
+        table tbody tr td a {
+        	color: $textColor;
+            background: $white;
+            display: block;
+            padding: 6px;
+            cursor: pointer;
+        }
+
+        table tbody tr:first-child td a:hover {
+            background-color: rgba(204, 204, 204, 0.4);
+            // color: $textColor;
+        }
+
+        table tbody td.image img {
+        	width: 80px;
+        }
+
+        th {
+            background: $white;
+            color: $textColor;
+            font-weight: bold;
+            width: 100px;
+        }
+        td, th {
+          padding: 6px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+
+        /*Mobile Screen*/
+        @media (max-width: 767px) {
+        	table {
+        		width: 100%;
+        	}
+        }
+
+        /*Medium Screen*/
+        @media (min-width: 992px) and (max-width: 1199px) {
+        	table {
+        		max-width: 80%;
+        	}
+        }
+
+        /*Large Screen*/
+        @media (min-width: 1200px) {
+        	table {
+        		max-width: 50%;
+        	}
+        }
+
+    }
+}

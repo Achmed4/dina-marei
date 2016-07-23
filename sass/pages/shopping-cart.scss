@@ -53,7 +53,7 @@ header ~ main {
         }
 
         table tbody td img {
-            width: 50px;
+            width: 80px;
         }
 
         table tbody td input {
@@ -76,10 +76,6 @@ header ~ main {
             }
         }
 
-        /* Zebra striping */
-        tr:nth-of-type(odd) {
-        //   background: #eee;
-        }
         th {
           background: $white;
           color: $textColor;
