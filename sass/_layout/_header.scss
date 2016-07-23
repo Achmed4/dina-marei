@@ -211,10 +211,10 @@ header {
                         visibility: visible;
                     }
                 }
-                span.ui.red.label, span.ui.red.labels .label {
+                > span.ui.red.label, span.ui.red.labels .label {
                     background: $mainColor !important;
                 }
-                div {
+                > div {
                     position: absolute;
                     opacity: 0;
                     visibility: hidden;
@@ -251,6 +251,9 @@ header {
                         -ms-transform: translate(-50%, -50%);
                         transform: translate(-50%, -50%);
                     }
+                    // .busy {
+                    //
+                    // }
                 }
                 @media (max-width: 767px) {
                     margin-right: 20px !important;
@@ -286,6 +289,62 @@ header {
                     left: 90%;
                     cursor: pointer;
                 }
+                > li {
+                    position: relative;
+                    display: inline-block;
+                    border: 1px solid $transparent;
+                    &:hover {
+                        border: 1px solid $mainColor;
+                        a {
+                            color: $mainColor;
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: $mainColor;
+                        }
+                        border: 1px solid $mainColor;
+                    }
+                    a {
+                        display: block;
+                        padding: $ten 15px;
+                        color: $textColor;
+                        font-size: 16px;
+                    }
+                    // Sub-Menu
+                    div {
+                        @include flexbox($align-items: flex-start);
+                        position: absolute;
+                        top: 40px;
+                        max-width: 400px;
+                        height: auto;
+                        border: 1px solid #e3e2e2;
+                        box-shadow: 0 2px 2px #cccccc;
+                        padding: 15px;
+                        background: $white;
+                        white-space: nowrap;
+                        text-align: left;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 2;
+                        > ul h3 {
+                            color: $textColor;
+                        }
+                        > ul li {
+                            display: block;
+                        }
+                        @media (max-width: 880px) {
+                            top: 40px;
+                        }
+                        @media (max-width: 767px) {
+                            max-width: 100%;
+                        }
+                    }
+                    &:hover div {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
                 @media (max-width: 767px) {
                     display: none;
                     position: fixed;
@@ -300,81 +359,81 @@ header {
                         display: block;
                     }
                     > li {
-                        display: block !important;
+                        display: block;
                         > div {
-                            display: block !important;
-                            position: static !important;
-                            width: 100% !important;
-                            height: auto !important;
-                            text-align: center !important;
-                            padding: 5px 0 !important;
-                            box-shadow: none !important;
-                            border: 0 !important;
-                            opacity: 1 !important;
-                            visibility: visible !important;
+                            display: block; // !important
+                            position: static; // !important
+                            width: 100%; // !important
+                            height: auto; // !important
+                            text-align: center; // !important
+                            padding: 5px 0; // !important
+                            box-shadow: none; // !important
+                            border: 0; // !important
+                            opacity: 1; // !important
+                            visibility: visible; // !important
                             > ul {
-                                margin: 0 !important;
-                                display: inline-block !important;
+                                margin: 0; // !important
+                                display: inline-block; // !important
                             }
                         }
                     }
                 }
             }
             ul li {
-                position: relative;
-                display: inline-block;
-                border: 1px solid $transparent;
-                &:hover {
-                    border: 1px solid $mainColor;
-                    a {
-                        color: $mainColor;
-                    }
-                }
-                &.active {
-                    a {
-                        color: $mainColor;
-                    }
-                    border: 1px solid $mainColor;
-                }
-                a {
-                    display: block;
-                    padding: $ten 15px;
-                    color: $textColor;
-                    font-size: 16px;
-                }
-                // Sub-Menu
-                div {
-                    @include flexbox($align-items: flex-start);
-                    position: absolute;
-                    top: 40px;
-                    max-width: 400px;
-                    height: auto;
-                    border: 1px solid #e3e2e2;
-                    box-shadow: 0 2px 2px #cccccc;
-                    padding: 15px;
-                    background: $white;
-                    white-space: nowrap;
-                    text-align: left;
-                    opacity: 0;
-                    visibility: hidden;
-                    z-index: 2;
-                    > ul h3 {
-                        color: $textColor;
-                    }
-                    > ul li {
-                        display: block;
-                    }
-                    @media (max-width: 880px) {
-                        top: 40px;
-                    }
-                    @media (max-width: 767px) {
-                        max-width: 100%;
-                    }
-                }
-                &:hover div {
-                    opacity: 1;
-                    visibility: visible;
-                }
+                // position: relative;
+                // display: inline-block;
+                // border: 1px solid $transparent;
+                // &:hover {
+                //     border: 1px solid $mainColor;
+                //     a {
+                //         color: $mainColor;
+                //     }
+                // }
+                // &.active {
+                //     a {
+                //         color: $mainColor;
+                //     }
+                //     border: 1px solid $mainColor;
+                // }
+                // a {
+                //     display: block;
+                //     padding: $ten 15px;
+                //     color: $textColor;
+                //     font-size: 16px;
+                // }
+                // // Sub-Menu
+                // div {
+                //     @include flexbox($align-items: flex-start);
+                //     position: absolute;
+                //     top: 40px;
+                //     max-width: 400px;
+                //     height: auto;
+                //     border: 1px solid #e3e2e2;
+                //     box-shadow: 0 2px 2px #cccccc;
+                //     padding: 15px;
+                //     background: $white;
+                //     white-space: nowrap;
+                //     text-align: left;
+                //     opacity: 0;
+                //     visibility: hidden;
+                //     z-index: 2;
+                //     > ul h3 {
+                //         color: $textColor;
+                //     }
+                //     > ul li {
+                //         display: block;
+                //     }
+                //     @media (max-width: 880px) {
+                //         top: 40px;
+                //     }
+                //     @media (max-width: 767px) {
+                //         max-width: 100%;
+                //     }
+                // }
+                // &:hover div {
+                //     opacity: 1;
+                //     visibility: visible;
+                // }
             }
             @media (max-width: 767px) {
                 margin-right: 0 !important;
@@ -393,7 +452,7 @@ header {
                     display: inline-block;
                     margin: 10px 0;
                 }
-                ul {
+                > ul {
                     margin: 10px 0;
                 }
             }
