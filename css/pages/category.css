@@ -351,8 +351,13 @@ body > footer {
         color: black; }
       body > footer main .container > div table {
         width: 100%; }
+        body > footer main .container > div table tr {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 10px; }
         body > footer main .container > div table td:first-child {
-          padding: 0 15px 15px 0; }
+          width: 10%; }
         body > footer main .container > div table ~ ul li {
           display: inline-block;
           margin-bottom: 0px;

@@ -1,0 +1,91 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Contact Us === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    .col {
+        padding: $ten;
+        margin-left: 0;
+        text-align: left;
+        .col:first-of-type {
+            p {
+                margin-bottom: 50px;
+                font-size: 16px;
+            }
+            tr {
+                @include flexbox($justify-content: flex-start);
+                margin-bottom: 10px;
+            }
+            td:first-child {
+                width: 10%;
+            }
+        }
+        .col:last-of-type {
+            p {
+                font-size: 16px;
+            }
+            form {
+                > div {
+                    margin-bottom: 30px;
+                    position: relative;
+                    label {
+                        position: absolute;
+                        font-size: 20px;
+                        top: 60%;
+                        width: 100%;
+                        transition: all 0.3s ease-in-out;
+                        z-index: -1;
+                    }
+                    input, textarea {
+                        width: 100%;
+                        border: $zero;
+                        outline: $zero;
+                        padding: 20px 0px;
+                        border-bottom: 1px solid $headerlinkcolor;
+                        font-size: 16px;
+                        background: $transparent;
+                        &:valid {
+                            background: $white;
+                        }
+                        &:focus + label {
+                            top: 0%;
+                            font-size: 15px;
+                        }
+                    }
+                    textarea {
+                        resize: vertical;
+                    }
+                    button {
+                        @include main-button;
+                        padding: 15px 35px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            &.span_6_of_12 {
+                width: 100% !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+
+        }
+        @media (min-width: 1200px) {
+
+        }
+    }
+}
