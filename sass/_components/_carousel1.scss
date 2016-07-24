@@ -50,6 +50,7 @@ header ~ figure {
         }
         .slick-list, .slick-track, .slick-slide {
             height: 100%;
+            outline: 0;
         }
     }
 }

@@ -391,7 +391,8 @@ header ~ figure {
       header ~ figure #main-carousel i.fa.fa-angle-left.slick-arrow:hover {
         opacity: 1; }
     header ~ figure #main-carousel .slick-list, header ~ figure #main-carousel .slick-track, header ~ figure #main-carousel .slick-slide {
-      height: 100%; }
+      height: 100%;
+      outline: 0; }
 
 /* === Featured & Latest Products === */
 figure ~ section {
