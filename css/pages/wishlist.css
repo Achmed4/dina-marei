@@ -137,7 +137,7 @@ header section {
               header section .container div form input:-ms-input-placeholder {
                 font-size: initial; } }
 header main {
-  padding: 5px 0;
+  height: 125px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -175,7 +175,7 @@ header {
 
     // Main Header
     main {
-        padding: 5px $zero; //padding: 33px $zero 5px;
+        height: 125px;
         @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
         box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19),
@@ -361,79 +361,23 @@ header {
                     > li {
                         display: block;
                         > div {
-                            display: block; // !important
-                            position: static; // !important
-                            width: 100%; // !important
-                            height: auto; // !important
-                            text-align: center; // !important
-                            padding: 5px 0; // !important
-                            box-shadow: none; // !important
-                            border: 0; // !important
-                            opacity: 1; // !important
-                            visibility: visible; // !important
+                            display: block;
+                            position: static;
+                            width: 100%;
+                            height: auto;
+                            text-align: center;
+                            padding: 5px 0;
+                            box-shadow: none;
+                            border: 0;
+                            opacity: 1;
+                            visibility: visible;
                             > ul {
-                                margin: 0; // !important
-                                display: inline-block; // !important
+                                margin: 0;
+                                display: inline-block;
                             }
                         }
                     }
                 }
-            }
-            ul li {
-                // position: relative;
-                // display: inline-block;
-                // border: 1px solid $transparent;
-                // &:hover {
-                //     border: 1px solid $mainColor;
-                //     a {
-                //         color: $mainColor;
-                //     }
-                // }
-                // &.active {
-                //     a {
-                //         color: $mainColor;
-                //     }
-                //     border: 1px solid $mainColor;
-                // }
-                // a {
-                //     display: block;
-                //     padding: $ten 15px;
-                //     color: $textColor;
-                //     font-size: 16px;
-                // }
-                // // Sub-Menu
-                // div {
-                //     @include flexbox($align-items: flex-start);
-                //     position: absolute;
-                //     top: 40px;
-                //     max-width: 400px;
-                //     height: auto;
-                //     border: 1px solid #e3e2e2;
-                //     box-shadow: 0 2px 2px #cccccc;
-                //     padding: 15px;
-                //     background: $white;
-                //     white-space: nowrap;
-                //     text-align: left;
-                //     opacity: 0;
-                //     visibility: hidden;
-                //     z-index: 2;
-                //     > ul h3 {
-                //         color: $textColor;
-                //     }
-                //     > ul li {
-                //         display: block;
-                //     }
-                //     @media (max-width: 880px) {
-                //         top: 40px;
-                //     }
-                //     @media (max-width: 767px) {
-                //         max-width: 100%;
-                //     }
-                // }
-                // &:hover div {
-                //     opacity: 1;
-                //     visibility: visible;
-                // }
             }
             @media (max-width: 767px) {
                 margin-right: 0 !important;
