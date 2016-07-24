@@ -10,6 +10,9 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 /* === Importing Layout === */
 /* === Header === */
 header section {
@@ -474,6 +477,7 @@ figure ~ section {
         padding: 5px 15px;
         color: white;
         background-color: #666;
+        cursor: pointer;
         transition: background-color 0.5s ease-in-out; }
         figure ~ section .carousel2 .slick-slide div:last-child button:hover {
           background-color: #DA0060; }
@@ -562,6 +566,7 @@ section ~ article {
         padding: 5px 35px;
         color: white;
         background-color: #666;
+        cursor: pointer;
         transition: background-color 0.5s ease-in-out; }
         section ~ article section div:last-child a:hover {
           background-color: #DA0060; }

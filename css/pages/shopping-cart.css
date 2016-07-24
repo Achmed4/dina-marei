@@ -461,6 +461,9 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .image-parent {
   overflow: hidden;
   vertical-align: middle;
@@ -538,6 +541,7 @@ header ~ main {
         padding: 5px 15px;
         color: white;
         background-color: #666;
+        cursor: pointer;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:first-child table ~ div a:hover {
           background-color: #DA0060; }
@@ -600,7 +604,8 @@ header ~ main {
     header ~ main .col:last-child h3 {
       color: #666; }
     header ~ main .col:last-child table {
-      float: right; }
+      float: right;
+      border-collapse: collapse; }
       header ~ main .col:last-child table td, header ~ main .col:last-child table th {
         padding: 15px 45px;
         border: 1px solid #ccc;
@@ -618,6 +623,7 @@ header ~ main {
         padding: 5px 15px;
         color: white;
         background-color: #666;
+        cursor: pointer;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:last-child table ~ div a:hover {
           background-color: #DA0060; }

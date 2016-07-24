@@ -461,6 +461,9 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .image-parent {
   overflow: hidden;
   vertical-align: middle;
@@ -560,6 +563,7 @@ header ~ main {
                 padding: 5px 15px;
                 color: white;
                 background-color: #666;
+                cursor: pointer;
                 transition: background-color 0.5s ease-in-out; }
                 header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:last-of-type a:hover {
                   background-color: #DA0060; }
@@ -656,6 +660,7 @@ header ~ main {
             padding: 5px 15px;
             color: white;
             background-color: #666;
+            cursor: pointer;
             transition: background-color 0.5s ease-in-out; }
             header ~ main .col #horizontal-layout > div > div:last-of-type a:last-child:hover {
               background-color: #DA0060; }

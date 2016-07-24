@@ -152,6 +152,7 @@ header ~ main {
         }
         table {
             float: right;
+            border-collapse: collapse;
             td, th {
               padding: 15px 45px;
               border: 1px solid #ccc;

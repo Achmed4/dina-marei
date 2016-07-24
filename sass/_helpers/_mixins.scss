@@ -16,6 +16,9 @@
         padding: 0;
         list-style: none;
     }
+    a {
+        text-decoration: none;
+    }
 }
 
 @mixin image-bg() {
@@ -47,6 +50,7 @@
     padding: $padding;
     color: $white;
     background-color: $textColor;
+    cursor: pointer;
     transition: background-color 0.5s ease-in-out;
     &:hover {
         background-color: $mainColor;

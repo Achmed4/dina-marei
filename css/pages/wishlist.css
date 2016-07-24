@@ -461,6 +461,9 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .image-parent {
   overflow: hidden;
   vertical-align: middle;
@@ -524,6 +527,7 @@ header ~ main {
       padding: 5px 15px;
       color: white;
       background-color: #666;
+      cursor: pointer;
       transition: background-color 0.5s ease-in-out; }
       header ~ main .col table tbody td:last-child a:hover {
         background-color: #DA0060; }

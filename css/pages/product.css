@@ -461,6 +461,9 @@ ul, li {
   padding: 0;
   list-style: none; }
 
+a {
+  text-decoration: none; }
+
 .image-parent {
   overflow: hidden;
   vertical-align: middle;
@@ -574,6 +577,7 @@ header ~ main {
         padding: 5px 15px;
         color: white;
         background-color: #666;
+        cursor: pointer;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:last-child div:last-of-type button:hover {
           background-color: #DA0060; }
@@ -640,6 +644,7 @@ main ~ section .container > .col {
       padding: 5px 15px;
       color: white;
       background-color: #666;
+      cursor: pointer;
       transition: background-color 0.5s ease-in-out; }
       main ~ section .container > .col > div#reviews form button[type="submit"]:hover {
         background-color: #DA0060; }
@@ -694,6 +699,7 @@ main ~ section .container > .col {
               padding: 5px 15px;
               color: white;
               background-color: #666;
+              cursor: pointer;
               transition: background-color 0.5s ease-in-out; }
               main ~ section .container > .col > div#products .col > div > div:last-of-type ul li:last-of-type a:hover {
                 background-color: #DA0060; }
