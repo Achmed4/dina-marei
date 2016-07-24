@@ -50,9 +50,6 @@ header {
                     line-height: 40px;
                     justify-content: space-around;
                     align-items: center;
-                    // @media (max-width: 1200px) {
-                    //     right: 15px;
-                    // }
                     li {
                         display: inline-block;
                         height: 100%;
@@ -223,7 +220,6 @@ header {
                     background: $white;
                     padding: $ten;
                     box-shadow:0 0px 5px 1px rgba(0, 0, 0, 0.1);
-                    position: absolute;
                     top: 54px;
                     left: -8px;
                     z-index: 1;
@@ -254,9 +250,20 @@ header {
                     // .busy {
                     //
                     // }
-                }
-                @media (max-width: 767px) {
-                    margin-right: 20px !important;
+                    @media (max-width: 767px) {
+                        & {
+                            left: -303px;
+                            &::before {
+                                left: 87%;
+                            }
+                        }
+                    }
+                    @media (max-width: 450px) {
+                        & {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
                 }
             }
             > button {
@@ -266,6 +273,7 @@ header {
                 color: $textColor;
                 font-size: 20px;
                 background: white;
+                margin-right: 15px;
                 &:hover {
                     border: 1px solid $mainColor;
                     color: $mainColor;
@@ -280,6 +288,7 @@ header {
                     width: 25px;
                     height: 25px;
                     line-height: 25px;
+                    text-align: center;
                     border-radius: 50%;
                     background: $mainColor;
                     color: $white;
@@ -348,11 +357,12 @@ header {
                 @media (max-width: 767px) {
                     display: none;
                     position: fixed;
-                    top: 0;
+                    top: $zero;
+                    left: $zero;
                     background: #FFF;
                     width: 100%;
                     height: 100%;
-                    margin-top: 0 !important;
+                    margin-top: $zero !important;
                     overflow-y: scroll;
                     z-index: 999;
                     > span {
@@ -381,20 +391,10 @@ header {
             }
             @media (max-width: 767px) {
                 margin-right: 0 !important;
-            }
-        }
-        @media (max-width: 880px) {
-            display: block;
-            figure {
-                display: block;
-                text-align: center;
-            }
-            nav {
                 text-align: center;
                 display: block;
                 > a {
                     display: inline-block;
-                    margin: 10px 0;
                 }
                 > ul {
                     margin: 10px 0;
