@@ -175,7 +175,7 @@ header {
 
     // Main Header
     main {
-        padding: 33px $zero 5px;
+        padding: 5px $zero; //padding: 33px $zero 5px;
         @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
         box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19),

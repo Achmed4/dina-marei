@@ -42,7 +42,7 @@ header ~ main {
                     label {
                         position: absolute;
                         font-size: 20px;
-                        top: 60%;
+                        top: 35px; //60%
                         width: 100%;
                         transition: all 0.3s ease-in-out;
                         z-index: -1;
@@ -55,12 +55,12 @@ header ~ main {
                         border-bottom: 1px solid $headerlinkcolor;
                         font-size: 16px;
                         background: $transparent;
-                        &:valid {
-                            background: $white;
-                        }
                         &:focus + label {
                             top: 0%;
                             font-size: 15px;
+                        }
+                        &:valid {
+                            background: $white;
                         }
                     }
                     textarea {
@@ -69,6 +69,7 @@ header ~ main {
                     button {
                         @include main-button;
                         padding: 15px 35px;
+                        background-color: $mainColor;
                     }
                 }
             }

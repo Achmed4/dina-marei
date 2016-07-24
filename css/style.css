@@ -146,7 +146,7 @@ header section {
               header section .container div form input:-ms-input-placeholder {
                 font-size: initial; } }
 header main {
-  padding: 33px 0 5px;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -442,7 +442,8 @@ figure ~ section {
     border: 1px solid #e7e7e7;
     border-radius: 5px;
     box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
-    margin: 0 5px; }
+    margin: 0 5px;
+    position: relative; }
     figure ~ section .carousel2 .slick-slide div:first-child {
       height: 210px; }
       figure ~ section .carousel2 .slick-slide div:first-child img {
@@ -476,12 +477,31 @@ figure ~ section {
         transition: background-color 0.5s ease-in-out; }
         figure ~ section .carousel2 .slick-slide div:last-child button:hover {
           background-color: #DA0060; }
-    figure ~ section .carousel2 .slick-slide:hover a {
-      color: #DA0060 !important; }
-    figure ~ section .carousel2 .slick-slide:hover img {
+    figure ~ section .carousel2 .slick-slide div.addTo {
+      position: absolute;
+      top: -80px;
+      left: 15px;
+      transition: all 0.3s ease-in-out; }
+      figure ~ section .carousel2 .slick-slide div.addTo a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 3px;
+        border-radius: 3px;
+        color: white;
+        background: #666; }
+        figure ~ section .carousel2 .slick-slide div.addTo a:hover {
+          background: #DA0060; }
+    figure ~ section .carousel2 .slick-slide:hover div:first-child img {
       transform: translate(-50%, -50%) scale(1.2); }
-    figure ~ section .carousel2 .slick-slide:hover button {
+    figure ~ section .carousel2 .slick-slide:hover div:last-child a {
+      color: #DA0060 !important; }
+    figure ~ section .carousel2 .slick-slide:hover div:last-child button {
       background-color: #DA0060 !important; }
+    figure ~ section .carousel2 .slick-slide:hover div.addTo {
+      top: 150px; }
   figure ~ section .carousel2 i.fa.fa-angle-right.slick-arrow,
   figure ~ section .carousel2 i.fa.fa-angle-left.slick-arrow {
     font-size: 30px;

@@ -137,7 +137,7 @@ header section {
               header section .container div form input:-ms-input-placeholder {
                 font-size: initial; } }
 header main {
-  padding: 33px 0 5px;
+  padding: 5px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -505,7 +505,7 @@ header ~ main {
       header ~ main .col .col:last-of-type form > div label {
         position: absolute;
         font-size: 20px;
-        top: 60%;
+        top: 35px;
         width: 100%;
         transition: all 0.3s ease-in-out;
         z-index: -1; }
@@ -517,11 +517,11 @@ header ~ main {
         border-bottom: 1px solid #A5A5A5;
         font-size: 16px;
         background: transparent; }
-        header ~ main .col .col:last-of-type form > div input:valid, header ~ main .col .col:last-of-type form > div textarea:valid {
-          background: white; }
         header ~ main .col .col:last-of-type form > div input:focus + label, header ~ main .col .col:last-of-type form > div textarea:focus + label {
           top: 0%;
           font-size: 15px; }
+        header ~ main .col .col:last-of-type form > div input:valid, header ~ main .col .col:last-of-type form > div textarea:valid {
+          background: white; }
       header ~ main .col .col:last-of-type form > div textarea {
         resize: vertical; }
       header ~ main .col .col:last-of-type form > div button {
@@ -531,7 +531,8 @@ header ~ main {
         color: white;
         background-color: #666;
         transition: background-color 0.5s ease-in-out;
-        padding: 15px 35px; }
+        padding: 15px 35px;
+        background-color: #DA0060; }
         header ~ main .col .col:last-of-type form > div button:hover {
           background-color: #DA0060; }
     @media (max-width: 767px) {

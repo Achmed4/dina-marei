@@ -63,6 +63,7 @@ figure ~ section {
             border-radius: 5px;
             box-shadow: 1px 0 1px rgba(206, 206, 206, 0.4);
             margin: 0 5px;
+            position: relative;
             div:first-child {
                 height: 210px;
                 img {
@@ -97,15 +98,42 @@ figure ~ section {
                     @include main-button;
                 }
             }
-            &:hover {
+            div.addTo {
+                position: absolute;
+                top: -80px;
+                left: 15px;
+                transition: all 0.3s ease-in-out;
                 a {
-                    color: $mainColor !important;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-bottom: 3px;
+                    border-radius: 3px;
+                    color: $white;
+                    background: $textColor;
+                    &:hover {
+                        background: $mainColor;
+                    }
                 }
-                img {
-                    transform: translate(-50%, -50%) scale(1.2);
+            }
+            &:hover {
+                div:first-child {
+                    img {
+                        transform: translate(-50%, -50%) scale(1.2);
+                    }
                 }
-                button {
-                    background-color: $mainColor !important;
+                div:last-child {
+                    a {
+                        color: $mainColor !important;
+                    }
+                    button {
+                        background-color: $mainColor !important;
+                    }
+                }
+                div.addTo {
+                    top: 150px;
                 }
             }
         }
