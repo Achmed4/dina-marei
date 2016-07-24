@@ -36,9 +36,6 @@ header ~ main {
         /* === Vertical Layout === */
         #vertical-layout {
             display: none;
-            // padding: 10px 15px;
-            // border: 1px solid $headerlinkcolor;
-            // text-align: left;
             border-radius: 5px;
             .col {
                 > div {
@@ -48,14 +45,19 @@ header ~ main {
                     border: 1px solid $headerlinkcolor;
                     border-radius: 5px;
                     transition: all 0.3s ease-in-out;
+                    position: relative;
+                    overflow: hidden;
                     &:hover {
                         box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
-                    }
-                    &:hover img {
-                        transform: translate(-50%, -50%) scale(1.2);
-                    }
-                    &:hover > div:last-of-type ul li:last-of-type a {
-                        background-color: $mainColor;
+                        img {
+                            transform: translate(-50%, -50%) scale(1.2);
+                        }
+                        > div:last-of-type ul li:last-of-type a {
+                            background-color: $mainColor;
+                        }
+                        div.addTo {
+                            top: 150px;
+                        }
                     }
                     .image {
                         height: 210px;
@@ -98,6 +100,26 @@ header ~ main {
                                         @include main-button;
                                     }
                                 }
+                            }
+                        }
+                    }
+                    div.addTo {
+                        position: absolute;
+                        top: -80px;
+                        left: 15px;
+                        transition: all 0.3s ease-in-out;
+                        a {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            margin-bottom: 3px;
+                            border-radius: 3px;
+                            color: $white;
+                            background: $textColor;
+                            &:hover {
+                                background: $mainColor;
                             }
                         }
                     }
@@ -147,8 +169,13 @@ header ~ main {
                 margin-bottom: 15px;
                 clear: both;
                 transition: all 0.3s ease-in-out;
+                position: relative;
+                overflow: hidden;
                 &:hover {
                     box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+                    div.addTo {
+                        top: 175px;
+                    }
                 }
                 .image {
                     width: 20%;
@@ -212,20 +239,33 @@ header ~ main {
                                 display: none;
                             }
                         }
+                        &:hover {
+                            div.addTo {
+                                top: 135px;
+                            }
+                        }
                     }
                 }
-                // @media (min-width: 768px) and (max-width: 991px) {
-                //     & {
-                //     }
-                // }
-                // @media (min-width: 992px) and (max-width: 1199px) {
-                //     & {
-                //     }
-                // }
-                // @media (min-width: 1200px) {
-                //     & {
-                //     }
-                // }
+            }
+            div.addTo {
+                position: absolute;
+                top: -80px;
+                left: 5px;
+                transition: all 0.3s ease-in-out;
+                a {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-bottom: 3px;
+                    border-radius: 3px;
+                    color: $white;
+                    background: $textColor;
+                    &:hover {
+                        background: $mainColor;
+                    }
+                }
             }
         }
         /* === jQuery Classes === */
