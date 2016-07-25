@@ -1,0 +1,147 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+
+/* === About Us === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    .container > .col {
+        padding: $ten;
+        &:first-of-type {
+            img {
+                width: 100%;
+            }
+            @media (max-width: 767px) {
+                &.span_8_of_12 {
+                    width: 100% !important;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            text-align: left;
+            h2 {
+                color: $textColor;
+                margin-top: $zero;
+            }
+            p {
+                color: $textColor;
+                line-height: 1.7em;
+                margin: $zero;
+            }
+            @media (max-width: 767px) {
+                &.span_4_of_12 {
+                    width: 100% !important;
+                }
+                &.col {
+                    margin-left: 0;
+                    text-align: center;
+                }
+            }
+        }
+        &:last-of-type {
+            margin-left: $zero;
+            h2 {
+                color: $textColor;
+                margin-top: $zero;
+                text-align: left;
+            }
+            .col {
+                > div {
+                    height: 370px;
+                    padding: 10px;
+                    border: 1px solid $headerlinkhover;
+                    border-radius: 5px;
+                    &:hover {
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+                    }
+                    .image {
+                        height: 210px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    > div:last-of-type {
+                        height: 140px;
+                        ul {
+                            height: 100%;
+                            li {
+                                height: 33.33%;
+                                @include flexbox;
+                                h4 {
+                                    color: $textColor;
+                                }
+                                span {
+                                    color: $mainColor;
+                                    font-weight: bold;
+                                    font-size: 20px;
+                                }
+                                &:last-of-type {
+                                    a {
+                                        display: inline-block;
+                                        width: 30px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        text-align: center;
+                                        border-radius: 50%;
+                                        background-color: $headerlinkhover;
+                                        color: $white;
+                                        margin-right: 5px;
+                                        &:hover {
+                                            background-color: $mainColor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 767px) {
+                    &.span_3_of_12 {
+                        width: 100% !important;
+                    }
+                    &.col {
+                        margin-left: 0;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    &.col:first-of-type {
+                        margin-left: 0;
+                    }
+                    &.span_3_of_12 {
+                        width: 32.26% !important;
+                    }
+                    &.col:nth-child(3n+1) {
+                        margin-left: 0;
+                    }
+                }
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    &.col:first-of-type {
+                        margin-left: 0;
+                    }
+                    &.col:nth-child(4n+1) {
+                        margin-left: 0;
+                    }
+                }
+                @media (min-width: 1200px) {
+                    &.col:first-of-type {
+                        margin-left: 0;
+                    }
+                    &.col:nth-child(4n+1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* === Framework === */
+@include image-bg;

@@ -607,7 +607,7 @@ header ~ main {
       float: right;
       border-collapse: collapse; }
       header ~ main .col:last-child table td, header ~ main .col:last-child table th {
-        padding: 15px 45px;
+        padding: 15px 35px;
         border: 1px solid #ccc;
         text-align: center;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
