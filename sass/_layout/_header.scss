@@ -44,25 +44,7 @@ header {
                     position: relative;
                     margin-right: 5px;
                     display: inline-block;
-                    // &:hover input {
-                    //     width: 200px;
-                    //     &::-webkit-input-placeholder {
-                    //        font-size: initial;
-                    //     }
-                    //     &:-moz-placeholder {
-                    //        font-size: initial;
-                    //     }
-                    //     &::-moz-placeholder {
-                    //        font-size: initial;
-                    //     }
-                    //
-                    //     &:-ms-input-placeholder {
-                    //        font-size: initial;
-                    //     }
-                    //     @media (max-width: 471px) { //460px
-                    //         width: 100%;
-                    //     }
-                    // }
+                    z-index: 999;
                     @media (max-width: 620px) {
                         position: absolute;
                         bottom: -30px;
@@ -79,10 +61,11 @@ header {
                         color: $headerlinkcolor;
                         background: $transparent;
                         border: $zero;
-                        padding: 5px 8px;
+                        padding: 6px 8px;
                         outline: $zero;
                         transform: translateX(-30px);
                         position: absolute;
+                        cursor: pointer;
                         @media (max-width: 620px) {
                             padding: 5px 8px;
                             position: absolute;
@@ -116,6 +99,7 @@ header {
                     line-height: 40px;
                     justify-content: space-around;
                     align-items: center;
+                    z-index: 999;
                     li {
                         display: inline-block;
                         height: 100%;

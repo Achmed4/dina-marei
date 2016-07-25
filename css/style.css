@@ -51,7 +51,8 @@ header section {
       header section .container div form {
         position: relative;
         margin-right: 5px;
-        display: inline-block; }
+        display: inline-block;
+        z-index: 999; }
         @media (max-width: 620px) {
           header section .container div form {
             position: absolute;
@@ -66,10 +67,11 @@ header section {
           color: #A5A5A5;
           background: transparent;
           border: 0;
-          padding: 5px 8px;
+          padding: 6px 8px;
           outline: 0;
           transform: translateX(-30px);
-          position: absolute; }
+          position: absolute;
+          cursor: pointer; }
           @media (max-width: 620px) {
             header section .container div form button {
               padding: 5px 8px;
@@ -99,7 +101,8 @@ header section {
         height: 40px;
         line-height: 40px;
         justify-content: space-around;
-        align-items: center; }
+        align-items: center;
+        z-index: 999; }
         header section .container div ul li {
           display: inline-block;
           height: 100%;
