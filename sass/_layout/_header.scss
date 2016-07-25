@@ -8,6 +8,11 @@ header {
             height: 50px;
             position: relative;
             @include flexbox($justify-content: space-between);
+            @media (max-width: 620px) {
+                display: block;
+                padding: $ten 0;
+                height: auto;
+            }
             > ul li {
                 display: inline-block;
                 padding: $zero $ten;
@@ -19,6 +24,15 @@ header {
                     color: $headerlinkcolor;
                     &:hover {
                         color: $headerlinkhover;
+                    }
+                }
+                @media (max-width: 620px) {
+                    display: inline-block;
+                    margin-bottom: $ten;
+                    padding: $zero;
+                    border-right: $zero !important;
+                    a {
+                        padding: $zero 10px;
                     }
                 }
             }
@@ -84,7 +98,7 @@ header {
                         transition: width 0.3s ease-in-out;
                         @media (max-width: 620px) {
                             width: 100%;
-                            background: $white;
+                            border-radius: 0;
                         }
                     }
                 }
@@ -119,6 +133,13 @@ header {
                     &.toggle {
                         @include flexbox;
                     }
+                    @media (max-width: 620px) {
+                        right: 0;
+                        left: 0;
+                    }
+                }
+                @media (max-width: 620px) {
+                    margin-right: $zero;
                 }
             }
         }
@@ -129,9 +150,8 @@ header {
         height: 125px;
         @include flexbox($justify-content: space-between);
         box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-        box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19),
-                    3px 0 3px 0 rgba(0,0,0,0.19),
-                    0 3px 3px 0 rgba(0,0,0,0.23);
+        box-shadow: 0px 0 3px 0 rgba(0, 0, 0, 0.19),
+                    0 3px 3px 0 rgba(0, 0, 0, 0.23);
         figure {
             a {
                 display: block;
@@ -140,6 +160,11 @@ header {
                 transition: all 0.3s ease-in-out;
                 img {
                     width: 100%;
+                }
+            }
+            @media (max-width: 620px) {
+                & {
+                    margin: 5px 20px;
                 }
             }
         }
@@ -154,6 +179,7 @@ header {
                 padding: $ten 15px;
                 color: $textColor;
                 font-size: 20px;
+                border-radius: 3px;
                 &:hover {
                     border: 1px solid $mainColor;
                     color: $mainColor;
@@ -214,8 +240,7 @@ header {
                     }
                     @media (max-width: 450px) {
                         & {
-                            opacity: 0;
-                            visibility: hidden;
+                            display: none;
                         }
                     }
                 }
@@ -223,11 +248,13 @@ header {
             > button {
                 display: none;
                 border: 1px solid $textColor;
-                padding: $ten;
+                padding: $ten 15px;
                 color: $textColor;
                 font-size: 20px;
                 background: white;
                 margin-right: 15px;
+                border-radius: 3px;
+                cursor: pointer;
                 &:hover {
                     border: 1px solid $mainColor;
                     color: $mainColor;
