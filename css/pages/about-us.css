@@ -240,7 +240,8 @@ header main {
     header main nav > ul > li {
       position: relative;
       display: inline-block;
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      border-radius: 25px; }
       header main nav > ul > li:hover {
         border: 1px solid #DA0060; }
         header main nav > ul > li:hover a {
@@ -465,59 +466,61 @@ header ~ main {
   padding: 60px 0 !important; }
   header ~ main .container > .col {
     padding: 10px; }
-    header ~ main .container > .col:first-of-type img {
+    header ~ main .container > .col:first-child img {
       width: 100%; }
     @media (max-width: 767px) {
-      header ~ main .container > .col:first-of-type.span_8_of_12 {
+      header ~ main .container > .col:first-child.span_8_of_12 {
         width: 100% !important; } }
-    header ~ main .container > .col:nth-of-type(2) {
+    header ~ main .container > .col:nth-child(2) {
       text-align: left; }
-      header ~ main .container > .col:nth-of-type(2) h2 {
+      header ~ main .container > .col:nth-child(2) h2 {
         color: #666;
         margin-top: 0; }
-      header ~ main .container > .col:nth-of-type(2) p {
+      header ~ main .container > .col:nth-child(2) p {
         color: #666;
         line-height: 1.7em;
         margin: 0; }
       @media (max-width: 767px) {
-        header ~ main .container > .col:nth-of-type(2).span_4_of_12 {
+        header ~ main .container > .col:nth-child(2).span_4_of_12 {
           width: 100% !important; }
-        header ~ main .container > .col:nth-of-type(2).col {
+        header ~ main .container > .col:nth-child(2).col {
           margin-left: 0;
           text-align: center; } }
-    header ~ main .container > .col:last-of-type {
+    header ~ main .container > .col.team {
       margin-left: 0; }
-      header ~ main .container > .col:last-of-type h2 {
+      header ~ main .container > .col.team h2 {
         color: #666;
         margin-top: 0;
         text-align: left; }
-      header ~ main .container > .col:last-of-type .col > div {
+      header ~ main .container > .col.team .col:first-of-type {
+        margin-left: 0; }
+      header ~ main .container > .col.team .col > div {
         height: 370px;
         padding: 10px;
         border: 1px solid #C0C0C0;
         border-radius: 5px; }
-        header ~ main .container > .col:last-of-type .col > div:hover {
+        header ~ main .container > .col.team .col > div:hover {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
-        header ~ main .container > .col:last-of-type .col > div .image {
+        header ~ main .container > .col.team .col > div .image {
           height: 210px; }
-          header ~ main .container > .col:last-of-type .col > div .image img {
+          header ~ main .container > .col.team .col > div .image img {
             width: 100%; }
-        header ~ main .container > .col:last-of-type .col > div > div:last-of-type {
+        header ~ main .container > .col.team .col > div > div:last-of-type {
           height: 140px; }
-          header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul {
+          header ~ main .container > .col.team .col > div > div:last-of-type ul {
             height: 100%; }
-            header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul li {
+            header ~ main .container > .col.team .col > div > div:last-of-type ul li {
               height: 33.33%;
               display: flex;
               justify-content: center;
               align-items: center; }
-              header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul li h4 {
+              header ~ main .container > .col.team .col > div > div:last-of-type ul li h4 {
                 color: #666; }
-              header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul li span {
+              header ~ main .container > .col.team .col > div > div:last-of-type ul li span {
                 color: #DA0060;
                 font-weight: bold;
                 font-size: 20px; }
-              header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul li:last-of-type a {
+              header ~ main .container > .col.team .col > div > div:last-of-type ul li:last-of-type a {
                 display: inline-block;
                 width: 30px;
                 height: 30px;
@@ -527,30 +530,24 @@ header ~ main {
                 background-color: #C0C0C0;
                 color: white;
                 margin-right: 5px; }
-                header ~ main .container > .col:last-of-type .col > div > div:last-of-type ul li:last-of-type a:hover {
+                header ~ main .container > .col.team .col > div > div:last-of-type ul li:last-of-type a:hover {
                   background-color: #DA0060; }
       @media (max-width: 767px) {
-        header ~ main .container > .col:last-of-type .col.span_3_of_12 {
+        header ~ main .container > .col.team .col.span_3_of_12 {
           width: 100% !important; }
-        header ~ main .container > .col:last-of-type .col.col {
-          margin-left: 0; } }
+        header ~ main .container > .col.team .col {
+          margin-left: 0 !important; } }
       @media (min-width: 768px) and (max-width: 991px) {
-        header ~ main .container > .col:last-of-type .col.col:first-of-type {
-          margin-left: 0; }
-        header ~ main .container > .col:last-of-type .col.span_3_of_12 {
+        header ~ main .container > .col.team .col.span_3_of_12 {
           width: 32.26% !important; }
-        header ~ main .container > .col:last-of-type .col.col:nth-child(3n+1) {
-          margin-left: 0; } }
+        header ~ main .container > .col.team .col:nth-child(4n+1) {
+          margin-left: 0 !important; } }
       @media (min-width: 992px) and (max-width: 1199px) {
-        header ~ main .container > .col:last-of-type .col.col:first-of-type {
-          margin-left: 0; }
-        header ~ main .container > .col:last-of-type .col.col:nth-child(4n+1) {
-          margin-left: 0; } }
+        header ~ main .container > .col.team .col:nth-child(5n+1) {
+          margin-left: 0 !important; } }
       @media (min-width: 1200px) {
-        header ~ main .container > .col:last-of-type .col.col:first-of-type {
-          margin-left: 0; }
-        header ~ main .container > .col:last-of-type .col.col:nth-child(4n+1) {
-          margin-left: 0; } }
+        header ~ main .container > .col.team .col:nth-child(5n+1) {
+          margin-left: 0 !important; } }
 
 /* === Framework === */
 .image-parent {

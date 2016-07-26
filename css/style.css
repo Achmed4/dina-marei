@@ -252,7 +252,8 @@ header main {
     header main nav > ul > li {
       position: relative;
       display: inline-block;
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      border-radius: 25px; }
       header main nav > ul > li:hover {
         border: 1px solid #DA0060; }
         header main nav > ul > li:hover a {
@@ -608,7 +609,8 @@ blockquote {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-right: 15px; }
+    padding-right: 15px;
+    outline: 0; }
     blockquote .carousel3 .slick-slide div:first-child {
       width: 90px;
       margin-right: 10px; }

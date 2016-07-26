@@ -283,6 +283,7 @@ header {
                     position: relative;
                     display: inline-block;
                     border: 1px solid $transparent;
+                    border-radius: 25px;
                     &:hover {
                         border: 1px solid $mainColor;
                         a {

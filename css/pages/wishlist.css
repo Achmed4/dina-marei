@@ -240,7 +240,8 @@ header main {
     header main nav > ul > li {
       position: relative;
       display: inline-block;
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      border-radius: 25px; }
       header main nav > ul > li:hover {
         border: 1px solid #DA0060; }
         header main nav > ul > li:hover a {
