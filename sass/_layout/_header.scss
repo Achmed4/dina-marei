@@ -172,12 +172,11 @@ header {
             margin-right: 15px;
             @include flexbox($justify-content: space-between);
             // Cart
-            > a {
+            > div {
+                display: inline-block;
                 position: relative;
                 border: 1px solid $textColor;
                 margin-right: 15px;
-                padding: $ten 15px;
-                color: $textColor;
                 font-size: 20px;
                 border-radius: 3px;
                 &:hover {
@@ -188,8 +187,13 @@ header {
                         visibility: visible;
                     }
                 }
-                > span.ui.red.label, span.ui.red.labels .label {
-                    background: $mainColor !important;
+                a {
+                    display: block;
+                    padding: $ten 15px;
+                    color: $textColor;
+                    > span.ui.red.label, span.ui.red.labels .label {
+                        background: $mainColor !important;
+                    }
                 }
                 > div {
                     position: absolute;
@@ -227,9 +231,61 @@ header {
                         -ms-transform: translate(-50%, -50%);
                         transform: translate(-50%, -50%);
                     }
-                    // .busy {
-                    //
-                    // }
+                    .busy {
+                        li {
+                            @include flexbox($justify-content: space-between);
+                            padding: $ten $zero;
+                            border-bottom: 1px dashed $headerlinkcolor;
+                            .image {
+                                width: 100px;
+                                height: 100px;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            > div {
+                                display: inline-block;
+                                text-align: center;
+                                > div {
+                                    &:first-child {
+                                        max-width: 210px;
+                                        a {
+                                            color: $textColor;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                            > button {
+                                width: 25px;
+                                height: 25px;
+                                line-height: 12.5px;
+                                text-align: center;
+                                border-radius: 50%;
+                                border: 2px solid;
+                                background: transparent;
+                                padding: 0;
+                                cursor: pointer;
+                                &:hover i {
+                                    color: $mainColor;
+                                }
+                            }
+                        }
+                        > div {
+                            margin-top: 10px;
+                            span:first-child {
+                                color: $textColor;
+                                font-weight: bold;
+                                margin-right: 3px;
+                            }
+                            span:last-child {
+                                color: $textColor;
+                                font-size: 15px;
+                            }
+                        }
+                    }
                     @media (max-width: 767px) {
                         & {
                             left: -303px;

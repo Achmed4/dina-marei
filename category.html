@@ -48,28 +48,33 @@
                     <a href="index.html"><img src="img/logo.png" alt=""  /></a>
                 </figure>
                 <nav>
-                    <a href="shopping-cart.html">
-                        <span class="floating ui red circular label">0</span>
-                        <i class="fa fa-shopping-bag"></i>
+                    <div>
+                        <a href="shopping-cart.html">
+                            <span class="floating ui red circular label">0</span>
+                            <i class="fa fa-shopping-bag"></i>
+                        </a>
                         <div>
-                            <ul class="empty">
+                            <!-- <ul class="empty">
                                 <li>Shopping Cart Is Empty!</li>
-                            </ul>
-                            <!-- <div class="busy">
-                                <ul>
-                                    <li class="image">
-                                        <img src="img/item1.JPG" alt="" />
-                                    </li>
-                                    <div>
-                                        <span>Product Name</span>
-                                        <span>X2</span>
-                                        <span>10,000.00LE</span>
+                            </ul> -->
+                            <ul class="busy">
+                                <li>
+                                    <div class="image image-parent">
+                                        <a href="product.html"><img class="image-cover" src="img/thumb/image1.jpg" alt="" /></a>
                                     </div>
-                                    <button type="button"><i class="fa fa-times" aria-hidden="true"></i></button>
-                                </ul>
-                            </div> -->
+                                    <div>
+                                        <div><a href="product.html">Product Name</a></div>
+                                        <div>X2</div>
+                                        <div>10,000.00LE</div>
+                                    </div>
+                                    <button type="button" title="Remove"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </li>
+                                <div>
+                                    <span>Subtotal:</span><span>10,000.00LE</span>
+                                </div>
+                            </ul>
                         </div>
-                    </a>
+                    </div>
                     <button type="button"><i class="fa fa-bars"></i></button>
                     <ul>
                         <span><i class="fa fa-times"></i></span>
@@ -489,7 +494,6 @@
 
         <script src="js/jquery-3.0.0.min.js"></script>
         <script src="js/slick.min.js"></script>
-        <script src="js/productSlider.js"></script>
         <script src="js/categoryToggleLayout.js"></script>
         <script src="js/script.js"></script>
     </body>

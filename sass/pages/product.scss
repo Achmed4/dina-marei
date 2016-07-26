@@ -39,7 +39,7 @@ header ~ main {
             }
             @media (min-width: 992px) and (max-width: 1200px) {
                 & {
-                    width: 500px;
+                    width: 480px;
                 }
             }
             @media (min-width: 1200px) {
@@ -259,20 +259,25 @@ main ~ section {
             &#products {
                 .col {
                     > div {
+                        position: relative;
                         height: 370px;
                         padding: 10px;
                         text-align: left;
                         border: 1px solid $headerlinkcolor;
                         border-radius: 5px;
                         transition: all 0.3s ease-in-out;
+                        overflow: hidden;
                         &:hover {
                             box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
-                        }
-                        &:hover img {
-                            transform: translate(-50%, -50%) scale(1.2);
-                        }
-                        &:hover > div:last-of-type ul li:last-of-type a {
-                            background-color: $mainColor;
+                            img {
+                                transform: translate(-50%, -50%) scale(1.2);
+                            }
+                            > div:last-of-type ul li:last-of-type a {
+                                background-color: $mainColor;
+                            }
+                            div.addTo {
+                                top: 150px;
+                            }
                         }
                         .image {
                             height: 210px;
@@ -318,8 +323,27 @@ main ~ section {
                                 }
                             }
                         }
+                        div.addTo {
+                            position: absolute;
+                            top: -80px;
+                            left: 15px;
+                            transition: all 0.3s ease-in-out;
+                            a {
+                                display: block;
+                                width: 30px;
+                                height: 30px;
+                                line-height: 30px;
+                                text-align: center;
+                                margin-bottom: 3px;
+                                border-radius: 3px;
+                                color: $white;
+                                background: $textColor;
+                                &:hover {
+                                    background: $mainColor;
+                                }
+                            }
+                        }
                     }
-
                     @media (max-width: 767px) {
                         &.span_3_of_12 {
                             width: 100% !important;
@@ -342,13 +366,11 @@ main ~ section {
                             margin-left: 0;
                         }
                     }
-
                     @media (min-width: 1200px) {
                         &.col:nth-child(4n+1) {
                             margin-left: 0;
                         }
                     }
-
                 }
             }
         }

@@ -110,25 +110,25 @@ header ~ main {
                     &.span_3_of_12 {
                         width: 100% !important;
                     }
-                    & {
-                        margin-left: 0 !important;
+                    &.col {
+                        margin-left: 0;
                     }
                 }
                 @media (min-width: 768px) and (max-width: 991px) {
                     &.span_3_of_12 {
                         width: 32.26% !important;
                     }
-                    &:nth-child(4n+1) {
+                    &.col:nth-child(3n+1) {
                         margin-left: 0 !important;
                     }
                 }
                 @media (min-width: 992px) and (max-width: 1199px) {
-                    &:nth-child(5n+1) {
+                    &.col:nth-child(4n+1) {
                         margin-left: 0 !important;
                     }
                 }
                 @media (min-width: 1200px) {
-                    &:nth-child(5n+1) {
+                    &.col:nth-child(4n+1) {
                         margin-left: 0 !important;
                     }
                 }

@@ -149,23 +149,26 @@ header main {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    header main nav > a {
+    header main nav > div {
+      display: inline-block;
       position: relative;
       border: 1px solid #666;
       margin-right: 15px;
-      padding: 10px 15px;
-      color: #666;
       font-size: 20px;
       border-radius: 3px; }
-      header main nav > a:hover {
+      header main nav > div:hover {
         border: 1px solid #DA0060;
         color: #DA0060; }
-        header main nav > a:hover div {
+        header main nav > div:hover div {
           opacity: 1;
           visibility: visible; }
-      header main nav > a > span.ui.red.label, header main nav > a span.ui.red.labels .label {
-        background: #DA0060 !important; }
-      header main nav > a > div {
+      header main nav > div a {
+        display: block;
+        padding: 10px 15px;
+        color: #666; }
+        header main nav > div a > span.ui.red.label, header main nav > div a span.ui.red.labels .label {
+          background: #DA0060 !important; }
+      header main nav > div > div {
         position: absolute;
         opacity: 0;
         visibility: hidden;
@@ -177,7 +180,7 @@ header main {
         top: 54px;
         left: -8px;
         z-index: 1; }
-        header main nav > a > div::before {
+        header main nav > div > div::before {
           content: '';
           position: absolute;
           top: -14px;
@@ -189,7 +192,7 @@ header main {
           -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
-        header main nav > a > div .empty {
+        header main nav > div > div .empty {
           font-size: 15px;
           text-align: center;
           font-style: italic;
@@ -199,13 +202,54 @@ header main {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+        header main nav > div > div .busy li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          border-bottom: 1px dashed #A5A5A5; }
+          header main nav > div > div .busy li .image {
+            width: 100px;
+            height: 100px; }
+            header main nav > div > div .busy li .image img {
+              width: 100%; }
+          header main nav > div > div .busy li > div {
+            display: inline-block;
+            text-align: center; }
+            header main nav > div > div .busy li > div > div:first-child {
+              max-width: 210px; }
+              header main nav > div > div .busy li > div > div:first-child a {
+                color: #666; }
+            header main nav > div > div .busy li > div > div:nth-child(2) {
+              font-size: 14px; }
+          header main nav > div > div .busy li > button {
+            width: 25px;
+            height: 25px;
+            line-height: 12.5px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid;
+            background: transparent;
+            padding: 0;
+            cursor: pointer; }
+            header main nav > div > div .busy li > button:hover i {
+              color: #DA0060; }
+        header main nav > div > div .busy > div {
+          margin-top: 10px; }
+          header main nav > div > div .busy > div span:first-child {
+            color: #666;
+            font-weight: bold;
+            margin-right: 3px; }
+          header main nav > div > div .busy > div span:last-child {
+            color: #666;
+            font-size: 15px; }
         @media (max-width: 767px) {
-          header main nav > a > div {
+          header main nav > div > div {
             left: -303px; }
-            header main nav > a > div::before {
+            header main nav > div > div::before {
               left: 87%; } }
         @media (max-width: 450px) {
-          header main nav > a > div {
+          header main nav > div > div {
             display: none; } }
     header main nav > button {
       display: none;
