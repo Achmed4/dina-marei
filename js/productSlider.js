@@ -9,22 +9,18 @@
     });
 
     //Initiate ZOOM Plugin
-    // var dataZoomImage = $('#zoom_01').data('zoom-image');
     $("#zoom_01 img").elevateZoom({
         zoomType: "inner",
         cursor: "crosshair"
     });
 
-    // $('#product-slider img').on('click', function() {
-    //     console.log('dataZoomImage');
-    // });
-
-    var imagePath, newDataZoomImage;
-
+    var imagePath;
     $('#product-slider .image-parent').on('click', function() {
-        // newDataZoomImage = $(this).children().data('zoom-image');
         imagePath = $(this).html();
-        $('.col #zoom_01').html(imagePath).elevateZoom();
+        $('#zoom_01').html(imagePath).children().elevateZoom({
+            zoomType: "inner",
+            cursor: "crosshair"
+        });
         console.log(imagePath);
     });
 

@@ -486,7 +486,7 @@ header ~ main {
   header ~ main .col:first-child {
     padding: 10px; }
     header ~ main .col:first-child > div:first-child {
-      width: 300px;
+      width: 312px;
       height: 300px;
       margin: 0 auto;
       margin-bottom: 25px;
@@ -504,8 +504,8 @@ header ~ main {
         opacity: 1;
         visibility: visible; }
       header ~ main .col:first-child #product-slider .slick-slide {
-        height: 70px;
-        margin: 0 27px;
+        height: 150px;
+        margin: 0 10px;
         border-radius: 3px;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
         cursor: pointer; }
