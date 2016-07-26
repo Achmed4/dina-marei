@@ -495,6 +495,18 @@ header ~ main {
       box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
       header ~ main .col:first-child > div:first-child img {
         width: 100%; }
+      @media (max-width: 767px) {
+        header ~ main .col:first-child > div:first-child {
+          width: 280px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        header ~ main .col:first-child > div:first-child {
+          width: 500px; } }
+      @media (min-width: 992px) and (max-width: 1200px) {
+        header ~ main .col:first-child > div:first-child {
+          width: 500px; } }
+      @media (min-width: 1200px) {
+        header ~ main .col:first-child > div:first-child {
+          width: 500px; } }
     header ~ main .col:first-child #product-slider {
       display: flex;
       justify-content: center;
@@ -511,6 +523,18 @@ header ~ main {
         cursor: pointer; }
         header ~ main .col:first-child #product-slider .slick-slide img {
           width: 100%; }
+        @media (max-width: 767px) {
+          header ~ main .col:first-child #product-slider .slick-slide {
+            margin: 0 4px; } }
+        @media (min-width: 768px) and (max-width: 991px) {
+          header ~ main .col:first-child #product-slider .slick-slide {
+            margin: 0 8px; } }
+        @media (min-width: 992px) and (max-width: 1200px) {
+          header ~ main .col:first-child #product-slider .slick-slide {
+            margin: 0 16px; } }
+        @media (min-width: 1200px) {
+          header ~ main .col:first-child #product-slider .slick-slide {
+            margin: 0 24px; } }
       header ~ main .col:first-child #product-slider i.fa.fa-angle-right.slick-arrow,
       header ~ main .col:first-child #product-slider i.fa.fa-angle-left.slick-arrow {
         font-size: 23px;

@@ -27,6 +27,26 @@ header ~ main {
             img {
                 width: 100%;
             }
+            @media (max-width: 767px) {
+                & {
+                    width: 280px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                & {
+                    width: 500px;
+                }
+            }
+            @media (min-width: 992px) and (max-width: 1200px) {
+                & {
+                    width: 500px;
+                }
+            }
+            @media (min-width: 1200px) {
+                & {
+                    width: 500px;
+                }
+            }
         }
         #product-slider {
             @include flexbox;
@@ -38,12 +58,32 @@ header ~ main {
             }
             .slick-slide {
                 height: 150px;
-                margin: 0 10px; //27px
+                margin: 0 10px;
                 border-radius: 3px;
                 box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
                 cursor: pointer;
                 img {
                     width: 100%;
+                }
+                @media (max-width: 767px) {
+                    & {
+                        margin: 0 4px;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    & {
+                        margin: 0 8px;
+                    }
+                }
+                @media (min-width: 992px) and (max-width: 1200px) {
+                    & {
+                        margin: 0 16px;
+                    }
+                }
+                @media (min-width: 1200px) {
+                    & {
+                        margin: 0 24px;
+                    }
                 }
             }
             // .slick-list {
