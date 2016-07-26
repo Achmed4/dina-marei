@@ -525,6 +525,7 @@ header ~ main {
       color: white;
       background-color: #666;
       cursor: pointer;
+      outline: 0;
       transition: background-color 0.5s ease-in-out; }
       header ~ main .col table tbody td:last-child a:hover {
         background-color: #DA0060; }

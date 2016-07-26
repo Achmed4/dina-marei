@@ -511,8 +511,6 @@ header ~ main {
         cursor: pointer; }
         header ~ main .col:first-child #product-slider .slick-slide img {
           width: 100%; }
-      header ~ main .col:first-child #product-slider .slick-list {
-        margin: 0 -27px; }
       header ~ main .col:first-child #product-slider i.fa.fa-angle-right.slick-arrow,
       header ~ main .col:first-child #product-slider i.fa.fa-angle-left.slick-arrow {
         font-size: 23px;
@@ -575,6 +573,7 @@ header ~ main {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:last-child div:last-of-type button:hover {
           background-color: #DA0060; }
@@ -642,6 +641,7 @@ main ~ section .container > .col {
       color: white;
       background-color: #666;
       cursor: pointer;
+      outline: 0;
       transition: background-color 0.5s ease-in-out; }
       main ~ section .container > .col > div#reviews form button[type="submit"]:hover {
         background-color: #DA0060; }
@@ -697,6 +697,7 @@ main ~ section .container > .col {
               color: white;
               background-color: #666;
               cursor: pointer;
+              outline: 0;
               transition: background-color 0.5s ease-in-out; }
               main ~ section .container > .col > div#products .col > div > div:last-of-type ul li:last-of-type a:hover {
                 background-color: #DA0060; }

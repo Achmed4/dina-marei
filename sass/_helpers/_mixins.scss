@@ -51,6 +51,7 @@
     color: $white;
     background-color: $textColor;
     cursor: pointer;
+    outline: $zero;
     transition: background-color 0.5s ease-in-out;
     &:hover {
         background-color: $mainColor;

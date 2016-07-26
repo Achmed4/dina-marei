@@ -476,6 +476,7 @@ figure ~ section {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out; }
         figure ~ section .carousel2 .slick-slide div:last-child button:hover {
           background-color: #DA0060; }
@@ -565,6 +566,7 @@ section ~ article {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out; }
         section ~ article section div:last-child a:hover {
           background-color: #DA0060; }

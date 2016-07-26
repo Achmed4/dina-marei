@@ -539,6 +539,7 @@ header ~ main {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:first-child table ~ div a:hover {
           background-color: #DA0060; }
@@ -621,6 +622,7 @@ header ~ main {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out; }
         header ~ main .col:last-child table ~ div a:hover {
           background-color: #DA0060; }

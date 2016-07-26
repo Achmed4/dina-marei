@@ -531,6 +531,7 @@ header ~ main {
         color: white;
         background-color: #666;
         cursor: pointer;
+        outline: 0;
         transition: background-color 0.5s ease-in-out;
         padding: 15px 35px;
         background-color: #DA0060; }

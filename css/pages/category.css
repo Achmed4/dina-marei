@@ -561,6 +561,7 @@ header ~ main {
                 color: white;
                 background-color: #666;
                 cursor: pointer;
+                outline: 0;
                 transition: background-color 0.5s ease-in-out; }
                 header ~ main .col #vertical-layout .col > div > div:last-of-type ul li:last-of-type a:hover {
                   background-color: #DA0060; }
@@ -658,6 +659,7 @@ header ~ main {
             color: white;
             background-color: #666;
             cursor: pointer;
+            outline: 0;
             transition: background-color 0.5s ease-in-out; }
             header ~ main .col #horizontal-layout > div > div:last-of-type a:last-child:hover {
               background-color: #DA0060; }
