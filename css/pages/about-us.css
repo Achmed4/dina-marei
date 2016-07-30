@@ -536,8 +536,6 @@ header ~ main {
         color: #666;
         margin-top: 0;
         text-align: left; }
-      header ~ main .container > .col.team .col:first-of-type {
-        margin-left: 0; }
       header ~ main .container > .col.team .col > div {
         height: 370px;
         padding: 10px;
@@ -579,19 +577,19 @@ header ~ main {
       @media (max-width: 767px) {
         header ~ main .container > .col.team .col.span_3_of_12 {
           width: 100% !important; }
-        header ~ main .container > .col.team .col.col {
+        header ~ main .container > .col.team .col {
           margin-left: 0; } }
       @media (min-width: 768px) and (max-width: 991px) {
         header ~ main .container > .col.team .col.span_3_of_12 {
           width: 32.26% !important; }
-        header ~ main .container > .col.team .col.col:nth-child(3n+1) {
-          margin-left: 0 !important; } }
+        header ~ main .container > .col.team .col:nth-of-type(3n+1) {
+          margin-left: 0; } }
       @media (min-width: 992px) and (max-width: 1199px) {
-        header ~ main .container > .col.team .col.col:nth-child(4n+1) {
-          margin-left: 0 !important; } }
+        header ~ main .container > .col.team .col:nth-of-type(4n+1) {
+          margin-left: 0; } }
       @media (min-width: 1200px) {
-        header ~ main .container > .col.team .col.col:nth-child(4n+1) {
-          margin-left: 0 !important; } }
+        header ~ main .container > .col.team .col:nth-of-type(4n+1) {
+          margin-left: 0; } }
 
 /* === Framework === */
 .image-parent {

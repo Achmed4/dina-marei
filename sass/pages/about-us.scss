@@ -54,9 +54,6 @@ header ~ main {
                 text-align: left;
             }
             .col {
-                &:first-of-type {
-                    margin-left: 0;
-                }
                 > div {
                     height: 370px;
                     padding: 10px;
@@ -110,7 +107,7 @@ header ~ main {
                     &.span_3_of_12 {
                         width: 100% !important;
                     }
-                    &.col {
+                    & {
                         margin-left: 0;
                     }
                 }
@@ -118,18 +115,18 @@ header ~ main {
                     &.span_3_of_12 {
                         width: 32.26% !important;
                     }
-                    &.col:nth-child(3n+1) {
-                        margin-left: 0 !important;
+                    &:nth-of-type(3n+1) {
+                        margin-left: 0;
                     }
                 }
                 @media (min-width: 992px) and (max-width: 1199px) {
-                    &.col:nth-child(4n+1) {
-                        margin-left: 0 !important;
+                    &:nth-of-type(4n+1) {
+                        margin-left: 0;
                     }
                 }
                 @media (min-width: 1200px) {
-                    &.col:nth-child(4n+1) {
-                        margin-left: 0 !important;
+                    &:nth-of-type(4n+1) {
+                        margin-left: 0;
                     }
                 }
             }
