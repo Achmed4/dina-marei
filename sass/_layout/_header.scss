@@ -8,7 +8,7 @@ header {
             height: 50px;
             position: relative;
             @include flexbox($justify-content: space-between);
-            @media (max-width: 620px) {
+            @media (max-width: 767px) { //620px
                 display: block;
                 padding: $ten 0;
                 height: auto;
@@ -26,7 +26,7 @@ header {
                         color: $headerlinkhover;
                     }
                 }
-                @media (max-width: 620px) {
+                @media (max-width: 767px) { //620px
                     display: inline-block;
                     margin-bottom: $ten;
                     padding: $zero;
@@ -36,8 +36,11 @@ header {
                     }
                 }
             }
-            div {
+            > div {
                 margin-right: $ten;
+                @media (max-width: 767px) { //620px
+                    margin-right: $zero;
+                }
                 > button {
                     background: $transparent;
                     border: $zero;
@@ -46,12 +49,9 @@ header {
                     cursor: pointer;
                     &:first-child {
                         display: none;
-                        @media (max-width: 620px) {
+                        @media (max-width: 767px) { //620px
                             display: inline-block;
                         }
-                    }
-                    &:nth-child(2) {
-                        display: inline-block;
                     }
                 }
                 form {
@@ -59,7 +59,7 @@ header {
                     margin-right: 5px;
                     display: inline-block;
                     z-index: 999;
-                    @media (max-width: 620px) {
+                    @media (max-width: 767px) { //620px
                         position: absolute;
                         bottom: -30px;
                         left: 0;
@@ -80,7 +80,7 @@ header {
                         transform: translateX(-30px);
                         position: absolute;
                         cursor: pointer;
-                        @media (max-width: 620px) {
+                        @media (max-width: 767px) { //620px
                             padding: 5px 8px;
                             position: absolute;
                             top: 1px;
@@ -88,58 +88,65 @@ header {
                         }
                     }
                     input {
-                        border-right: $zero;
                         border-radius: 15px;
-                        border: 2px solid $headerlinkcolor;
+                        border: $zero;
                         outline: $zero;
+                        box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
                         padding: 5px $ten;
                         height: 30px;
                         width: 200px;
                         transition: width 0.3s ease-in-out;
-                        @media (max-width: 620px) {
+                        @media (max-width: 767px) { //620px
                             width: 100%;
                             border-radius: 0;
                         }
                     }
                 }
-                ul {
-                    display: none;
-                    position: absolute;
-                    bottom: -40px;
-                    right: 15px;
-                    background: $headerbg;
-                    min-width: 150px;
-                    height: 40px;
-                    line-height: 40px;
-                    justify-content: space-around;
-                    align-items: center;
-                    z-index: 999;
-                    li {
+                > label {
+                    position:relative;
+                    &::after {
+                        content:'<>';
+                        font:11px "Consolas", monospace;
+                        color:#aaa;
+                        -webkit-transform:rotate(90deg);
+                        -moz-transform:rotate(90deg);
+                        -ms-transform:rotate(90deg);
+                        transform:rotate(90deg);
+                        right:8px; top:2px;
+                        padding:0 0 2px;
+                        border-bottom:1px solid #ddd;
+                        position:absolute;
+                        pointer-events:none;
+                    }
+                    &::before {
+                        content:'';
+                        right:4px;
+                        top:0px;
+                        width:32px;
+                        height:20px;
+                        background:#f8f8f8;
+                        position:absolute;
+                        pointer-events:none;
+                        display:block;
+                    }
+                    select {
+                        padding:3px;
+                        margin: 0;
+                        border-radius:4px;
+                        box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+                        background: #f8f8f8;
+                        color:#888;
+                        border:none;
+                        outline:none;
                         display: inline-block;
-                        height: 100%;
-                        width: 25%;
-                        &:not(:last-child) {
-                            border-right: 1px solid #222;
-                        }
-                        a {
-                            display: block;
-                            padding: 0 15px;
-                            color: $headerlinkcolor;
-                            &:hover {
-                                color: $mainColor;
-                            }
-                        }
+                        -webkit-appearance:none;
+                        -moz-appearance:none;
+                        appearance:none;
+                        cursor:pointer;
+                        // @media screen and (-webkit-min-device-pixel-ratio:0) {
+                        //     select {padding-right:18px}
+                        // }
                     }
-                    &.toggle {
-                        @include flexbox;
-                    }
-                    @media (max-width: 620px) {
-                        right: 0;
-                        left: 0;
-                    }
-                }
-                @media (max-width: 620px) {
-                    margin-right: $zero;
                 }
             }
         }
@@ -164,7 +171,7 @@ header {
             }
             @media (max-width: 620px) {
                 & {
-                    margin: 5px 20px;
+                    margin: 5px;
                 }
             }
         }

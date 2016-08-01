@@ -23,7 +23,7 @@ header section {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    @media (max-width: 620px) {
+    @media (max-width: 767px) {
       header section .container {
         display: block;
         padding: 10px 0;
@@ -38,7 +38,7 @@ header section {
         color: #A5A5A5; }
         header section .container > ul li a:hover {
           color: #C0C0C0; }
-      @media (max-width: 620px) {
+      @media (max-width: 767px) {
         header section .container > ul li {
           display: inline-block;
           margin-bottom: 10px;
@@ -46,37 +46,38 @@ header section {
           border-right: 0 !important; }
           header section .container > ul li a {
             padding: 0 10px; } }
-    header section .container div {
+    header section .container > div {
       margin-right: 10px; }
-      header section .container div > button {
+      @media (max-width: 767px) {
+        header section .container > div {
+          margin-right: 0; } }
+      header section .container > div > button {
         background: transparent;
         border: 0;
         color: #A5A5A5;
         outline: 0;
         cursor: pointer; }
-        header section .container div > button:first-child {
+        header section .container > div > button:first-child {
           display: none; }
-          @media (max-width: 620px) {
-            header section .container div > button:first-child {
+          @media (max-width: 767px) {
+            header section .container > div > button:first-child {
               display: inline-block; } }
-        header section .container div > button:nth-child(2) {
-          display: inline-block; }
-      header section .container div form {
+      header section .container > div form {
         position: relative;
         margin-right: 5px;
         display: inline-block;
         z-index: 999; }
-        @media (max-width: 620px) {
-          header section .container div form {
+        @media (max-width: 767px) {
+          header section .container > div form {
             position: absolute;
             bottom: -30px;
             left: 0;
             width: 100%; }
-            header section .container div form:hover input {
+            header section .container > div form:hover input {
               width: 100%; }
-            header section .container div form.toggle {
+            header section .container > div form.toggle {
               display: none; } }
-        header section .container div form button {
+        header section .container > div form button {
           color: #A5A5A5;
           background: transparent;
           border: 0;
@@ -85,60 +86,65 @@ header section {
           transform: translateX(-30px);
           position: absolute;
           cursor: pointer; }
-          @media (max-width: 620px) {
-            header section .container div form button {
+          @media (max-width: 767px) {
+            header section .container > div form button {
               padding: 5px 8px;
               position: absolute;
               top: 1px;
               right: -30px; } }
-        header section .container div form input {
-          border-right: 0;
+        header section .container > div form input {
           border-radius: 15px;
-          border: 2px solid #A5A5A5;
+          border: 0;
           outline: 0;
+          box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
           padding: 5px 10px;
           height: 30px;
           width: 200px;
           transition: width 0.3s ease-in-out; }
-          @media (max-width: 620px) {
-            header section .container div form input {
+          @media (max-width: 767px) {
+            header section .container > div form input {
               width: 100%;
               border-radius: 0; } }
-      header section .container div ul {
-        display: none;
-        position: absolute;
-        bottom: -40px;
-        right: 15px;
-        background: #414141;
-        min-width: 150px;
-        height: 40px;
-        line-height: 40px;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 999; }
-        header section .container div ul li {
+      header section .container > div > label {
+        position: relative; }
+        header section .container > div > label::after {
+          content: '<>';
+          font: 11px "Consolas", monospace;
+          color: #aaa;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+          right: 8px;
+          top: 2px;
+          padding: 0 0 2px;
+          border-bottom: 1px solid #ddd;
+          position: absolute;
+          pointer-events: none; }
+        header section .container > div > label::before {
+          content: '';
+          right: 4px;
+          top: 0px;
+          width: 32px;
+          height: 20px;
+          background: #f8f8f8;
+          position: absolute;
+          pointer-events: none;
+          display: block; }
+        header section .container > div > label select {
+          padding: 3px;
+          margin: 0;
+          border-radius: 4px;
+          box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+          background: #f8f8f8;
+          color: #888;
+          border: none;
+          outline: none;
           display: inline-block;
-          height: 100%;
-          width: 25%; }
-          header section .container div ul li:not(:last-child) {
-            border-right: 1px solid #222; }
-          header section .container div ul li a {
-            display: block;
-            padding: 0 15px;
-            color: #A5A5A5; }
-            header section .container div ul li a:hover {
-              color: #DA0060; }
-        header section .container div ul.toggle {
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        @media (max-width: 620px) {
-          header section .container div ul {
-            right: 0;
-            left: 0; } }
-      @media (max-width: 620px) {
-        header section .container div {
-          margin-right: 0; } }
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          cursor: pointer; }
 header main {
   height: 125px;
   display: flex;
@@ -155,7 +161,7 @@ header main {
       width: 100%; }
   @media (max-width: 620px) {
     header main figure {
-      margin: 5px 20px; } }
+      margin: 5px; } }
   header main nav {
     margin-right: 15px;
     display: flex;
