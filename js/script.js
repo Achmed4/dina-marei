@@ -33,15 +33,33 @@
     });
 
     // Adjusting Nav Menu on Mobile
-    $('header main nav > button').on('click', function() {
-        $('header main nav > ul').fadeIn('300');
-        // Hide Body Scroll
+    // $('header main nav > button').on('click', function() {
+    //     $('header main nav > div:last-child ul').fadeIn('300');
+    //     $('body').css('overflow', 'hidden');
+    // });
+    // $('header main nav > ul span').on('click', function() {
+    //     $('header main nav > div:last-child ul').fadeOut('300');
+    //     $('body').css('overflow-y', 'visible');
+    // });
+
+    function openNav() {
+        $("header main nav > div:last-child").css('width', '100%');
         $('body').css('overflow', 'hidden');
+    }
+
+    function closeNav() {
+        $("header main nav > div:last-child").css('width', '0%');
+        $('body').css('overflow', 'auto');
+    }
+
+    /* Open when someone clicks on the Hamburger button */
+    $('#hamburger').on('click', function() {
+        openNav();
     });
-    $('header main nav > ul span').on('click', function() {
-        $('header main nav > ul').fadeOut('300');
-        // Show Body Scroll
-        $('body').css('overflow-y', 'visible');
+
+    /* Close when someone clicks on the "x" symbol inside the mobile menu */
+    $('.closebtn').on('click', function() {
+        closeNav();
     });
 
 }());

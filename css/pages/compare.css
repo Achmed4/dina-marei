@@ -149,26 +149,26 @@ header main {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    header main nav > div {
+    header main nav > div:first-child {
       display: inline-block;
       position: relative;
       border: 1px solid #666;
       margin-right: 15px;
       font-size: 20px;
       border-radius: 3px; }
-      header main nav > div:hover {
+      header main nav > div:first-child:hover {
         border: 1px solid #DA0060;
         color: #DA0060; }
-        header main nav > div:hover div {
+        header main nav > div:first-child:hover div {
           opacity: 1;
           visibility: visible; }
-      header main nav > div a {
+      header main nav > div:first-child a {
         display: block;
         padding: 10px 15px;
         color: #666; }
-        header main nav > div a > span.ui.red.label, header main nav > div a span.ui.red.labels .label {
+        header main nav > div:first-child a > span.ui.red.label, header main nav > div:first-child a span.ui.red.labels .label {
           background: #DA0060 !important; }
-      header main nav > div > div {
+      header main nav > div:first-child > div {
         position: absolute;
         opacity: 0;
         visibility: hidden;
@@ -180,7 +180,7 @@ header main {
         top: 54px;
         left: -8px;
         z-index: 1; }
-        header main nav > div > div::before {
+        header main nav > div:first-child > div::before {
           content: '';
           position: absolute;
           top: -14px;
@@ -192,7 +192,7 @@ header main {
           -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
-        header main nav > div > div .empty {
+        header main nav > div:first-child > div .empty {
           font-size: 15px;
           text-align: center;
           font-style: italic;
@@ -202,27 +202,27 @@ header main {
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
-        header main nav > div > div .busy li {
+        header main nav > div:first-child > div .busy li {
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 10px 0;
           border-bottom: 1px dashed #A5A5A5; }
-          header main nav > div > div .busy li .image {
+          header main nav > div:first-child > div .busy li .image {
             width: 100px;
             height: 100px; }
-            header main nav > div > div .busy li .image img {
+            header main nav > div:first-child > div .busy li .image img {
               width: 100%; }
-          header main nav > div > div .busy li > div {
+          header main nav > div:first-child > div .busy li > div {
             display: inline-block;
             text-align: center; }
-            header main nav > div > div .busy li > div > div:first-child {
+            header main nav > div:first-child > div .busy li > div > div:first-child {
               max-width: 210px; }
-              header main nav > div > div .busy li > div > div:first-child a {
+              header main nav > div:first-child > div .busy li > div > div:first-child a {
                 color: #666; }
-            header main nav > div > div .busy li > div > div:nth-child(2) {
+            header main nav > div:first-child > div .busy li > div > div:nth-child(2) {
               font-size: 14px; }
-          header main nav > div > div .busy li > button {
+          header main nav > div:first-child > div .busy li > button {
             width: 25px;
             height: 25px;
             line-height: 12.5px;
@@ -232,24 +232,24 @@ header main {
             background: transparent;
             padding: 0;
             cursor: pointer; }
-            header main nav > div > div .busy li > button:hover i {
+            header main nav > div:first-child > div .busy li > button:hover i {
               color: #DA0060; }
-        header main nav > div > div .busy > div {
+        header main nav > div:first-child > div .busy > div {
           margin-top: 10px; }
-          header main nav > div > div .busy > div span:first-child {
+          header main nav > div:first-child > div .busy > div span:first-child {
             color: #666;
             font-weight: bold;
             margin-right: 3px; }
-          header main nav > div > div .busy > div span:last-child {
+          header main nav > div:first-child > div .busy > div span:last-child {
             color: #666;
             font-size: 15px; }
         @media (max-width: 767px) {
-          header main nav > div > div {
+          header main nav > div:first-child > div {
             left: -303px; }
-            header main nav > div > div::before {
+            header main nav > div:first-child > div::before {
               left: 87%; } }
         @media (max-width: 450px) {
-          header main nav > div > div {
+          header main nav > div:first-child > div {
             display: none; } }
     header main nav > button {
       display: none;
@@ -260,46 +260,79 @@ header main {
       background: white;
       margin-right: 15px;
       border-radius: 3px;
-      cursor: pointer; }
+      cursor: pointer;
+      outline: 0; }
       header main nav > button:hover {
         border: 1px solid #DA0060;
         color: #DA0060; }
       @media (max-width: 767px) {
         header main nav > button {
           display: inline-block; } }
-    header main nav > ul span {
+    @media (max-width: 767px) {
+      header main nav > div:last-child {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s; } }
+    header main nav > div:last-child .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 40px;
+      color: #DA0060;
       display: none;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
-      text-align: center;
-      border-radius: 50%;
-      background: #DA0060;
-      color: white;
-      margin-bottom: 15px;
-      position: relative;
-      top: 1%;
-      left: 90%;
       cursor: pointer; }
-    header main nav > ul > li {
+      @media (max-width: 767px) {
+        header main nav > div:last-child .closebtn {
+          display: block; } }
+    @media (max-width: 767px) {
+      header main nav > div:last-child > ul {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center; } }
+    header main nav > div:last-child > ul > li {
       position: relative;
       display: inline-block;
       border: 1px solid transparent;
       border-radius: 25px; }
-      header main nav > ul > li:hover {
+      header main nav > div:last-child > ul > li:hover {
         border: 1px solid #DA0060; }
-        header main nav > ul > li:hover a {
+        header main nav > div:last-child > ul > li:hover > a {
           color: #DA0060; }
-      header main nav > ul > li.active {
+        header main nav > div:last-child > ul > li:hover > div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > div:last-child > ul > li.active {
         border: 1px solid #DA0060; }
-        header main nav > ul > li.active a {
+        header main nav > div:last-child > ul > li.active > a {
           color: #DA0060; }
-      header main nav > ul > li a {
+      header main nav > div:last-child > ul > li a {
         display: block;
         padding: 10px 15px;
         color: #666;
         font-size: 16px; }
-      header main nav > ul > li div {
+        @media (max-width: 767px) {
+          header main nav > div:last-child > ul > li a {
+            color: white;
+            font-weight: bold; } }
+      @media (max-width: 767px) {
+        header main nav > div:last-child > ul > li {
+          display: block;
+          margin: 0;
+          padding: 8px;
+          border: 0;
+          border-radius: 0; }
+          header main nav > div:last-child > ul > li:hover {
+            border: 0; }
+          header main nav > div:last-child > ul > li.active {
+            border: 0; } }
+      header main nav > div:last-child > ul > li div {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -316,37 +349,28 @@ header main {
         opacity: 0;
         visibility: hidden;
         z-index: 2; }
-        header main nav > ul > li div > ul h3 {
+        header main nav > div:last-child > ul > li div > ul h3 {
           color: #666; }
-        header main nav > ul > li div > ul li {
+        header main nav > div:last-child > ul > li div > ul li {
           display: block; }
+          header main nav > div:last-child > ul > li div > ul li:hover > a {
+            color: #DA0060; }
+          header main nav > div:last-child > ul > li div > ul li.active > a {
+            color: #DA0060; }
+        @media (max-width: 767px) {
+          header main nav > div:last-child > ul > li div > ul {
+            margin: 0;
+            display: inline-block; } }
+        @media (max-width: 315px) {
+          header main nav > div:last-child > ul > li div > ul {
+            display: block; } }
         @media (max-width: 880px) {
-          header main nav > ul > li div {
+          header main nav > div:last-child > ul > li div {
             top: 40px; } }
         @media (max-width: 767px) {
-          header main nav > ul > li div {
-            max-width: 100%; } }
-      header main nav > ul > li:hover div {
-        opacity: 1;
-        visibility: visible; }
-    @media (max-width: 767px) {
-      header main nav > ul {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #FFF;
-        width: 100%;
-        height: 100%;
-        margin-top: 0 !important;
-        overflow-y: scroll;
-        z-index: 999; }
-        header main nav > ul > span {
-          display: block; }
-        header main nav > ul > li {
-          display: block; }
-          header main nav > ul > li > div {
+          header main nav > div:last-child > ul > li div {
             display: block;
+            max-width: 100%;
             position: static;
             width: 100%;
             height: auto;
@@ -355,10 +379,8 @@ header main {
             box-shadow: none;
             border: 0;
             opacity: 1;
-            visibility: visible; }
-            header main nav > ul > li > div > ul {
-              margin: 0;
-              display: inline-block; } }
+            visibility: visible;
+            background: transparent; } }
     @media (max-width: 767px) {
       header main nav {
         margin-right: 0 !important;

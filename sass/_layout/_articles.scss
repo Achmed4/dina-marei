@@ -6,6 +6,7 @@ section ~ article {
         height: 370px;
         margin-bottom: 20px !important;
         h3 {
+            margin-top: $zero;
             color: $textColor;
         }
         div:nth-child(2) {
@@ -17,11 +18,13 @@ section ~ article {
         div:last-child {
             height: 140px;
             p {
-                color: $textColor;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
                 height: 54px;
                 overflow: hidden;
-                padding-top: 5%;
                 margin-bottom: 0;
+                color: $textColor;
             }
             a {
                 display: inline-block;
