@@ -132,6 +132,8 @@ header section {
           pointer-events: none;
           display: block; }
         header section .container > div > label select {
+          width: 49px;
+          height: 24px;
           padding: 3px;
           margin: 0;
           border-radius: 4px;

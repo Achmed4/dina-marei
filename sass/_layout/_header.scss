@@ -8,7 +8,7 @@ header {
             height: 50px;
             position: relative;
             @include flexbox($justify-content: space-between);
-            @media (max-width: 767px) { //620px
+            @media (max-width: 767px) {
                 display: block;
                 padding: $ten 0;
                 height: auto;
@@ -26,7 +26,7 @@ header {
                         color: $headerlinkhover;
                     }
                 }
-                @media (max-width: 767px) { //620px
+                @media (max-width: 767px) {
                     display: inline-block;
                     margin-bottom: $ten;
                     padding: $zero;
@@ -38,7 +38,7 @@ header {
             }
             > div {
                 margin-right: $ten;
-                @media (max-width: 767px) { //620px
+                @media (max-width: 767px) {
                     margin-right: $zero;
                 }
                 > button {
@@ -49,7 +49,7 @@ header {
                     cursor: pointer;
                     &:first-child {
                         display: none;
-                        @media (max-width: 767px) { //620px
+                        @media (max-width: 767px) {
                             display: inline-block;
                         }
                     }
@@ -59,7 +59,7 @@ header {
                     margin-right: 5px;
                     display: inline-block;
                     z-index: 999;
-                    @media (max-width: 767px) { //620px
+                    @media (max-width: 767px) {
                         position: absolute;
                         bottom: -30px;
                         left: 0;
@@ -80,7 +80,7 @@ header {
                         transform: translateX(-30px);
                         position: absolute;
                         cursor: pointer;
-                        @media (max-width: 767px) { //620px
+                        @media (max-width: 767px) {
                             padding: 5px 8px;
                             position: absolute;
                             top: 1px;
@@ -96,7 +96,7 @@ header {
                         height: 30px;
                         width: 200px;
                         transition: width 0.3s ease-in-out;
-                        @media (max-width: 767px) { //620px
+                        @media (max-width: 767px) {
                             width: 100%;
                             border-radius: 0;
                         }
@@ -130,6 +130,8 @@ header {
                         display:block;
                     }
                     select {
+                        width: 49px;
+                        height: 24px;
                         padding:3px;
                         margin: 0;
                         border-radius:4px;
