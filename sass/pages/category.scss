@@ -287,6 +287,12 @@ header ~ main {
                 &:hover {
                     background: $mainColor;
                 }
+                &.active {
+                    background: $mainColor;
+                }
+                &.disabled {
+                    background: #ccc;
+                }
                 a {
                     display: block;
                     padding: 5px 8px;

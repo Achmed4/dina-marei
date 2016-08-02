@@ -1,0 +1,111 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Article === */
+header ~ article {
+    padding: 60px $zero !important;
+    .col {
+        padding: 20px;
+        section {
+            padding: $zero 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            margin-bottom: 30px;
+            > div:first-child {
+                padding: 20px $zero;
+                color: $textColor;
+                border-bottom: 1px solid #ccc;
+                h3 {
+                    margin-top: $zero;
+                    margin-bottom: 5px;
+                }
+                span {
+                    margin-right: 5px;
+                }
+                a {
+                    color: $textColor;
+                }
+            }
+            > div:last-child {
+                p {
+                    color: $textColor;
+                    line-height: 1.7em;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        > div {
+            text-align: left;
+            .image {
+                width: 74px;
+                height: 74px;
+                img {
+                    width: 100%;
+                }
+            }
+            h4 {
+                color: $textColor;
+                margin: 5px $zero;
+            }
+            a {
+                color: $textColor;
+                text-decoration: underline;
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+            form {
+                margin: 30px $zero;
+                label {
+                    display: block;
+                    margin: $ten $zero;
+                    color: $textColor;
+                }
+                input[type="text"], input[type="email"], textarea {
+                    width: 100%;
+                    border: 1px solid $headerlinkcolor;
+                    padding: 5px $ten;
+                    margin-bottom: 15px;
+                    outline: $zero;
+                }
+                textarea {
+                    resize: vertical;
+                }
+                button {
+                    @include main-button;
+                }
+            }
+        }
+    }
+}
+
+/* === Media Query === */
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
