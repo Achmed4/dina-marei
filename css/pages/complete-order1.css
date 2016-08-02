@@ -1,0 +1,862 @@
+/* === Importing Helpers === */
+/* === Variables === */
+/* === Mixins === */
+/* === Importing Layout === */
+/* === Header === */
+header section {
+  background: #414141; }
+  header section .container {
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 767px) {
+      header section .container {
+        display: block;
+        padding: 10px 0;
+        height: auto; } }
+    header section .container > ul li {
+      display: inline-block;
+      padding: 0 10px; }
+      header section .container > ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+      header section .container > ul li a {
+        display: block;
+        color: #A5A5A5; }
+        header section .container > ul li a:hover {
+          color: #C0C0C0; }
+      @media (max-width: 767px) {
+        header section .container > ul li {
+          display: inline-block;
+          margin-bottom: 10px;
+          padding: 0;
+          border-right: 0 !important; }
+          header section .container > ul li a {
+            padding: 0 10px; } }
+    header section .container > div {
+      margin-right: 10px; }
+      @media (max-width: 767px) {
+        header section .container > div {
+          margin-right: 0; } }
+      header section .container > div > button {
+        background: transparent;
+        border: 0;
+        color: #A5A5A5;
+        outline: 0;
+        cursor: pointer; }
+        header section .container > div > button:first-child {
+          display: none; }
+          @media (max-width: 767px) {
+            header section .container > div > button:first-child {
+              display: inline-block; } }
+      header section .container > div form {
+        position: relative;
+        margin-right: 5px;
+        display: inline-block;
+        z-index: 999; }
+        @media (max-width: 767px) {
+          header section .container > div form {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%; }
+            header section .container > div form:hover input {
+              width: 100%; }
+            header section .container > div form.toggle {
+              display: none; } }
+        header section .container > div form button {
+          color: #A5A5A5;
+          background: transparent;
+          border: 0;
+          padding: 6px 8px;
+          outline: 0;
+          transform: translateX(-30px);
+          position: absolute;
+          cursor: pointer; }
+          @media (max-width: 767px) {
+            header section .container > div form button {
+              padding: 5px 8px;
+              position: absolute;
+              top: 1px;
+              right: -30px; } }
+        header section .container > div form input {
+          border-radius: 15px;
+          border: 0;
+          outline: 0;
+          box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+          padding: 5px 10px;
+          height: 30px;
+          width: 200px;
+          transition: width 0.3s ease-in-out; }
+          @media (max-width: 767px) {
+            header section .container > div form input {
+              width: 100%;
+              border-radius: 0; } }
+      header section .container > div > label {
+        position: relative; }
+        header section .container > div > label::after {
+          content: '<>';
+          font: 11px "Consolas", monospace;
+          color: #aaa;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+          right: 8px;
+          top: 2px;
+          padding: 0 0 2px;
+          border-bottom: 1px solid #ddd;
+          position: absolute;
+          pointer-events: none; }
+        header section .container > div > label::before {
+          content: '';
+          right: 4px;
+          top: 0px;
+          width: 32px;
+          height: 20px;
+          background: #f8f8f8;
+          position: absolute;
+          pointer-events: none;
+          display: block; }
+        header section .container > div > label select {
+          width: 49px;
+          height: 24px;
+          padding: 3px;
+          margin: 0;
+          border-radius: 4px;
+          box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+          background: #f8f8f8;
+          color: #888;
+          border: none;
+          outline: none;
+          display: inline-block;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          cursor: pointer; }
+header main {
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 3px 0 rgba(0, 0, 0, 0.19), 0 3px 3px 0 rgba(0, 0, 0, 0.23); }
+  header main figure a {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out; }
+    header main figure a img {
+      width: 100%; }
+  @media (max-width: 620px) {
+    header main figure {
+      margin: 5px; } }
+  header main nav {
+    margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header main nav > div:first-child {
+      display: inline-block;
+      position: relative;
+      border: 1px solid #666;
+      margin-right: 15px;
+      font-size: 20px;
+      border-radius: 3px; }
+      header main nav > div:first-child:hover {
+        border: 1px solid #DA0060;
+        color: #DA0060; }
+        header main nav > div:first-child:hover div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > div:first-child a {
+        display: block;
+        padding: 10px 15px;
+        color: #666; }
+        header main nav > div:first-child a > span.ui.red.label, header main nav > div:first-child a span.ui.red.labels .label {
+          background: #DA0060 !important; }
+      header main nav > div:first-child > div {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        min-width: 360px;
+        min-height: 125px;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.1);
+        top: 54px;
+        left: -8px;
+        z-index: 1; }
+        header main nav > div:first-child > div::before {
+          content: '';
+          position: absolute;
+          top: -14px;
+          left: 5%;
+          width: 28px;
+          height: 28px;
+          background: white;
+          box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1);
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        header main nav > div:first-child > div .empty {
+          font-size: 15px;
+          text-align: center;
+          font-style: italic;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+        header main nav > div:first-child > div .busy li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          border-bottom: 1px dashed #A5A5A5; }
+          header main nav > div:first-child > div .busy li .image {
+            width: 100px;
+            height: 100px; }
+            header main nav > div:first-child > div .busy li .image img {
+              width: 100%; }
+          header main nav > div:first-child > div .busy li > div {
+            display: inline-block;
+            text-align: center; }
+            header main nav > div:first-child > div .busy li > div > div:first-child {
+              max-width: 210px; }
+              header main nav > div:first-child > div .busy li > div > div:first-child a {
+                color: #666; }
+            header main nav > div:first-child > div .busy li > div > div:nth-child(2) {
+              font-size: 14px; }
+          header main nav > div:first-child > div .busy li > button {
+            width: 25px;
+            height: 25px;
+            line-height: 12.5px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid;
+            background: transparent;
+            padding: 0;
+            cursor: pointer; }
+            header main nav > div:first-child > div .busy li > button:hover i {
+              color: #DA0060; }
+        header main nav > div:first-child > div .busy > div {
+          margin-top: 10px; }
+          header main nav > div:first-child > div .busy > div span:first-child {
+            color: #666;
+            font-weight: bold;
+            margin-right: 3px; }
+          header main nav > div:first-child > div .busy > div span:last-child {
+            color: #666;
+            font-size: 15px; }
+        @media (max-width: 767px) {
+          header main nav > div:first-child > div {
+            left: -303px; }
+            header main nav > div:first-child > div::before {
+              left: 87%; } }
+        @media (max-width: 450px) {
+          header main nav > div:first-child > div {
+            display: none; } }
+    header main nav > button {
+      display: none;
+      border: 1px solid #666;
+      padding: 10px 15px;
+      color: #666;
+      font-size: 20px;
+      background: white;
+      margin-right: 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: 0; }
+      header main nav > button:hover {
+        border: 1px solid #DA0060;
+        color: #DA0060; }
+      @media (max-width: 767px) {
+        header main nav > button {
+          display: inline-block; } }
+    @media (max-width: 767px) {
+      header main nav > div:last-child {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s; } }
+    header main nav > div:last-child .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 40px;
+      color: #DA0060;
+      display: none;
+      cursor: pointer; }
+      @media (max-width: 767px) {
+        header main nav > div:last-child .closebtn {
+          display: block; } }
+    @media (max-width: 767px) {
+      header main nav > div:last-child > ul {
+        position: relative;
+        top: 10%;
+        width: 100%;
+        text-align: center; } }
+    header main nav > div:last-child > ul > li {
+      position: relative;
+      display: inline-block;
+      border: 1px solid transparent;
+      border-radius: 25px; }
+      header main nav > div:last-child > ul > li:hover {
+        border: 1px solid #DA0060; }
+        header main nav > div:last-child > ul > li:hover > a {
+          color: #DA0060; }
+        header main nav > div:last-child > ul > li:hover > div {
+          opacity: 1;
+          visibility: visible; }
+      header main nav > div:last-child > ul > li.active {
+        border: 1px solid #DA0060; }
+        header main nav > div:last-child > ul > li.active > a {
+          color: #DA0060; }
+      header main nav > div:last-child > ul > li a {
+        display: block;
+        padding: 10px 15px;
+        color: #666;
+        font-size: 16px; }
+        @media (max-width: 767px) {
+          header main nav > div:last-child > ul > li a {
+            color: white;
+            font-weight: bold; } }
+      @media (max-width: 767px) {
+        header main nav > div:last-child > ul > li {
+          display: block;
+          margin: 0;
+          padding: 8px;
+          border: 0;
+          border-radius: 0; }
+          header main nav > div:last-child > ul > li:hover {
+            border: 0; }
+          header main nav > div:last-child > ul > li.active {
+            border: 0; } }
+      header main nav > div:last-child > ul > li div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        top: 40px;
+        max-width: 400px;
+        height: auto;
+        border: 1px solid #e3e2e2;
+        box-shadow: 0 2px 2px #cccccc;
+        padding: 15px;
+        background: white;
+        white-space: nowrap;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2; }
+        header main nav > div:last-child > ul > li div > ul h3 {
+          color: #666; }
+        header main nav > div:last-child > ul > li div > ul li {
+          display: block; }
+          header main nav > div:last-child > ul > li div > ul li:hover > a {
+            color: #DA0060; }
+          header main nav > div:last-child > ul > li div > ul li.active > a {
+            color: #DA0060; }
+        @media (max-width: 767px) {
+          header main nav > div:last-child > ul > li div > ul {
+            margin: 0;
+            display: inline-block; } }
+        @media (max-width: 315px) {
+          header main nav > div:last-child > ul > li div > ul {
+            display: block; } }
+        @media (max-width: 880px) {
+          header main nav > div:last-child > ul > li div {
+            top: 40px; } }
+        @media (max-width: 767px) {
+          header main nav > div:last-child > ul > li div {
+            display: block;
+            max-width: 100%;
+            position: static;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding: 5px 0;
+            box-shadow: none;
+            border: 0;
+            opacity: 1;
+            visibility: visible;
+            background: transparent; } }
+    @media (max-width: 767px) {
+      header main nav {
+        margin-right: 0 !important;
+        text-align: center;
+        display: block; }
+        header main nav > a {
+          display: inline-block; }
+        header main nav > ul {
+          margin: 10px 0; } }
+  header main.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 10; }
+    header main.fixed figure a {
+      width: 70px; }
+
+/* === Footer === */
+body > footer {
+  background: #E0E0E0; }
+  body > footer main {
+    padding: 60px 0;
+    overflow: hidden; }
+    body > footer main .container > div {
+      text-align: left;
+      margin-bottom: 25px !important;
+      padding: 10px; }
+      body > footer main .container > div h4 {
+        color: black; }
+      body > footer main .container > div table {
+        width: 100%; }
+        body > footer main .container > div table tr {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 10px; }
+        body > footer main .container > div table td:first-child {
+          width: 10%; }
+        body > footer main .container > div table ~ ul li {
+          display: inline-block;
+          margin-bottom: 0px;
+          margin-right: 5px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 50%;
+          border: 1px solid #A5A5A5;
+          text-align: center; }
+          body > footer main .container > div table ~ ul li a {
+            display: block; }
+          body > footer main .container > div table ~ ul li:hover {
+            background: white; }
+      body > footer main .container > div a {
+        color: black; }
+        body > footer main .container > div a:hover {
+          color: #DA0060; }
+      body > footer main .container > div li {
+        margin-bottom: 10px; }
+        body > footer main .container > div li a {
+          display: block; }
+      body > footer main .container > div p {
+        color: black; }
+      body > footer main .container > div form {
+        width: 100%;
+        height: 30px;
+        line-height: 30px; }
+        body > footer main .container > div form input {
+          width: 60%;
+          height: 100%;
+          border-radius: 20px;
+          border: 0;
+          outline: 0;
+          padding: 5px 10px; }
+          body > footer main .container > div form input:focus ~ button {
+            color: white;
+            background-color: #DA0060; }
+        body > footer main .container > div form button {
+          display: inline-block;
+          width: 45px;
+          height: 30px;
+          transform: translate(-25px, 1px);
+          border: 0;
+          outline: 0;
+          color: black;
+          background-color: white;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          transition: all 0.3s ease-in-out; }
+          body > footer main .container > div form button:hover {
+            color: white;
+            background-color: #DA0060; }
+      @media (max-width: 991px) {
+        body > footer main .container > div {
+          text-align: center; } }
+  body > footer > div.sub-footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    text-align: center;
+    padding: 15px 0; }
+    body > footer > div.sub-footer ul {
+      margin: 10px 0; }
+      body > footer > div.sub-footer ul li {
+        display: inline-block;
+        padding: 0 15px; }
+        body > footer > div.sub-footer ul li a {
+          display: block;
+          color: #C0C0C0; }
+      body > footer > div.sub-footer ul li:not(:last-child) {
+        border-right: 1px solid #A5A5A5; }
+    body > footer > div.sub-footer p {
+      color: #C0C0C0; }
+      body > footer > div.sub-footer p a {
+        font-weight: bold;
+        color: #DA0060; }
+  @media (max-width: 767px) {
+    body > footer .container .span_4_of_12 {
+      width: 100% !important; }
+    body > footer .container .col {
+      margin-left: 0; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    body > footer .container .span_4_of_12 {
+      width: 49.2%; }
+    body > footer .container .col:nth-child(2n+1) {
+      margin-left: 0; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    body > footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+  @media (min-width: 1200px) {
+    body > footer .container .col:nth-child(3n+1) {
+      margin-left: 0; } }
+
+/* === Main Style === */
+* {
+  box-sizing: border-box; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.image-parent {
+  overflow: hidden;
+  vertical-align: middle;
+  position: relative; }
+
+.image-cover {
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/* === Complete-Order1 === */
+header ~ main {
+  padding: 60px 0 !important; }
+  header ~ main .col {
+    padding: 10px;
+    margin-left: 0; }
+  header ~ main .col:first-child {
+    /*
+    Generic Styling, for Desktops/Laptops
+    */
+    /*table tbody td:first-child {
+        padding: 0;
+    }*/
+    /*My Style*/
+    /*
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */ }
+    header ~ main .col:first-child table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
+    header ~ main .col:first-child table tbody tr:hover {
+      background-color: rgba(204, 204, 204, 0.4); }
+    header ~ main .col:first-child table tbody td:first-child a {
+      color: white;
+      display: block;
+      background: #666;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      margin: auto; }
+    header ~ main .col:first-child table tbody td:first-child a:hover {
+      background: #DA0060;
+      color: white; }
+    header ~ main .col:first-child table tbody td img {
+      width: 80px; }
+    header ~ main .col:first-child table tbody td input {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #A5A5A5;
+      text-align: center;
+      outline: 0; }
+    header ~ main .col:first-child table ~ div {
+      width: 100%;
+      text-align: right;
+      border: 1px solid #ccc;
+      border-top: 0;
+      padding: 15px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
+      header ~ main .col:first-child table ~ div a {
+        border-radius: 3px;
+        border: 1px solid transparent;
+        padding: 5px 15px;
+        color: white;
+        background-color: #666;
+        cursor: pointer;
+        outline: 0;
+        transition: background-color 0.5s ease-in-out; }
+        header ~ main .col:first-child table ~ div a:hover {
+          background-color: #DA0060; }
+    header ~ main .col:first-child th {
+      background: white;
+      color: #666;
+      font-weight: bold; }
+    header ~ main .col:first-child td, header ~ main .col:first-child th {
+      padding: 6px;
+      border: 1px solid #ccc;
+      text-align: center; }
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+      header ~ main .col:first-child {
+        /* Force table to not be like tables anymore */
+        /* Hide table headers (but not display: none;, for accessibility) */
+        /*
+        Label the data
+        */ }
+        header ~ main .col:first-child table, header ~ main .col:first-child thead, header ~ main .col:first-child tbody, header ~ main .col:first-child th, header ~ main .col:first-child td, header ~ main .col:first-child tr {
+          display: block; }
+        header ~ main .col:first-child thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px; }
+        header ~ main .col:first-child tr {
+          border: 1px solid #ccc; }
+        header ~ main .col:first-child td {
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%; }
+        header ~ main .col:first-child td:before {
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          font-weight: bold;
+          color: #666;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          /*My Style*/
+          top: 50%;
+          transform: translate(0, -50%); }
+        header ~ main .col:first-child td:nth-of-type(1):before {
+          content: ""; }
+        header ~ main .col:first-child td:nth-of-type(2):before {
+          content: ""; }
+        header ~ main .col:first-child td:nth-of-type(3):before {
+          content: "Product"; }
+        header ~ main .col:first-child td:nth-of-type(4):before {
+          content: "Price"; }
+        header ~ main .col:first-child td:nth-of-type(5):before {
+          content: "Quantity"; }
+        header ~ main .col:first-child td:nth-of-type(6):before {
+          content: "Total"; } }
+  header ~ main .col:nth-child(2) {
+    text-align: left; }
+    header ~ main .col:nth-child(2) h3 {
+      color: #DA0060; }
+    header ~ main .col:nth-child(2) table {
+      border-collapse: collapse; }
+      @media (max-width: 767px) {
+        header ~ main .col:nth-child(2) table {
+          width: 100%; } }
+      header ~ main .col:nth-child(2) table td, header ~ main .col:nth-child(2) table th {
+        padding: 15px 35px;
+        border: 1px solid #ccc;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); }
+        @media (max-width: 767px) {
+          header ~ main .col:nth-child(2) table td, header ~ main .col:nth-child(2) table th {
+            padding: 10px; } }
+  header ~ main .col:nth-child(3),
+  header ~ main .col:nth-child(4),
+  header ~ main .col:nth-child(5),
+  header ~ main .col:nth-child(6) {
+    text-align: left; }
+    header ~ main .col:nth-child(3) > div,
+    header ~ main .col:nth-child(4) > div,
+    header ~ main .col:nth-child(5) > div,
+    header ~ main .col:nth-child(6) > div {
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
+      header ~ main .col:nth-child(3) > div h3,
+      header ~ main .col:nth-child(4) > div h3,
+      header ~ main .col:nth-child(5) > div h3,
+      header ~ main .col:nth-child(6) > div h3 {
+        color: #DA0060; }
+      header ~ main .col:nth-child(3) > div form,
+      header ~ main .col:nth-child(4) > div form,
+      header ~ main .col:nth-child(5) > div form,
+      header ~ main .col:nth-child(6) > div form {
+        margin: 30px 0; }
+        header ~ main .col:nth-child(3) > div form label,
+        header ~ main .col:nth-child(4) > div form label,
+        header ~ main .col:nth-child(5) > div form label,
+        header ~ main .col:nth-child(6) > div form label {
+          display: block;
+          margin: 10px 0;
+          color: #666; }
+        header ~ main .col:nth-child(3) > div form > div input[type="text"], header ~ main .col:nth-child(3) > div form > div input[type="email"], header ~ main .col:nth-child(3) > div form > div select, header ~ main .col:nth-child(3) > div form > div div,
+        header ~ main .col:nth-child(4) > div form > div input[type="text"],
+        header ~ main .col:nth-child(4) > div form > div input[type="email"],
+        header ~ main .col:nth-child(4) > div form > div select,
+        header ~ main .col:nth-child(4) > div form > div div,
+        header ~ main .col:nth-child(5) > div form > div input[type="text"],
+        header ~ main .col:nth-child(5) > div form > div input[type="email"],
+        header ~ main .col:nth-child(5) > div form > div select,
+        header ~ main .col:nth-child(5) > div form > div div,
+        header ~ main .col:nth-child(6) > div form > div input[type="text"],
+        header ~ main .col:nth-child(6) > div form > div input[type="email"],
+        header ~ main .col:nth-child(6) > div form > div select,
+        header ~ main .col:nth-child(6) > div form > div div {
+          width: 100%;
+          border: 1px solid #A5A5A5;
+          padding: 5px 10px;
+          margin-bottom: 15px;
+          outline: 0; }
+        header ~ main .col:nth-child(3) > div form > div button,
+        header ~ main .col:nth-child(4) > div form > div button,
+        header ~ main .col:nth-child(5) > div form > div button,
+        header ~ main .col:nth-child(6) > div form > div button {
+          border-radius: 3px;
+          border: 1px solid transparent;
+          padding: 5px 15px;
+          color: white;
+          background-color: #666;
+          cursor: pointer;
+          outline: 0;
+          transition: background-color 0.5s ease-in-out; }
+          header ~ main .col:nth-child(3) > div form > div button:hover,
+          header ~ main .col:nth-child(4) > div form > div button:hover,
+          header ~ main .col:nth-child(5) > div form > div button:hover,
+          header ~ main .col:nth-child(6) > div form > div button:hover {
+            background-color: #DA0060; }
+      header ~ main .col:nth-child(3) > div table,
+      header ~ main .col:nth-child(4) > div table,
+      header ~ main .col:nth-child(5) > div table,
+      header ~ main .col:nth-child(6) > div table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 15px; }
+      header ~ main .col:nth-child(3) > div th,
+      header ~ main .col:nth-child(4) > div th,
+      header ~ main .col:nth-child(5) > div th,
+      header ~ main .col:nth-child(6) > div th {
+        background: white;
+        color: #666;
+        font-weight: bold; }
+      header ~ main .col:nth-child(3) > div td, header ~ main .col:nth-child(3) > div th,
+      header ~ main .col:nth-child(4) > div td,
+      header ~ main .col:nth-child(4) > div th,
+      header ~ main .col:nth-child(5) > div td,
+      header ~ main .col:nth-child(5) > div th,
+      header ~ main .col:nth-child(6) > div td,
+      header ~ main .col:nth-child(6) > div th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: center; }
+      @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+        header ~ main .col:nth-child(3) > div,
+        header ~ main .col:nth-child(4) > div,
+        header ~ main .col:nth-child(5) > div,
+        header ~ main .col:nth-child(6) > div {
+          /* Force table to not be like tables anymore */
+          /* Hide table headers (but not display: none;, for accessibility) */ }
+          header ~ main .col:nth-child(3) > div table, header ~ main .col:nth-child(3) > div thead, header ~ main .col:nth-child(3) > div tbody, header ~ main .col:nth-child(3) > div th, header ~ main .col:nth-child(3) > div td, header ~ main .col:nth-child(3) > div tr,
+          header ~ main .col:nth-child(4) > div table,
+          header ~ main .col:nth-child(4) > div thead,
+          header ~ main .col:nth-child(4) > div tbody,
+          header ~ main .col:nth-child(4) > div th,
+          header ~ main .col:nth-child(4) > div td,
+          header ~ main .col:nth-child(4) > div tr,
+          header ~ main .col:nth-child(5) > div table,
+          header ~ main .col:nth-child(5) > div thead,
+          header ~ main .col:nth-child(5) > div tbody,
+          header ~ main .col:nth-child(5) > div th,
+          header ~ main .col:nth-child(5) > div td,
+          header ~ main .col:nth-child(5) > div tr,
+          header ~ main .col:nth-child(6) > div table,
+          header ~ main .col:nth-child(6) > div thead,
+          header ~ main .col:nth-child(6) > div tbody,
+          header ~ main .col:nth-child(6) > div th,
+          header ~ main .col:nth-child(6) > div td,
+          header ~ main .col:nth-child(6) > div tr {
+            display: block; }
+          header ~ main .col:nth-child(3) > div thead tr,
+          header ~ main .col:nth-child(4) > div thead tr,
+          header ~ main .col:nth-child(5) > div thead tr,
+          header ~ main .col:nth-child(6) > div thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px; }
+          header ~ main .col:nth-child(3) > div tr,
+          header ~ main .col:nth-child(4) > div tr,
+          header ~ main .col:nth-child(5) > div tr,
+          header ~ main .col:nth-child(6) > div tr {
+            border: 1px solid #ccc; }
+          header ~ main .col:nth-child(3) > div td,
+          header ~ main .col:nth-child(4) > div td,
+          header ~ main .col:nth-child(5) > div td,
+          header ~ main .col:nth-child(6) > div td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%; }
+          header ~ main .col:nth-child(3) > div td:before,
+          header ~ main .col:nth-child(4) > div td:before,
+          header ~ main .col:nth-child(5) > div td:before,
+          header ~ main .col:nth-child(6) > div td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            font-weight: bold;
+            color: #666;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            top: 50%;
+            transform: translate(0, -50%); }
+          header ~ main .col:nth-child(3) > div td:nth-of-type(1):before,
+          header ~ main .col:nth-child(4) > div td:nth-of-type(1):before,
+          header ~ main .col:nth-child(5) > div td:nth-of-type(1):before,
+          header ~ main .col:nth-child(6) > div td:nth-of-type(1):before {
+            content: "Product"; }
+          header ~ main .col:nth-child(3) > div td:nth-of-type(2):before,
+          header ~ main .col:nth-child(4) > div td:nth-of-type(2):before,
+          header ~ main .col:nth-child(5) > div td:nth-of-type(2):before,
+          header ~ main .col:nth-child(6) > div td:nth-of-type(2):before {
+            content: "Weight"; }
+          header ~ main .col:nth-child(3) > div td:nth-of-type(3):before,
+          header ~ main .col:nth-child(4) > div td:nth-of-type(3):before,
+          header ~ main .col:nth-child(5) > div td:nth-of-type(3):before,
+          header ~ main .col:nth-child(6) > div td:nth-of-type(3):before {
+            content: "Shipping Value"; } }
+  header ~ main .col:nth-child(4),
+  header ~ main .col:nth-child(5),
+  header ~ main .col:nth-child(6) {
+    display: none; }
+
+/*# sourceMappingURL=complete-order1.css.map */

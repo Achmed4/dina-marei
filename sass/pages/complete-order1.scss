@@ -1,0 +1,266 @@
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
+
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Complete-Order1 === */
+
+header ~ main {
+    padding: 60px 0 !important;
+    .col {
+        padding: $ten;
+        margin-left: 0;
+    }
+    .col:first-child {
+        /*
+        Generic Styling, for Desktops/Laptops
+        */
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
+        }
+        /*table tbody td:first-child {
+            padding: 0;
+        }*/
+
+        /*My Style*/
+        table tbody tr:hover {
+            background-color: rgba(204, 204, 204, 0.4);
+        }
+
+        table tbody td:first-child a {
+            color: $white;
+            display: block;
+            background: $textColor;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        table tbody td:first-child a:hover {
+            background: $mainColor;
+            color: $white;
+        }
+
+        table tbody td img {
+            width: 80px;
+        }
+
+        table tbody td input {
+            width: 30px;
+            height: 30px;
+            border: 1px solid $headerlinkcolor;
+            text-align: center;
+            outline: 0;
+        }
+
+        table ~ div {
+            width: 100%;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-top: 0;
+            padding: 15px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+            a {
+                @include main-button;
+            }
+        }
+
+        th {
+          background: $white;
+          color: $textColor;
+          font-weight: bold;
+        }
+        td, th {
+          padding: 6px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+
+
+        /*
+        Max width before this PARTICULAR table gets nasty
+        This query will take effect for any screen smaller than 760px
+        and also iPads specifically.
+        */
+        @media
+        only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+        	/* Force table to not be like tables anymore */
+        	table, thead, tbody, th, td, tr {
+        		display: block;
+        	}
+
+        	/* Hide table headers (but not display: none;, for accessibility) */
+        	thead tr {
+        		position: absolute;
+        		top: -9999px;
+        		left: -9999px;
+        	}
+
+        	tr { border: 1px solid #ccc; }
+
+        	td {
+        		/* Behave  like a "row" */
+        		border: none;
+        		border-bottom: 1px solid #eee;
+        		position: relative;
+        		padding-left: 50%;
+        	}
+
+        	td:before {
+        		/* Now like a table header */
+        		position: absolute;
+        		/* Top/left values mimic padding */
+                font-weight: bold;
+                color: $textColor;
+        		left: 6px;
+        		width: 45%;
+        		padding-right: 10px;
+        		white-space: nowrap;
+                /*My Style*/
+                top: 50%;
+                transform: translate(0, -50%);
+        	}
+
+        	/*
+        	Label the data
+        	*/
+        	td:nth-of-type(1):before { content: ""; }
+        	td:nth-of-type(2):before { content: ""; }
+        	td:nth-of-type(3):before { content: "Product"; }
+        	td:nth-of-type(4):before { content: "Price"; }
+        	td:nth-of-type(5):before { content: "Quantity"; }
+        	td:nth-of-type(6):before { content: "Total"; }
+        }
+    }
+    .col:nth-child(2) {
+        text-align: left;
+        h3 {
+            color: $mainColor;
+        }
+        table {
+            border-collapse: collapse;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+            td, th {
+              padding: 15px 35px;
+              border: 1px solid #ccc;
+              text-align: center;
+              box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+              @media (max-width: 767px) {
+                  padding: $ten;
+              }
+            }
+        }
+    }
+    .col:nth-child(3),
+    .col:nth-child(4),
+    .col:nth-child(5),
+    .col:nth-child(6) {
+        text-align: left;
+        > div {
+            padding: $ten;
+            border: 1px solid #ccc;
+            box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
+            h3 {
+                color: $mainColor;
+            }
+            form {
+                margin: 30px $zero;
+                label {
+                    display: block;
+                    margin: $ten $zero;
+                    color: $textColor;
+                }
+                > div {
+                    input[type="text"], input[type="email"], select, div {
+                        width: 100%;
+                        border: 1px solid $headerlinkcolor;
+                        padding: 5px $ten;
+                        margin-bottom: 15px;
+                        outline: $zero;
+                    }
+                    button {
+                        @include main-button;
+                    }
+                }
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 15px;
+            }
+            th {
+              background: $white;
+              color: $textColor;
+              font-weight: bold;
+            }
+            td, th {
+              padding: 6px;
+              border: 1px solid #ccc;
+              text-align: center;
+            }
+            @media
+            only screen and (max-width: 760px),
+            (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+            	/* Force table to not be like tables anymore */
+            	table, thead, tbody, th, td, tr {
+            		display: block;
+            	}
+
+            	/* Hide table headers (but not display: none;, for accessibility) */
+            	thead tr {
+            		position: absolute;
+            		top: -9999px;
+            		left: -9999px;
+            	}
+
+            	tr { border: 1px solid #ccc; }
+
+            	td {
+            		/* Behave  like a "row" */
+            		border: none;
+            		border-bottom: 1px solid #eee;
+            		position: relative;
+            		padding-left: 50%;
+            	}
+
+            	td:before {
+            		/* Now like a table header */
+            		position: absolute;
+            		/* Top/left values mimic padding */
+                    font-weight: bold;
+                    color: $textColor;
+            		left: 6px;
+            		width: 45%;
+            		padding-right: 10px;
+            		white-space: nowrap;
+                    top: 50%;
+                    transform: translate(0, -50%);
+            	}
+            	td:nth-of-type(1):before { content: "Product"; }
+            	td:nth-of-type(2):before { content: "Weight"; }
+            	td:nth-of-type(3):before { content: "Shipping Value"; }
+            }
+        }
+    }
+    .col:nth-child(4),
+    .col:nth-child(5),
+    .col:nth-child(6) {
+        display: none;
+    }
+}
