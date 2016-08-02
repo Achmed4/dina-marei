@@ -1,6 +1,17 @@
-/* === Articles === */
+/* === Importing Helpers === */
+@import "../_helpers/_variables.scss";
+@import "../_helpers/_mixins.scss";
 
-section ~ article {
+/* === Importing Layout === */
+@import "../_layout/_header.scss";
+@import "../_layout/_footer.scss";
+
+/* === Main Style === */
+@include mainstyle;
+@include image-bg;
+
+/* === Articles === */
+header ~ article {
     padding: 60px 0;
     section {
         padding: $ten;
